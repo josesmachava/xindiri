@@ -1,3 +1,5 @@
+from django.utils import timezone
+
 from django.db import models
 
 # Create your models here.
@@ -11,6 +13,8 @@ class payment(models.Model):
     transaction_status_code = models.CharField(max_length=255, null=False)
     transaction_status = models.CharField(max_length=255, null=False)
     website = models.URLField()
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(auto_now=True)
 
     mpesaReturn = models.TextField()
 
