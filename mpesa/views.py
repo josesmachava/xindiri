@@ -13,6 +13,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 from pprint import pprint
 from django.http import JsonResponse
 from django.urls import reverse
+
+
 # Api import End
 
 def index(request):
@@ -33,9 +35,9 @@ def payment_list(request):
         serializer = PaymentSerializer(data=request.data)
         if serializer.is_valid():
             requestPayment = request.data
-            contact = str(258) + str(requestPayment["contact"]) 
+            contact = str(258) + str(requestPayment["contact"])
             amount = requestPayment["amount"]
-            
+
             reference = requestPayment["reference"]
             api_key = requestPayment["api_key"]
             public_key = requestPayment["public_key"]
@@ -44,7 +46,7 @@ def payment_list(request):
             api_context.public_key = public_key
             api_context.ssl = True
             api_context.method_type = APIMethodType.POST
-            
+
             if 1 == 1:
                 api_context.address = 'api.sandbox.vm.co.mz'
 
@@ -58,11 +60,22 @@ def payment_list(request):
             api_context.add_parameter('input_CustomerMSISDN', contact)
             api_context.add_parameter('input_ServiceProviderCode', '171717')
             api_context.add_parameter('input_TransactionReference', reference)
-            
+
             api_request = APIRequest(api_context)
             result = json.dumps(api_request.execute())
             data = json.loads(result)
-            pay = payment(mpesaReturn=data, amount=amount,contact=contact,public_key=public_key,api_key=api_key,reference=reference)
+            print(data)
+            transaction_status_code = data["status_code"]
+            transaction_id = data["body"]["output_TransactionID"]
+            transaction_status = data["body"]["output_ResponseDesc"]
+            pay = payment(
+                mpesaReturn=data,
+                amount=amount,
+                contact=contact,
+                transaction_status_code=transaction_status_code,
+                transaction_status=transaction_status,
+                transaction_id=transaction_id,
+                public_key=public_key, api_key=api_key, reference=reference)
             pay.save()
             return Response({'data': data})
             # return Response(serializer.data, status=status.HTTP_201_CREATED, paymts = data["status_code"] )
