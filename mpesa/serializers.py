@@ -7,7 +7,7 @@ class PaymentSerializer(serializers.ModelSerializer):
 
         model = payment
         fields = '__all__'
-        extra_kwargs = {'mpesaReturn': {'required': False},
+        extra_kwargs = {'phone_number': {'required': False},
                         'transaction_id': {'required': False},
                         'transaction_status_code': {'required': False},
                         'transaction_status': {'required': False},

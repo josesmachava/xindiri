@@ -37,7 +37,7 @@ def payment_list(request):
             requestPayment = request.data
             contact = str(258) + str(requestPayment["contact"])
             amount = requestPayment["amount"]
-
+            phone_number =  requestPayment['phone_number']
             reference = requestPayment["reference"]
             api_key = requestPayment["api_key"]
             public_key = requestPayment["public_key"]
@@ -68,15 +68,20 @@ def payment_list(request):
             transaction_status_code = data["status_code"]
             transaction_id = data["body"]["output_TransactionID"]
             transaction_status = data["body"]["output_ResponseDesc"]
-            pay = payment(
-                mpesaReturn=data,
-                amount=amount,
-                contact=contact,
-                transaction_status_code=transaction_status_code,
-                transaction_status=transaction_status,
-                transaction_id=transaction_id,
-                public_key=public_key, api_key=api_key, reference=reference)
-            pay.save()
-            return Response({'data': data})
+            if phone_number == "849394995":
+
+                pay = payment(
+                    mpesaReturn=data,
+                    amount=amount,
+                    contact=contact,
+                    transaction_status_code=transaction_status_code,
+                    transaction_status=transaction_status,
+                    transaction_id=transaction_id,
+                    public_key=public_key, api_key=api_key, reference=reference)
+                pay.save()
+                return Response({'data': data})
+            else:
+                return Response({'data': "wrong number"})
+
             # return Response(serializer.data, status=status.HTTP_201_CREATED, paymts = data["status_code"] )
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
