@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Xpay - DashBoard</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src='main.js'></script>
+    <style>
+      *{
+       margin: 0;
+       padding: 0;
+      }
+    
+      nav.main-menu{
+          padding: 20px 20px 10px 20px;
+          font-size: 15px;
+          color: #545353;
+          border-bottom: 1px solid #bfb9b9;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        }
+
+        li {
+        float: left;
+        }
+
+        li a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        color: #545353;
+
+        text-decoration: none;
+        }
+
+        .grid-container{
+           
+            display: grid;
+            grid-template-columns: 250px auto;
+          
+        }
+        .grid-container, .menu-user{
+            padding-left: 20px;
+            border-right: 1px solid #bfb9b9;
+            height: 500px;
+        }
+
+        .item-menu-user, a{
+            font-size: 15px;
+            color: #545353;
+            text-decoration: none;
+            padding-bottom: 15px;
+        }
+
+</style>
+</head>
+<body>
+<nav class="main-menu">
+    <span>Xpay</span>
+
+    <div style="float:right;margin-top: -15px;">
+
+         <ul>
+            <li><a href="#">HELP</a></li>
+            <li><a href="#" style="color:#199ad6;font-weight: 550;">LOGOUT</a></li>
+            <li><a href="#">PROFILE</a></li>
+        </ul>
+    </div>
+
+</nav>
+<!-- Content main  -->
+<div class="grid-container">
+        <div class="menu-user">
+
+         <div class="wrapper" style="margin-top: 30px;">
+              
+              <div class="item-menu-user"><a href="#"><i class="fa fa-user" aria-hidden="true"></i>  MY ACCOUNT </a></div>
+              <div class="item-menu-user"><a href="#"><i class="fa fa-reply" aria-hidden="true"></i>  REQUEST MONEY </a></div>
+              <div class="item-menu-user"><a href="#"><i class="fa fa-book" aria-hidden="true"></i>  HISTORIC </a></div>
+
+         </div>
+
+        </div>
+        <div class="item2">
+                <div class="wrapper" style="margin-top: 30px;">
+
+
+
+                    </div>
+
+
+
+        </div>
+
+</div>
+<!-- End Content main  -->
+
+</body>
+</html>
