@@ -21,6 +21,10 @@ def index(request):
     return render(request, 'index.html')
 
 
+def phone_number(request):
+    return render(request, 'phone_number.html')
+
+
 @api_view(['GET', 'POST'])
 def payment_list(request):
     """
@@ -37,7 +41,7 @@ def payment_list(request):
             requestPayment = request.data
             contact = str(258) + str(requestPayment["contact"])
             amount = requestPayment["amount"]
-            phone_number =  requestPayment['phone_number']
+            phone_number = requestPayment['phone_number']
             reference = requestPayment["reference"]
             api_key = requestPayment["api_key"]
             public_key = requestPayment["public_key"]
