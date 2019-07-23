@@ -1,12 +1,17 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
 
     <style>
         body{
              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Roboto', sans-serif;
+
         }
         section{
             width: 350px;
@@ -19,7 +24,15 @@
             justify-content: space-between;
 
         }
+        h1{
+            font-size: 18px;
+        }
+        h2{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            }
         input[type="text"] {
+               width: -webkit-fill-available;
                 box-sizing: border-box;
                 padding-left: 15px;
                 padding-right: 15px;
@@ -37,6 +50,9 @@
             display: block;
             margin: 0 auto;
         }
+        label, h2, h1{
+            padding-left: 15px;
+        }
         .primary-button{
             border: none;
         background-color: rgb(7, 71, 166);
@@ -47,6 +63,15 @@
         border-radius: 4px;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
             }
+        h2, label{
+            font-size: 16px;
+        }
+        .mpesa-logo{
+            width: 100px;
+            height: 100px;
+
+
+        }
     </style>
 </head>
 <body>
@@ -54,13 +79,14 @@
         <section>
                 <header>
                     <h1 class="title">M-pesa</h1>
-                    <img src="" alt="mpesa logo">
+
+                    <img class="mpesa-logo" src="http://www.kutiva.co.mz/static/images/wallet/mpesa-icon.png" alt="mpesa logo">
                 </header>
                 <section>
                     <h2>Page com m-pesa na xindiri</h2>
                 <form action="">
-                      <label for="phone_number">Numero de celular</label>
-                    <input class="align-center" type="text" placeholder="ex 841234567" id="phone_number" >
+                      <label for="phone_number">Digite o seu número</label>
+                    <input class="align-center" type="text" placeholder="Digite o seu número 84 xxx xxxx" id="phone_number" >
                     <input class="primary-button align-center" type="submit" value="Pagar">
                 </form>
 
