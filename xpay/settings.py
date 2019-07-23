@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 import django_heroku
+import dj_database_url
+import os
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -59,7 +61,7 @@ ROOT_URLCONF = 'xpay.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['xpay/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,12 +80,20 @@ WSGI_APPLICATION = 'xpay.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+try:
+    from .settings_local import *
+except ImportError:
+
+    ALLOWED_HOSTS = ["*"]
+
+    #ADMINS = [('Arnaldo Govene', 'arnaldo.govene@outlook.com'), ('Guidione  Machava', 'geral.market.co.mz@gmail.com'),
+     #('Jose Machava',  'josesmachava@gmail.com'), ]
+
+    # Parse database configuration from $DATABASE_URL
+    DATABASES['default'] = dj_database_url.config()  # Reverted RDS Migration
+    # Enable Persistent Connections
+    DATABASES['default']['CONN_MAX_AGE'] = 500
+
 
 
 # Password validation
