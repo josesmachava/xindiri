@@ -7,8 +7,10 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+   
     <script src='main.js'></script>
     <style>
+        /* DEPOIS VOU ORGANIZAR CSS */
       *{
        margin: 0;
        padding: 0;
@@ -59,11 +61,34 @@
             padding-bottom: 15px;
         }
         .welcome-box{
-            height: 60px;
+            height: 55px;
             border-bottom: 1px solid #bfb9b9;
-            padding: 20px;
+            padding: 25px;
         }
-
+.welcome-box-inf{
+    display: grid;
+    grid-template-columns: auto;
+  grid-template-rows: auto  auto auto;
+}
+.item-1 {
+    padding-right: 100px;
+  grid-column: 1;
+  grid-row: 1;
+}
+.item-2 {
+    padding-right: 100px;
+  grid-column: 2;
+  grid-row: 1;
+}
+.item-3 {
+    padding-right: 100px;
+    background-color: #199ad6;
+    padding: 7px 10px 7px 10px;
+    font-size: 13px;
+    border-radius: 5px;
+  grid-column: 3;
+  grid-row: 1;
+}
 </style>
 </head>
 <body>
@@ -93,19 +118,62 @@
          </div>
 
         </div>
+
+
+
+
+
+
+
+
         <div class="content-user">
-                  <div class="wrapper">
-                     <div class="welcome-box">
+            <div class="wrapper">
+               <div class="welcome-box">
+
                         <p>Welcome, <nm style="font-weight: 550;">Jeremias Fondo</nm></p>
                         <p style="font-size: 13px;
                         color: #545353;
                         padding-top: 5px;">Account Type <xp style="color:#199ad6">Premier</xp> Status <xp style="color:#199ad6">Verfied</xp></p>
-                     </div>
+                    
+                       <div style="float: right; margin-top:-35px" >
+
+                          
+     <div class="welcome-box-inf">
+            <div class="item-1">
+                
+                <span style="font-size: 13px;
+                color: #545353;
+                padding-top: 5px;">Last Transaction</span>
+                <h4 style="color:#199ad6">15,000.00 MT</h4>
+                  </div>
+            <div class="item-2">
+                <span style="font-size: 13px;
+                color: #545353;
+                padding-top: 5px;">Last Withdraw</span>
+                <h4 style="color:#199ad6">-5,000.00 MT</h4></div>
+
+            <div class="item-3">
+
+                    <span style="font-size: 13px;
+                    color:#dad8d8;
+                    padding-top: 5px;">Xpay Balance</span>
+                    <h4 style="color:#fff">20,000.00 MT</h4>
+            </div>
+
+     </div>
+
+
+                       </div>
+                
+                </div>
                        
 
-                    </div>
 
 
+
+        </div>
+
+        
 
         </div>
 
