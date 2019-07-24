@@ -92,9 +92,9 @@ except ImportError:
      #('Jose Machava',  'josesmachava@gmail.com'), ]
 
     # Parse database configuration from $DATABASE_URL
-    DATABASES['default'] = dj_database_url.config()  # Reverted RDS Migration
+    DATABASES = {}
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600)
     # Enable Persistent Connections
-    DATABASES['default']['CONN_MAX_AGE'] = 500
 
 
 
