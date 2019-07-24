@@ -61,6 +61,24 @@
     font-size: 12px;
    
 }
+.button-Tpayments{
+    padding: 10px;
+    width: 115px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #292828;
+    font-weight: 410;
+
+}
+.content-top-table{
+    display: grid;
+    grid-template-columns: 130px;
+    grid-template-rows: auto  auto auto;
+}
+.row-1{grid-column: 1;grid-row: 1;}
+.row-2{grid-column: 2;grid-row: 1;}
+
 table {
     margin-top: 25px;
     font-family: arial, sans-serif;
@@ -133,10 +151,20 @@ td, th {
 
         <div style="padding:25px 25px 0px 25px">
 
-                <div class="button-activity">
-                     ACTIVITY
+                  
+                <div class="content-top-table">
+                    <div class="row-1">
+                            <div class="button-activity">
+                                ACTIVITY
+                            </div> 
+                    </div>
+                    <div class="row-2">
+                        <div class="button-Tpayments">
+                            TOTAL PAYMENTS()
+                       </div> 
+                    </div>
+                    <div class="row-3"></div>
                 </div>
-
                 <table>
                         <tr>
                          
@@ -163,6 +191,7 @@ td, th {
                       
                         
                       </table>
+                     
         </div>
     </div>
 </div>
