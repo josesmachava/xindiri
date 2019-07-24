@@ -8,6 +8,7 @@ class User(models.Model):
     username = models.CharField(max_length=255, null=False)
     email  = models.TextField()
     website = models.URLField()
+    balance = models.CharField(max_length=255, null=False)
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 
