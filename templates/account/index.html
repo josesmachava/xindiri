@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Xpay - DashBoard</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+   
+    <script src='main.js'></script>
+    <style>
+        /* DEPOIS VOU ORGANIZAR CSS */
+      *{
+       margin: 0;
+       padding: 0;
+      }
+    
+      nav.main-menu{
+          padding: 20px 20px 10px 20px;
+          font-size: 15px;
+          color: #545353;
+          border-bottom: 1px solid #bfb9b9;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        }
+
+        li {
+        float: left;
+        }
+
+        li a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        color: #545353;
+
+        text-decoration: none;
+        }
+
+        .grid-container{
+           
+            display: grid;
+            grid-template-columns: 250px auto;
+          
+        }
+        .grid-container, .menu-user{
+            padding-left: 20px;
+            border-right: 1px solid #bfb9b9;
+            height: 500px;
+        }
+
+        .item-menu-user, a{
+            font-size: 15px;
+            color: #545353;
+            text-decoration: none;
+            padding-bottom: 15px;
+        }
+        .welcome-box{
+            height: 55px;
+            border-bottom: 1px solid #bfb9b9;
+            padding: 25px;
+        }
+.welcome-box-inf{
+    display: grid;
+    grid-template-columns: auto;
+  grid-template-rows: auto  auto auto;
+}
+.item-1 {
+    padding-right: 100px;
+  grid-column: 1;
+  grid-row: 1;
+}
+.item-2 {
+    padding-right: 100px;
+  grid-column: 2;
+  grid-row: 1;
+}
+.item-3 {
+    padding-right: 100px;
+    background-color: #199ad6;
+    padding: 7px 10px 7px 10px;
+    font-size: 13px;
+    border-radius: 5px;
+  grid-column: 3;
+  grid-row: 1;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.button-activity{
+    background-color: #199ad6;
+    padding: 10px;
+    width: 100px;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    margin: 15px;
+}
+</style>
+</head>
+<body>
+<nav class="main-menu">
+    <span>Xpay</span>
+
+    <div style="float:right;margin-top: -15px;">
+
+         <ul>
+            <li><a href="#">HELP</a></li>
+            <li><a href="#" style="color:#199ad6;font-weight: 550;">LOGOUT</a></li>
+            <li><a href="#">PROFILE</a></li>
+        </ul>
+    </div>
+
+</nav>
+<!-- Content main  -->
+<div class="grid-container">
+        <div class="menu-user">
+
+         <div class="wrapper" style="margin-top: 30px;">
+              
+              <div class="item-menu-user"><a href="#"><i class="fa fa-user" aria-hidden="true"></i>  MY ACCOUNT </a></div>
+              <div class="item-menu-user"><a href="#"><i class="fa fa-reply" aria-hidden="true"></i>  REQUEST MONEY </a></div>
+              <div class="item-menu-user"><a href="#"><i class="fa fa-book" aria-hidden="true"></i>  HISTORIC </a></div>
+
+         </div>
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class="content-user">
+            <div class="wrapper">
+               <div class="welcome-box">
+
+                        <p>Welcome, <nm style="font-weight: 550;">Jeremias Fondo</nm></p>
+                        <p style="font-size: 13px;
+                        color: #545353;
+                        padding-top: 5px;">Account Type <xp style="color:#199ad6">Premier</xp> Status <xp style="color:#199ad6">Verfied</xp></p>
+                    
+                       <div style="float: right; margin-top:-35px" >
+
+                          
+     <div class="welcome-box-inf">
+            <div class="item-1">
+                
+                <span style="font-size: 13px;
+                color: #545353;
+                padding-top: 5px;">Last Transaction</span>
+                <h4 style="color:#199ad6">15,000.00 MT</h4>
+                  </div>
+            <div class="item-2">
+                <span style="font-size: 13px;
+                color: #545353;
+                padding-top: 5px;">Last Withdraw</span>
+                <h4 style="color:#199ad6">-5,000.00 MT</h4></div>
+
+            <div class="item-3">
+
+                    <span style="font-size: 13px;
+                    color:#dad8d8;
+                    padding-top: 5px;">Xpay Balance</span>
+                    <h4 style="color:#fff">20,000.00 MT</h4>
+            </div>
+
+     </div>
+
+
+                       </div>
+                
+                </div>
+                       
+
+
+
+
+        </div>
+
+        <!--  -->
+
+        <div style="padding-left: 20px; padding-right: 20px">
+
+                  <div class="button-activity">
+                       ACTIVITY
+                  </div>
+
+                <table>
+                        <tr>
+                          <th>Date</th>
+                          <th>Type</th>
+                          <th>Name</th>
+                          <th>Payment Status</th>
+                          <th>Order Status</th>
+                          
+                        </tr>
+                        <tr>
+                          <td>Alfreds Futterkiste</td>
+                          <td>Maria Anders</td>
+                          <td>Germany</td>
+                          <td>Francisco Chang</td>
+                          <td>Mexico</td>
+                        </tr>
+                        <tr>
+                                <td>Francisco Chang</td>
+                                <td>Mexico</td>
+                          <td>Centro comercial Moctezuma</td>
+                          <td>Francisco Chang</td>
+                          <td>Mexico</td>
+                        </tr>
+                        <tr>
+                          <td>Ernst Handel</td>
+                          <td>Roland Mendel</td>
+                          <td>Austria</td>
+                          <td>Francisco Chang</td>
+                          <td>Mexico</td>
+                        </tr>
+                        <tr>
+                          <td>Island Trading</td>
+                          <td>Helen Bennett</td>
+                          <td>UK</td>
+                          <td>Francisco Chang</td>
+                          <td>Mexico</td>
+                        </tr>
+                        <tr>
+                          <td>Laughing Bacchus Winecellars</td>
+                          <td>Yoshi Tannamuri</td>
+                          <td>Canada</td>
+                          <td>Francisco Chang</td>
+                          <td>Mexico</td>
+                        </tr>
+                        <tr>
+                          <td>Magazzini Alimentari Riuniti</td>
+                          <td>Giovanni Rovelli</td>
+                          <td>Italy</td>
+                          <td>Francisco Chang</td>
+                          <td>Mexico</td>
+                        </tr>
+                        
+                      </table>
+        </div>
+
+        </div>
+
+</div>
+<!-- End Content main  -->
+
+</body>
+</html>
