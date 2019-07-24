@@ -9,5 +9,6 @@ from django.contrib.auth.decorators import login_required
 @login_required()
 def index(request):
     paymentByUser = payment.objects.all()
-    paymentCount = payment.objects.all().count()
-    return render(request, 'dashboard/index.html',{'payments': paymentByUser})
+    count = payment.objects.all().count()
+    context= {'count': count}
+    return render(request, 'dashboard/index.html',{'payments': paymentByUser},context)
