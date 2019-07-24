@@ -21,8 +21,6 @@ def index(request):
     return render(request, 'index.html')
 
 
-def phone_number(request):
-    return render(request, 'phone_number.html')
 
 
 @api_view(['GET', 'POST'])
