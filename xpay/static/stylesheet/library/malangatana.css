@@ -1,77 +1,4 @@
-{% extends "xpay/layout/base.html" %}
-{% load staticfiles %}
-
-{% comment %}
-
-{% endcomment %}
-{% load staticfiles %}
-
-{# overide the tile of the page #}
-{% block title %}
-
-<title>market</title>
-{% endblock %}
-
-<meta charset="utf-8">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible", content="IE=edge">
-<meta name="viewport", content="width=device-width, initial-scale=1">
-
-{% block styles %}
-{#    only include css  files needed for thi page bootstap and other libs are add in base template #}
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
-{% endblock %}
-
-
-{% block scripts %}
-{#    only include css  files needed for thi page bootstap and other libs are add in base template #}
-
-{% endblock %}
-
-
-{% block content %}
-
-
-<main>
-    <header>
-
-        <nav>
-            <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="alignElementCenter">
-        <div>
-            <img src="https://woocommerce.com/wp-content/themes/woo/images/logo-woocommerce@2x.png" alt="woocommerce image" />
-            <h1>plugin para m-pesa</h1>
-        </div>
-
-            <h2>Aceite pagamentos online em qualquer lugar de Mocambique</h2>
-          <button class="buy primary-button">
-
-            <a href="{% url 'phone_number' %}" class="unstyledLink">comprar</a>
-        </button>
-
-    </section>
-
-
-    <style>
-
-
-button a{
-    color: white;
-    font-size: 20px;
-    text-transform: capitalize;
-}
-h1, h2{
-    font-family: 'Open Sans', sans-serif;
-
-}
-        body, html{
+body, html{
      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -83,11 +10,11 @@ h1, h2{
 
 .unstyledLink {
     text-decoration: none;
-
+   
 }
 
 .unstyledLink :hover {
-
+   
 }
 
 .resetPadding{
@@ -155,7 +82,7 @@ input{
 
 display: flex;
 justify-content: flex-end;
-
+   
 }
 .alignTextLeft{
     text-align: left;
@@ -198,7 +125,7 @@ justify-content: flex-end;
 
 }
 
-
+ 
  .default-button{
     border: none;
     background-color: rgba(9, 30, 66, 0.08);
@@ -223,8 +150,8 @@ justify-content: flex-end;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 
     width: auto;
-    border-radius: 4px;
- }
+    border-radius: 4px;    
+ } 
  .danger-button{
     border: none;
     background-color:#DE350A;
@@ -233,8 +160,8 @@ justify-content: flex-end;
     width: auto;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 
-    border-radius: 4px;
- }
+    border-radius: 4px; 
+ } 
  .disable-button{
 
  }
@@ -270,20 +197,3 @@ justify-content: flex-end;
 
     }
 }
-
-         .buy{
-            width: 300px;
-            height: 40px;
-
-        }
-    </style>
-</main>
-
-{% endblock %}
-
-
-
-
-
-
-
