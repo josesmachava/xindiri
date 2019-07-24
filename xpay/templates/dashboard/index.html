@@ -15,9 +15,9 @@
     border-right: 1px solid #a29f9f;
     height: 500px;
 }
+/* Menu SideBar */
 .item-menu-user, a{
-    font-size: 15px;
-    color: #545353;
+    color: #292828;
     text-decoration: none;
     padding-bottom: 15px;
 }
@@ -25,6 +25,58 @@
     color: #a29f9f;
     padding-right: 10px;
 }
+
+/* Content info */
+.welcome-box{
+    color: #292828;
+    height: 55px;
+    border-bottom: 1px solid  #a29f9f;
+    padding: 25px;
+}
+
+.small-italic{
+    font-style: italic;
+    font-weight: 400;
+}
+.p-welcome{
+    font-weight: 600;
+    color: #292828;
+}
+.item-3 {
+    background-color: #199ad6;
+    padding: 7px 15px 7px 15px;
+    font-size: 13px;
+    border-radius: 2px;
+    border-color: #199ad6;
+  
+}
+/* section Table */
+.button-activity{
+    background-color: #199ad6;
+    padding: 10px;
+    width: 100px;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+   
+}
+table {
+    margin-top: 25px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    background-color: #f9f3f3;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+
 </style>
 
 
@@ -42,7 +94,7 @@
 
 <!-- Content main  -->
 <div class="grid-container">
-
+<!-- MenuSideBar -->
     <div class="menu-user">
         <div class="wrapper-menu-sidebar">
             <div class="item-menu-user"><a href="#"><i class="fa fa-user" aria-hidden="true"></i>  MY ACCOUNT </a></div>
@@ -50,6 +102,72 @@
             <div class="item-menu-user"><a href="#"><i class="fa fa-book" aria-hidden="true"></i>  HISTORIC </a></div>
         </div>
     </div>
+<!-- End MenuSideBar -->
+
+
+<!-- Content Info & Table -->
+<div class="content-user">
+    <div class="wrapper">
+        <div class="welcome-box">
+            <p class="p-welcome"><small class="small-italic">Welcome</small>, Jeremias Fondo</p>
+            <p style="font-size: 13px;
+                    color: #545353;
+                    padding-top: 5px;">Account Type <small style="color:#199ad6">Premier</small> Status <small style="color:#199ad6">Verfied</small></p>
+               
+            <div style="float: right; margin-top:-35px" >
+                <div class="welcome-box-inf">
+                        <div class="item-3">
+
+                                <span style="font-size: 13px;
+                                color:#dad8d8;
+                                padding-top: 5px;">Xpay Balance</span>
+                                <h4 style="color:#fff">20,000.00 MT</h4>
+                        </div>
+
+                </div>
+            </div>
+
+        </div>
+
+<!-- Section Table -->
+
+        <div style="padding:25px 25px 0px 25px">
+
+                <div class="button-activity">
+                     ACTIVITY
+                </div>
+
+                <table>
+                        <tr>
+                          <th>Date</th>
+                          <th>Type</th>
+                          <th>Name</th>
+                          <th>Payment Status</th>
+                          <th>Order Status</th>
+                          
+                        </tr>
+                        <tr>
+                          <td>Alfreds Futterkiste</td>
+                          <td>Maria Anders</td>
+                          <td>Germany</td>
+                          <td>Francisco Chang</td>
+                          <td>Mexico</td>
+                        </tr>
+                        <tr>
+                                <td>Francisco Chang</td>
+                                <td>Mexico</td>
+                          <td>Centro comercial Moctezuma</td>
+                          <td>Francisco Chang</td>
+                          <td>Mexico</td>
+                        </tr>
+                       
+                      
+                        
+                      </table>
+        </div>
+    </div>
+</div>
+<!-- End Content Info & Table -->
 
 </div>
 <!-- End Content main  -->

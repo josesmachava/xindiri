@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^', include('mpesa.urls')),
     path('', include('payment.urls')),
+    path('dashboard', include('dashboard.urls')),
 
 ]
