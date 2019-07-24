@@ -17,12 +17,14 @@
         body{
              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
             font-family: 'Roboto', sans-serif;
-
+            background: whitesmoke;
         }
         section{
-            width: 350px;
-            background: whitesmoke;
-            height: 200px;
+                width: 350px;
+            background: white;
+            height: 350px;
+            padding: 10px;
+
         }
         header{
               display: flex;
@@ -37,6 +39,10 @@
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
             }
+        header{
+                background-color: rgb(7, 71, 166);
+                color: white;
+        }
         input[type="text"] {
                width: -webkit-fill-available;
                 box-sizing: border-box;
@@ -78,6 +84,34 @@
 
 
         }
+    .mpesa{
+            margin: 0 auto;
+    background-color: #ef4326;
+    border-radius: 100%;
+    height: 90px;
+    width: 90px;
+    margin-top: -70px;
+
+    }
+    .paymentMpesa{
+        margin-top: 40px;
+    }
+    .mpesa img{
+       width: 60px;
+    height: 60px;
+    display: block;
+    padding: 14px;
+
+    }
+    h1 {
+        text-align: center;
+        font-size: 50px;
+        margin-bottom: 0;
+    }
+    h2 {
+        text-align: center;
+        font-size: 18px;
+    }
     </style>
     {% endblock %}
 <meta charset="utf-8">
@@ -98,27 +132,261 @@
 
 <main>
 
-                <header>
-                    <h1 class="title">M-pesa</h1>
+        <div class="alignCenter">
+        <section class="alignCenterSingleElement">
 
-                    <img class="mpesa-logo" src="http://www.kutiva.co.mz/static/images/wallet/mpesa-icon.png" alt="mpesa logo">
-                </header>
-                <section>
-                    <h2>Page com m-pesa na xindiri</h2>
-                <form action="">
-                      <label for="phone_number">Digite o seu número</label>
-                    <input class="align-center" type="text" placeholder="Digite o seu número 84 xxx xxxx" id="phone_number" >
-                    <input class="primary-button align-center" type="submit" value="Pagar">
-                </form>
+            <div class="mpesa">
+                <img src="http://www.przestrzeninnowacji.pl/wp-content/uploads/2018/04/27655006_2006603532961463_2972204159027559696_n.png" alt="">
+            </div>
+                <h1>100 <sup>MTN</sup></h1>
+                <h2>Pacote basico</h2>
+            <div>
 
-                </section>
+                    <form action="">
+                          <label for="phone_number">Digite o seu número</label>
+                        <input class="align-center" type="text" placeholder="Digite o seu número 84 xxx xxxx" id="phone_number" >
+                        <input class="primary-button align-center" type="submit" value="Pagar  com M-pesa  ">
+                    </form>
+            </div>
 
 
         </section>
+        </div>
+
+    <style>
+
+
+        button a{
+    color: white;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+h1, h2{
+    font-family: 'Open Sans', sans-serif;
+
+}
+header{
+    height: 80vh;
+}
+        body, html{
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.unstyledList {
+    list-style-type: none;
+    text-transform: capitalize
+}
+
+.unstyledLink {
+    text-decoration: none;
+    margin: 0 20px;
+}
+.inlineElement{
+    display:inline;
+
+}
+.unstyledLink :hover {
+
+}
+
+.resetPadding{
+    padding: 0;
+
+}
+.error{
+    color:red;
+}
+.resetMargin{
+    margin: 0;
+}
+.menuEnd{
+        display: flex;
+    justify-content: space-between;
+}
+.menu{
+        display: flex;
+    justify-content: space-around;
+}
+input{
+      box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #dbe2e8;
+    font-size: 14px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
+    box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
+    border-radius: 2px;
+    color: #2e3d49;
+    margin: 10px;
+        border-radius: 4px;
+            height: 44px;
+
+}
+.inputField{
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #dbe2e8;
+    font-size: 14px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
+    box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
+    border-radius: 2px;
+    color: #2e3d49;
+    margin: 10px;
+    border-radius: 4px;
+    height: 44px;
+
+}
+
+.alignCenter{
+  display: grid;
+  height: 100vh;
+  place-items: center center;
+
+}
+
+.alignElementCenter{
+  display: grid;
+  place-items: center center;
+  height: 100%;
+}
+
+.alignTextCenter{
+    text-align: center;
+}
+.flex{
+    display: flex;
+}
+.alignTextRight{
+    text-align: right;
+}
+.alignRight{
+
+display: flex;
+justify-content: flex-end;
+
+}
+.alignTextLeft{
+    text-align: left;
+}
+
+.alignCenterSingleElement{    margin: 0 auto;
+    display: block;
+
+
+}
+.defaultHeader{
+
+    height: 15vh;
+    color: #3a343a;
+    background-color: #F6F8FA;
+        margin: 0 -5.5%;
+
+ }
+
+
+/*typography*/
+
+
+.primary-font{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*typography*/
+
+/*buttons*/
+ .primary-button{
+    border: none;
+    background-color: rgb(7, 71, 166);
+    color: white;
+    height: 40px;
+    width: auto;
+    font-weight: bold;
+    border-radius: 4px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+ .default-button{
+    border: none;
+    background-color: rgba(9, 30, 66, 0.08);
+    color: black;
+    height: 40px;
+    width: auto;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+    border-radius: 4px;
+ }
+ .link-button{
+    color: rgb(7, 71, 166);
+        font-weight: bold;
+    font-family: Ubuntu;
+
+ }
+ .warning-button{
+     border: none;
+    background-color: #F5AA07;
+    color: black;
+    height: 40px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+    width: auto;
+    border-radius: 4px;
+ }
+ .danger-button{
+    border: none;
+    background-color:#DE350A;
+    color: white;
+    height: 40px;
+    width: auto;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+    border-radius: 4px;
+ }
+ .disable-button{
+
+ }
+
+ /*buttons*/
+
+
+@media only screen and  (max-width: 480px) {
+
+    .smallHeading{
+        font-size: 25px;
+        text-transform: capitalize;
+    }
+
+}
+@media only screen and (min-width: 768px  ) and (max-width: 992px) {
+
+    .mediumHeading{
+
+    }
+
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px){
+    .largeHeading{
+
+    }
+}
 
 
 
+@media only screen and  (min-width: 1201px){
+    .extraLargeHeading{
 
+    }
+}
+
+         .buy{
+            width: 300px;
+            height: 40px;
+
+        }
+    </style>
 
 </main>
 
