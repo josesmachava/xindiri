@@ -142,12 +142,12 @@
                 <h2>Pacote basico</h2>
             <div>
 
-                    <form action="{% url 'mpesa' %}"  method="post">
+                    <form action="{% url 'mpesa' %}" method="post">
                           {% csrf_token %}
 
                           <label for="phone_number">Digite o seu número</label>
                         <input class="align-center" type="text" placeholder="Digite o seu número 84 xxx xxxx" name="contact" id="phone_number" >
-                            <button type="submit" class="primary-button align-center" type="submit">Pagar  com M-pesa</button>
+                        <button type="submit" class="primary-button align-center" type="submit">Pagar  com M-pesa</button>
 
                     </form>
             </div>

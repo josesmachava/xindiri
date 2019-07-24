@@ -21,7 +21,7 @@ from . import views
 urlpatterns = [
 
     path('phone/', views.phone_number, name='phone_number'),
-    path('mpesasendpayment/', views.mpesa, name='mpesa'),
+    path('msendpayment/', views.Mpesa, name='mpesa'),
 
 
    
