@@ -35,11 +35,12 @@
 <main>
     <header>
 
-        <nav>
-            <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+        <nav class="menu">
+            <h1>xindiri</h1>
+            <ul class="unstyledList menu">
+                <li><a class="unstyledLink" href="">sigin up</a></li>
+                <li><a class="unstyledLink" href="">sigin up</a></li>
+
             </ul>
         </nav>
     </header>
@@ -85,7 +86,10 @@ h1, h2{
     text-decoration: none;
 
 }
+.inlineElement{
+    display:inline;
 
+}
 .unstyledLink :hover {
 
 }
@@ -99,6 +103,14 @@ h1, h2{
 }
 .resetMargin{
     margin: 0;
+}
+.menuEnd{
+        display: flex;
+    justify-content: space-between;
+}
+.menu{
+        display: flex;
+    justify-content: space-around;
 }
 input{
       box-sizing: border-box;
