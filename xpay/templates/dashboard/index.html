@@ -106,7 +106,7 @@ td, th {
 
 
 <!-- Content Info & Table -->
-<div class="content-user">
+<div class="content-user" style="padding-bottom: 50px">
     <div class="wrapper">
         <div class="welcome-box">
             <p class="p-welcome"><small class="small-italic">Welcome</small>, Jeremias Fondo</p>
@@ -139,28 +139,27 @@ td, th {
 
                 <table>
                         <tr>
-                          <th>Date</th>
-                          <th>Type</th>
-                          <th>Name</th>
+                         
+                          
+                          <th>Payer Number</th>
+                          <th>Reference</th>
+                          <th>Amount</th>
                           <th>Payment Status</th>
-                          <th>Order Status</th>
+                          <th>Date</th>
                           
                         </tr>
-                        <tr>
-                          <td>Alfreds Futterkiste</td>
-                          <td>Maria Anders</td>
-                          <td>Germany</td>
-                          <td>Francisco Chang</td>
-                          <td>Mexico</td>
-                        </tr>
-                        <tr>
-                                <td>Francisco Chang</td>
-                                <td>Mexico</td>
-                          <td>Centro comercial Moctezuma</td>
-                          <td>Francisco Chang</td>
-                          <td>Mexico</td>
-                        </tr>
-                       
+                        {% for payment in payments %}
+                            <tr> 
+                                <td>{{ payment.contact}}</td>
+                                <td>{{ payment.reference}}</td>
+                                <td>{{ payment.amount}} MT</td>
+                                <td>{{ payment.transaction_status }}</td>
+                                <td>{{ payment.created_at}}</td>
+                               
+                                
+                            </tr>
+                        {% endfor %}
+                                        
                       
                         
                       </table>
