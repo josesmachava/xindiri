@@ -82,7 +82,7 @@ def payment_list(request):
                     transaction_id=transaction_id,
                     public_key=public_key, api_key=api_key, reference=reference)
             pay.save()
-            #     return Response({'data': data})
+            return Response({'data': data})
             # else:
             #     return Response({'data': "wrong number"})
 
