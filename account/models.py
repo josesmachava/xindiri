@@ -46,13 +46,13 @@ class User(AbstractUser):
     """User model."""
 
     username = None
-    email = models.EmailField(_('email address'), unique=False)
+    email = models.EmailField(_('email address'), unique=True)
     phone_number = models.CharField(max_length=30, blank=False, unique=True)
     is_active = models.BooleanField(default=False)
     is_business = models.BooleanField(default=False)
 
-    USERNAME_FIELD = 'phone_number'
-    REQUIRED_FIELDS = ['email']
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
 
     objects = UserManager()
 
