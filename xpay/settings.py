@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'mpesa',
+    'account',
     'payment',
     'xpay',
     'dashboard',
@@ -51,6 +52,9 @@ INSTALLED_APPS = [
 
 
 
+AUTH_USER_MODEL = 'account.User'
+LOGIN_URL='signin'
+LOGOUT_REDIRECT_URL = 'index'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

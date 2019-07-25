@@ -4,7 +4,6 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils.translation import ugettext_lazy as _
 
-from cms.models import Course
 from xpay import settings
 
 
@@ -47,7 +46,7 @@ class User(AbstractUser):
 
     username = None
     email = models.EmailField(_('email address'), unique=True)
-    phone_number = models.CharField(max_length=30, blank=False,  unique=True)
+    phone_number = models.CharField(max_length=30, blank=False, unique=True)
     is_active = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'phone_number'
@@ -56,13 +55,11 @@ class User(AbstractUser):
     objects = UserManager()
 
 
-
-
-class Basic(models.Model):
+class Business(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    location = models.CharField(max_length=30, blank=True)
-    description = models.TextField(max_length=30, blank=True)
+    address = models.CharField(max_length=30, blank=True)
+    company_name = models.CharField(max_length=30, blank=True)
+    website = models.URLField()
 
     def __str__(self):
         return str(self.user)
-

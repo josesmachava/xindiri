@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import User, Student
+from .models import User, Business
 
 # Register your models here.
 
@@ -15,5 +15,5 @@ admin.site.register(User, UserAdmin)
 class StudentAdmin(admin.ModelAdmin):
     list_display = ['user']
 
-admin.site.register(Student, StudentAdmin)
+admin.site.register(Business, StudentAdmin)
 
