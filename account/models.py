@@ -3,6 +3,7 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils.translation import ugettext_lazy as _
+import uuid
 
 from xpay import settings
 
@@ -63,3 +64,8 @@ class Business(models.Model):
 
     def __str__(self):
         return str(self.user)
+
+
+class Token(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
