@@ -39,7 +39,7 @@ def businesssignup(request):
 
     else:
         form = BusinessForm()
-    return render(request, 'account/signup.html', {'form': form})
+    return render(request, 'account/businessAccount.html', {'form': form})
 
 
 @login_required()

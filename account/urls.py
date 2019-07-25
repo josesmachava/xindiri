@@ -20,10 +20,8 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    path('signin', views.signin, name="signin"),
+    path('signin/business', views.businesssignup, name="business"),
     # path('signup', views.signup, name="signup"),
-    path('signup/student', views.sudentsignup, name='student_sigin'),
-    path('perfile/<pk>', views.StudentPerfile.as_view(), name="perfile"),
 
     # path('logout', 'django.contrib.auth.views.logout',  {'next_page': '/successfully_logged_out/'}).
     path('', include('django.contrib.auth.urls')),
