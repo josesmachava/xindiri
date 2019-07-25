@@ -1,4 +1,4 @@
-{% extends "kutiva/layout/base.html" %}
+{% extends "xpay/layout/base.html" %}
 {% load staticfiles %}
 
 {% comment %}
@@ -31,7 +31,7 @@
                     <form class="alignElementCenter"  action="signin" method="post">
                          {% csrf_token %}
                         
-                         <input type="email" placeholder="E-mail" class="inputField" name="username">
+                         <input type="text" placeholder="numero de telfone" class="inputField" name="username">
                          <input placeholder="Senha" type="password" class="inputField" name="password">
                         <p><a href="{% url 'password_reset' %}" class="unstyledLink link-button">Esqueceu a senha?</a></p>
                         <input type="submit" name="hello" class="primary-button" value="Iniciar Sessão">
@@ -40,7 +40,7 @@
                           <p class="error alignTextCenter"> {{ message }}</p>
                     {% endfor %}
 
-                    <p class="alignTextCenter"><a class="unstyledLink link-button" href="{% url 'student_sigin' %}">ou criar conta</a></p>
+                    <p class="alignTextCenter"><a class="unstyledLink link-button" href="{% url 'signup' %}">ou criar conta</a></p>
                      </form>
      
       </div>
