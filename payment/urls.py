@@ -20,8 +20,8 @@ from . import views
 
 urlpatterns = [
 
-    path('phone/', views.phone_number, name='phone_number'),
-    path('msendpayment/', views.Mpesa, name='mpesa'),
+    path('', views.phone_number, name='phone_number'),
+    path('payfee/', views.Mpesa, name='mpesa'),
 
 
    
