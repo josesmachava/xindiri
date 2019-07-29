@@ -31,7 +31,7 @@
                     <form class="alignElementCenter"  action="signin" method="post">
                          {% csrf_token %}
                         
-                         <input type="text" placeholder="numero de telfone" class="inputField" name="username">
+                         <input type="email" placeholder="numero de telfone" class="inputField" name="username">
                          <input placeholder="Senha" type="password" class="inputField" name="password">
                         <p><a href="{% url 'password_reset' %}" class="unstyledLink link-button">Esqueceu a senha?</a></p>
                         <input type="submit" name="hello" class="primary-button" value="Iniciar Sessão">

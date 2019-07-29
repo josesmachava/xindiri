@@ -12,10 +12,10 @@ from .forms import BusinessForm
 
 def signin(request):
     if request.method == 'POST':
-        phone_number = request.POST['username']
+        email = request.POST['username']
         password = request.POST['password']
 
-        user = authenticate(username=phone_number, password=password)
+        user = authenticate(username=email, password=password)
 
         if user is not None:
             login(request, user)
