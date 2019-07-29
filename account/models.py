@@ -63,6 +63,8 @@ class Business(models.Model):
     address = models.CharField(max_length=30, blank=True)
     company_name = models.CharField(max_length=30, blank=True)
     website = models.URLField()
+    created_date = models.DateTimeField(auto_now_add=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return str(self.user)
@@ -71,3 +73,5 @@ class Business(models.Model):
 class Token(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    created_date = models.DateTimeField(auto_now_add=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
