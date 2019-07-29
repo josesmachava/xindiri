@@ -4,7 +4,6 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils.translation import ugettext_lazy as _
 import uuid
-
 from xpay import settings
 
 
@@ -47,14 +46,15 @@ class User(AbstractUser):
 
     username = None
     email = models.EmailField(_('email address'), unique=True)
-    phone_number = models.CharField(max_length=30, blank=False, unique=True)
-    is_active = models.BooleanField(default=False)
-    is_business = models.BooleanField(default=False)
-
+    is_instructor = models.BooleanField(default=False)
+    is_student = models.BooleanField(default=False)
+    
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
     objects = UserManager()
+
+
 
 
 class Business(models.Model):

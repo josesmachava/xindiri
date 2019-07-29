@@ -27,8 +27,8 @@ def signin(request):
 
 def businesssignup(request):
     if request.method == 'POST':
-        form = BusinessForm(request.POST)
-        if form.is_valid():
+      form = BusinessForm(request.POST)
+      if form.is_valid():
             form.save()
             email = form.cleaned_data.get('email')
             raw_password = form.cleaned_data.get('password1')
