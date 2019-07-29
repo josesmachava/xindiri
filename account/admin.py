@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import User, Business
+from .models import User, Business, Token
 
 # Register your models here.
 
@@ -12,8 +12,13 @@ class UserAdmin(admin.ModelAdmin):
 admin.site.register(User, UserAdmin)
 
 
-class StudentAdmin(admin.ModelAdmin):
+class BusinessAdmin(admin.ModelAdmin):
     list_display = ['user']
 
-admin.site.register(Business, StudentAdmin)
+admin.site.register(Business, BusinessAdmin)
 
+
+class TokenAdmin(admin.ModelAdmin):
+    list_display = ['id', 'user']
+
+admin.site.register(Token, TokenAdmin)
