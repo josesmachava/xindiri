@@ -5,7 +5,7 @@ from django.db import models
 # Create your models here.
 class payment(models.Model):
     contact = models.CharField(max_length=255, null=False)
-    phone_number = models.CharField(max_length=255, null=False)
+    token = models.CharField(max_length=255, null=False)
     amount = models.CharField(max_length=255, null=False)
     mpesaReturn = models.TextField()
     reference = models.CharField(max_length=255, null=False)
