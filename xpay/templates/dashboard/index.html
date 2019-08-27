@@ -9,6 +9,25 @@
         background-color: rgb(24, 24, 24);
             height: 100vh;
         }
+        table{
+            width: 100%;
+        }
+      tr{
+          border-bottom: 1px solid #f2f2f2;
+
+      }
+     table{
+         border-radius: 10px;
+
+         margin: 50px auto;
+         overflow: hidden;
+         box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+         -moz-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+         -webkit-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+         -o-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+         -ms-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+
+     }
 
      </style>
 
@@ -34,14 +53,16 @@
 
              <div class="col-md-9">
 
-                 <table class="table table-bordered">
 
 
-                     <th scope="col">Numero do cliente</th>
-                     <th scope="col">Referencia</th>
-                     <th scope="col">Valor</th>
-                     <th scope="col">Estado</th>
-                     <th scope="col">Data</th>
+                 <table class="table table-borderless">
+
+
+                     <th >Numero do cliente</th>
+                     <th >Referencia</th>
+                     <th >Valor</th>
+                     <th >Estado</th>
+                     <th >Data</th>
 
                      </tr>
                      {% for payment in payments %}
@@ -63,6 +84,7 @@
 
              </div>
 
+             </div>
 
 
 
