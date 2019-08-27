@@ -1,5 +1,4 @@
-
-{% load static %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +6,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible", content="IE=edge">
     <meta name="viewport", content="width=device-width, initial-scale=1">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet"  href="{% static 'stylesheet/dashboard/main.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900&display=swap" rel="stylesheet">
+
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/v4-shims.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   <!-- title goes here -->
+
+
+    <!-- title goes here -->
     {% block title %}
 
     {% endblock %}
@@ -23,82 +34,12 @@
     {% endblock %}
 
     <!-- scripts goes here -->
-    
+
     {% block scripts %}
 
     {% endblock %}
-
-    <style>
-  
-        *{
-        margin: 0;
-        padding: 0;
-        font-family: 'Roboto', sans-serif;
-        color: #545353;
-        font-size: 15px;
-        
-        }
-        
-        nav.main-menu{
-          padding: 20px 3.5% 10px 3.5%;
-          font-size: 15px;
-          
-          border-bottom: 1px solid #a29f9f;
-        }
-        ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        }
-
-        li {
-        float: left;
-        }
-
-        li a {
-        display: block;
-        text-align: center;
-        padding: 10px;
-        color: #545353;
-        text-decoration: none;
-        }
-        nav>span{font-size:25px; }
-
-        nav>.menu-right{
-          float:right;
-          margin-top: -10px;
-        }
-       .user-image-circule{
-        background-color: #545353;
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-        margin-top: -5px;
-       }
-    </style>
 </head>
     <body>
-        <!-- Menu Bar -->
-
-        <!--  -->
-        <!--  -->
-
-
-        <nav class="main-menu">
-                <span><logx style="color:#199ad6;font-weight: 600;font-size: 25px">X</logx>pay</span>
-            
-                <div class="menu-right">
-            
-                     <ul>
-                        <li><a href="#">HELP</a></li>
-                        <li><a href="#" style="color:#199ad6;font-weight: 550;">LOGOUT</a></li>
-                        <li><a href="#"><div class="user-image-circule"  title="{{user.username}}" ></div></a></li>
-                    </ul>
-                </div>
-            
-            </nav>
-
         <!-- content goes here -->
         {% block  content %}
 

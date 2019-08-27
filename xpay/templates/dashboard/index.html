@@ -1,203 +1,77 @@
 {% extends "dashboard/layout/base.html" %}
 {% load static %}
 
+
+
  {% block  content %}
+     <style>
+        .aside{
+        background-color: rgb(24, 24, 24);
+            height: 100vh;
+        }
 
- <style>
-.grid-container{
-    display: grid;
-    grid-template-columns: 200px auto;
-}
-.wrapper-menu-sidebar{ margin-top: 30px;}   
+     </style>
 
-.grid-container, .menu-user{
-    padding-left: 3%;
-    border-right: 1px solid #a29f9f;
-    height: 500px;
-}
-/* Menu SideBar */
-.item-menu-user, a{
-    color: #292828;
-    text-decoration: none;
-    padding-bottom: 15px;
-}
-.item-menu-user>a>i{
-    color: #a29f9f;
-    padding-right: 10px;
-}
-
-/* Content info */
-.welcome-box{
-    color: #292828;
-    height: 55px;
-    border-bottom: 1px solid  #a29f9f;
-    padding: 25px;
-}
-
-.small-italic{
-    font-style: italic;
-    font-weight: 400;
-}
-.p-welcome{
-    font-weight: 600;
-    color: #292828;
-}
-.item-3 {
-    background-color: #199ad6;
-    padding: 7px 15px 7px 15px;
-    font-size: 13px;
-    border-radius: 2px;
-    border-color: #199ad6;
-  
-}
-/* section Table */
-.button-activity{
-    background-color: #199ad6;
-    padding: 10px;
-    width: 100px;
-    border-radius: 20px;
-    color: #fff;
-    text-align: center;
-    font-size: 12px;
-   
-}
-.button-Tpayments{
-    padding: 10px;
-    width: 130px;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 12px;
-    color: #292828;
-    font-weight: 410;
-
-}
-.content-top-table{
-    display: grid;
-    grid-template-columns: 130px;
-    grid-template-rows: auto  auto auto;
-}
-.row-1{grid-column: 1;grid-row: 1;}
-.row-2{grid-column: 2;grid-row: 1;}
-
-table {
-    margin-top: 25px;
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-th {
-    background-color: #f9f3f3;
-}
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
+     <div class="container-fluid">
+         <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+         <div class="row">
 
 
-</style>
+
+             <div class="col-lg-2 col-md-3 aside">
+                 <aside>
+                     <ul>
+                         <li><a href="#">Transações</a></li>
+                     </ul>
+                 </aside>
+
+
+             </div>
+
+
+
+
+
+             <div class="col-md-9">
+
+                 <table class="table table-bordered">
+
+
+                     <th scope="col">Numero do cliente</th>
+                     <th scope="col">Referencia</th>
+                     <th scope="col">Valor</th>
+                     <th scope="col">Estado</th>
+                     <th scope="col">Data</th>
+
+                     </tr>
+                     {% for payment in payments %}
+                         <tr>
+                             <td>{{ payment.contact}}</td>
+                             <td>{{ payment.reference}}</td>
+                             <td>{{ payment.amount}} MT</td>
+                             <td>{{ payment.transaction_status }}</td>
+                             <td>{{ payment.created_at}}</td>
+
+
+                         </tr>
+                     {% endfor %}
+
+
+
+                 </table>
+
+
+             </div>
+
+
+
+
+         </div>
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-<!-- Content main  -->
-<div class="grid-container">
-<!-- MenuSideBar -->
-    <div class="menu-user">
-        <div class="wrapper-menu-sidebar">
-            <div class="item-menu-user"><a href="#"><i class="fa fa-user" aria-hidden="true"></i>  MY ACCOUNT </a></div>
-            <div class="item-menu-user"><a href="#"><i class="fa fa-reply" aria-hidden="true"></i>  REQUEST MONEY </a></div>
-            <div class="item-menu-user"><a href="#"><i class="fa fa-book" aria-hidden="true"></i>  HISTORIC </a></div>
-        </div>
-    </div>
-<!-- End MenuSideBar -->
-
-
-<!-- Content Info & Table -->
-<div class="content-user" style="padding-bottom: 50px">
-    <div class="wrapper">
-        <div class="welcome-box">
-            <p class="p-welcome"><small class="small-italic">Welcome</small>, Jeremias Fondo</p>
-            <p style="font-size: 13px;
-                    color: #545353;
-                    padding-top: 5px;">Account Type <small style="color:#199ad6">Premier</small> Status <small style="color:#199ad6">Verfied</small></p>
-               
-            <div style="float: right; margin-top:-35px" >
-                <div class="welcome-box-inf">
-                        <div class="item-3">
-
-                                <span style="font-size: 13px;
-                                color:#dad8d8;
-                                padding-top: 5px;">Xpay Balance</span>
-                                <h4 style="color:#fff">20,000.00 MT</h4>
-                        </div>
-
-                </div>
-            </div>
-
-        </div>
-
-<!-- Section Table -->
-
-        <div style="padding:25px 25px 0px 25px">
-
-                  
-                <div class="content-top-table">
-                    <div class="row-1">
-                            <div class="button-activity">
-                                ACTIVITY
-                            </div> 
-                    </div>
-                    <div class="row-2">
-                        <div class="button-Tpayments">
-                            TOTAL PAYMENTS(50)
-                       </div> 
-                    </div>
-                    <div class="row-3"></div>
-                </div>
-                <table>
-                        <tr>
-                         
-                          
-                          <th>Payer Number</th>
-                          <th>Reference</th>
-                          <th>Amount</th>
-                          <th>Payment Status</th>
-                          <th>Date</th>
-                          
-                        </tr>
-                        {% for payment in payments %}
-                            <tr> 
-                                <td>{{ payment.contact}}</td>
-                                <td>{{ payment.reference}}</td>
-                                <td>{{ payment.amount}} MT</td>
-                                <td>{{ payment.transaction_status }}</td>
-                                <td>{{ payment.created_at}}</td>
-                               
-                                
-                            </tr>
-                        {% endfor %}
-                                        
-                      
-                        
-                      </table>
-                     
-        </div>
-    </div>
-</div>
-<!-- End Content Info & Table -->
-
-</div>
-<!-- End Content main  -->
 
  {%  endblock%}
