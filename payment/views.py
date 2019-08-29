@@ -32,15 +32,18 @@ def Mpesa(request):
         reference  = requestPayment[""]
         api_key    = requestPayment[""]
         public_key = requestPayment[""]
-
+        
     
 
 
         if checkToken != "":
 
+            requestCheck = 
             
-            if contact != "" and amount != "" and reference != "" and api_key != "" and public_key != "" :
-                return Response({'data': "token invalido"})
+            if requestCheck > = 0:
+            
+                if contact != "" and amount != "" and reference != "" and api_key != "" and public_key != "" :
+                    return Response({'data': "token invalido"})
 
 
  
