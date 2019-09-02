@@ -48,7 +48,6 @@ class User(AbstractUser):
     username = None
     email = models.EmailField(_('email address'), unique=True)
     phone_number = models.CharField(max_length=30, blank=False, unique=True)
-    # is_active = models.BooleanField(default=False)
     is_business = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
@@ -59,9 +58,12 @@ class User(AbstractUser):
 
 class Business(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    address = models.CharField(max_length=30, blank=True)
     company_name = models.CharField(max_length=30, blank=True)
+    nuit = models.CharField(max_length=30, blank=True)
     website = models.URLField()
+    address = models.CharField(max_length=30, blank=True)
+    province = models.CharField(max_length=30, blank=True)
+    location = models.CharField(max_length=30, blank=True)
     created_date = models.DateTimeField(default=timezone.now)
     uploaded_at = models.DateTimeField(blank=True, null=True)
     def __str__(self):
