@@ -7,6 +7,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import PaymentSerializer
+from .models import  Payment
 
 
 # Create your views here.
@@ -22,17 +23,24 @@ def Mpesa(request):
     """
     List all code Payment, or create a new Payment.
     """
+    if request.method == 'GET':
+        payments = Payment.objects.all()
+        serializer = PaymentSerializer(payments, many=True)
+        return Response(serializer.data)
+
+
     #Get Data from Post API
-    serializer = PaymentSerializer(data=request.data)
-    if serializer.is_valid():
-        requestPayment = request.data
-        checkToken = requestPayment[""]
-        contact    = requestPayment[""]
-        amount     = requestPayment[""]
-        reference  = requestPayment[""]
-        api_key    = requestPayment[""]
-        public_key = requestPayment[""]
-        
+    elif request.method == 'POST':
+        serializer = PaymentSerializer(data=request.data)
+        if serializer.is_valid():
+            requestPayment = request.data
+            checkToken = requestPayment["token"]
+            contact    = requestPayment["contact"]
+            amount     = requestPayment["amount"]
+            reference  = requestPayment["reference"]
+            api_key    = requestPayment["api_key"]
+            public_key = requestPayment["public_key"]
+            website    = requestPayment["website"]
     
 
 
@@ -41,9 +49,11 @@ def Mpesa(request):
             requestCheck = 
             
             if requestCheck > = 0:
-            
-                if contact != "" and amount != "" and reference != "" and api_key != "" and public_key != "" :
-                    return Response({'data': "token invalido"})
+                return Response("Requests":"Sorry you don't have it!!!", status=status.HTTP_400_BAD_REQUEST)
+
+                if contact == "" and amount == "" and reference == "" and api_key == "" and public_key == "" :
+                     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+                
 
 
  
