@@ -2,6 +2,13 @@
   "addons": [
     "heroku-postgresql"
   ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "nose test mpesa"
+      }
+    }
+  },
   "buildpacks": [
     {
       "url": "heroku/python"
