@@ -24,8 +24,8 @@ if socket.gethostname() == 'YOUR_MACHINE_HOST_NAME':
        'default': {
           'ENGINE': 'django.db.backends.postgresql',
          'NAME': 'marketv3',
-            'USER': 'user',
-           'PASSWORD': 'password',
+            'USER': 'USER',
+           'PASSWORD': 'PASSWORD',
            'HOST':  'localhost',
            'PORT':  '5432',
 
