@@ -46,10 +46,10 @@ def Mpesa(request):
 
         if checkToken != "":
 
-            requestCheck = 
-            
-            if requestCheck > = 0:
-                return Response("Requests":"Sorry you don't have it!!!", status=status.HTTP_400_BAD_REQUEST)
+            requestCheck = ""
+
+            if requestCheck == 0:
+                return Response("Requests :Sorry you don't have it!!!", status=status.HTTP_400_BAD_REQUEST)
 
                 if contact == "" and amount == "" and reference == "" and api_key == "" and public_key == "" :
                      return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

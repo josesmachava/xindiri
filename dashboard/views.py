@@ -15,5 +15,12 @@ def index(request):
     return render(request, 'dashboard/index.html', {'payments': paymentByUser}, context)
 
 
+def painel(request):
+    paymentByUser = payment.objects.all()[:5]
+    count = payment.objects.all().count()
+    context = {'count': count}
+    return render(request, 'dashboard/painel.html', {'payments': paymentByUser}, context)
+
+
 def token(request):
     return render(request, 'dashboard/token.html')
