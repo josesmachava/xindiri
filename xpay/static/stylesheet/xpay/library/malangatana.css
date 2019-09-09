@@ -19,7 +19,6 @@ body, html{
 h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
     color: #241c15;
     line-height: 1.25;
-    font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
     outline: 0;
 }
 .resetPadding{
