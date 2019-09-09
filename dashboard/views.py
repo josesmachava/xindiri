@@ -22,5 +22,14 @@ def painel(request):
     return render(request, 'dashboard/painel.html', {'payments': paymentByUser}, context)
 
 
+def active_account(request):
+
+    return render(request, 'dashboard/active_account.html')
+
+
+
+
+
 def token(request):
     return render(request, 'dashboard/token.html')
+

@@ -7,5 +7,6 @@ urlpatterns = [
     path('', views.index, name='dashboard'),
     path('token/', views.token, name='token'),
     path('painel', views.painel, name='dashboard'),
+    path('active', views.active_account, name='active'),
 
 ]
