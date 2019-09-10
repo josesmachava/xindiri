@@ -3,7 +3,7 @@ from django.utils import timezone
 from django.db import models
 
 # Create your models here.
-class payment(models.Model):
+class xpayMpesa(models.Model):
     contact = models.CharField(max_length=255, null=False)
     token = models.CharField(max_length=255, null=False)
     amount = models.CharField(max_length=255, null=False)
