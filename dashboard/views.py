@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # from account.models import User
-from mpesa.models import payment
+from mpesa.models import xpayMpesa
 from django.contrib.auth.decorators import login_required
 
 
@@ -9,15 +9,15 @@ from django.contrib.auth.decorators import login_required
 
 # @login_required()
 def index(request):
-    paymentByUser = payment.objects.all()
-    count = payment.objects.all().count()
+    paymentByUser = xpayMpesa.objects.all()
+    count = xpayMpesa.objects.all().count()
     context = {'count': count}
     return render(request, 'dashboard/index.html', {'payments': paymentByUser}, context)
 
 
 def painel(request):
-    paymentByUser = payment.objects.all()[:5]
-    count = payment.objects.all().count()
+    paymentByUser = xpayMpesa.objects.all()[:5]
+    count = xpayMpesa.objects.all().count()
     context = {'count': count}
     return render(request, 'dashboard/painel.html', {'payments': paymentByUser}, context)
 

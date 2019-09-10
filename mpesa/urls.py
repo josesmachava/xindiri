@@ -4,6 +4,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index),
-    path('payment/', views.payment_list),
+    path('xpayMpesa/', views.xpay_mpesa),
 
 ]
