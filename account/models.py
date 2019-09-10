@@ -4,7 +4,8 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
-import uuid
+import secrets
+
 from xpay import settings
 
 
@@ -71,7 +72,7 @@ class Business(models.Model):
 
 
 class Token(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.CharField(primary_key=True, max_length=32,  blank=False,  default=secrets.token_hex(16), editable=False)
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created_date = models.DateTimeField(default=timezone.now)
     uploaded_at = models.DateTimeField(blank=True, null=True)

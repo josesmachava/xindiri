@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'mpesa',
     'account',
     'payment',
+    'uria',
     'xpay',
     'dashboard',
 ]
