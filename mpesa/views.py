@@ -78,7 +78,6 @@ def xpay_mpesa(request):
                             mpesaReturn=data,
                             amount=amount,
                             contact=contact,
-                            token=token,
                             transaction_status_code=transaction_status_code,
                             transaction_status=transaction_status,
                             transaction_id=transaction_id,
