@@ -1,0 +1,73 @@
+{% extends "../../xpay/layout/base.html" %}
+{% load static %}
+
+
+
+{% block  content %}
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <aside>
+                        {% include "dashboard/layout/aside.html" %}
+                </aside>
+
+            </div>
+            <div class="col-md-9 ">
+                    <p>Use a chave Test API para testar sua integração e a chave Live API para criar pagamentos reais. Por favor, mantenha-os privados o máximo possível. Leia mais sobre como integrar nossa API.
+
+Para acessar as APIs mais avançadas no nível da organização, você pode criar tokens de acesso à organização.
+</p>
+                  <table>
+                <tr>
+
+
+                    <th>Nome</th>
+                    <th>Token</th>
+                    <th>Data</th>
+
+                </tr>
+                <tr>
+                    <td>API Key</td>
+                    <td>{{ user.token.id }}  </td>
+
+
+                </tr>
+                <tr>
+                    <td>Test API Key</td>
+                    <td>{{ user.token.id }}  </td>
+
+
+                </tr>
+
+<tr>
+                    <td>Live API Key</td>
+                    <td>{{ user.token.id }}  </td>
+
+
+                </tr>
+
+
+
+            </table>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+

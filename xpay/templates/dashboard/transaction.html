@@ -1,0 +1,54 @@
+{% extends "../xpay/layout/base.html" %}
+{% load static %}
+
+
+
+{% block  content %}
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <aside>
+                    {% include "dashboard/layout/aside.html" %}
+                </aside>
+
+            </div>
+            <div class="col-md-9">
+
+                <table class="table table-borderless">
+
+
+                    <th>Numero do cliente</th>
+                    <th>Valor</th>
+                    <th>Status</th>
+                    <th>Data</th>
+
+                    </tr>
+                    {% for payment in payments %}
+                        <tr>
+                            <td>+{{ payment.contact }}</td>
+                            <td>{{ payment.amount }} MT</td>
+                            <td>{{ payment.transaction_status }}</td>
+                            <td>{{ payment.created_at }}</td>
+
+
+                        </tr>
+                    {% endfor %}
+
+
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+{% endblock %}

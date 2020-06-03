@@ -22,7 +22,7 @@ def index(request):
 
 
 @api_view(['GET', 'POST'])
-def xpay_mpesa(request):
+def mpesa(request):
     """
     List all code Payment, or create a new Payment.
     """
@@ -49,7 +49,7 @@ def xpay_mpesa(request):
             api_context.api_key = api_key
             api_context.public_key = public_key
             api_context.add_parameter('input_Amount', amount)
-            api_context.add_parameter('input_CustomerMSISDN', contact)
+            api_context.add_parameter('input_CustomerMSISDN', phone)
             api_context.add_parameter('input_TransactionReference', reference)
 
             #Configuacoes Do Mpesa
