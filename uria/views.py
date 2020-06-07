@@ -36,7 +36,7 @@ def transation_list(request):
 
             amount = request_transaction["amount"]
             api_key = request_transaction["api_key"]
-            phone_number = str(258) + str(request_transaction["phone_number"])
+            phone_number =  str(request_transaction["phone_number"])
             reference = secrets.token_hex(6)
             if Token.objects.filter(id=api_key).exists():
                 user = User.objects.get(token=api_key)
