@@ -1,25 +1,29 @@
 {% extends "../../xpay/layout/base.html" %}
 {% load static %}
 
+{% block styles %}
+    {#    only include css  files needed for thi page bootstap and other libs are add in base template #}
 
+    <link rel="stylesheet" href="{% static 'stylesheet/xpay/dashboard.css' %}">{% endblock %}
+{% load static %}
 
 {% block  content %}
 
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2 aside">
                 <aside>
                         {% include "dashboard/layout/aside.html" %}
                 </aside>
 
             </div>
-            <div class="col-md-9 ">
+            <div class="col-md-10 ">
                     <p>Use a chave Test API para testar sua integração e a chave Live API para criar pagamentos reais. Por favor, mantenha-os privados o máximo possível. Leia mais sobre como integrar nossa API.
-
-Para acessar as APIs mais avançadas no nível da organização, você pode criar tokens de acesso à organização.
+                    </p>
+<p>Para acessar as APIs mais avançadas no nível da organização, você pode criar tokens de acesso à organização.
 </p>
-                  <table>
+                  <table class="table table table-borderless">
                 <tr>
 
 

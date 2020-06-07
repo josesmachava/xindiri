@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'uria',
     'xpay',
     'dashboard',
+    'crispy_forms',
 ]
 
 
@@ -94,6 +95,7 @@ try:
 except ImportError:
 
     ALLOWED_HOSTS = ["*"]
+
 
     #ADMINS = [('Arnaldo Govene', 'arnaldo.govene@outlook.com'), ('Guidione  Machava', 'geral.market.co.mz@gmail.com'),
      #('Jose Machava',  'josesmachava@gmail.com'), ]

@@ -2,27 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/xpay/templates/dashboard/transaction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpesa/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mpesa/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpesa/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mpesa/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/Activate.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/activate" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/activate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/activate.csh" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/activate.csh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/activate.fish" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/activate.fish" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/python" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/python" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/python3" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/python3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/python3.8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib64" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/xpayy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/xpayy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xpay/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/account/signin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/account/signup.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/library/malangatana.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/account/businessAccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/account/businessAccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/account/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/account/signin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/active_account.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/active_account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/developer/api.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/developer/api.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/painel.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/token.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/developer/api.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/layout/aside.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/layout/aside.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/transaction.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/transaction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/payment/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/payment/payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/xpay/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/xpay/layout/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,13 +50,9 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>mpesaReturn</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,25 +68,26 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bossie" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/xpay/static/javascript" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/xpay/static/javascript" />
       <recent name="$PROJECT_DIR$/uria" />
       <recent name="$PROJECT_DIR$/mpesa" />
       <recent name="$PROJECT_DIR$/xpay/templates/dashboard/layout" />
       <recent name="$PROJECT_DIR$/xpay/static/stylesheet" />
-      <recent name="$PROJECT_DIR$/xpay/templates/xpay" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/xpay/static" />
+      <recent name="$PROJECT_DIR$/xpay/static/stylesheet/xpay" />
       <recent name="$PROJECT_DIR$/xpay/templates/dashboard/developer" />
       <recent name="$PROJECT_DIR$/xpay" />
       <recent name="$PROJECT_DIR$/xpay/templates/dashboard" />
-      <recent name="$PROJECT_DIR$/xpay/templates/dashboard/layout" />
-      <recent name="$PROJECT_DIR$/xpay/static/stylesheet/xpay" />
     </key>
   </component>
   <component name="RunManager">
@@ -199,7 +195,14 @@
       <workItem from="1591199328041" duration="1116000" />
       <workItem from="1591201159462" duration="1790000" />
       <workItem from="1591212074351" duration="1793000" />
-      <workItem from="1591213884469" duration="900000" />
+      <workItem from="1591213884469" duration="1889000" />
+      <workItem from="1591215787041" duration="798000" />
+      <workItem from="1591220461411" duration="105000" />
+      <workItem from="1591220762305" duration="95000" />
+      <workItem from="1591538023717" duration="1723000" />
+      <workItem from="1591539847718" duration="1823000" />
+      <workItem from="1591541690059" duration="1791000" />
+      <workItem from="1591543499217" duration="1068000" />
     </task>
     <servers />
   </component>
@@ -207,18 +210,34 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="717" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582842467991">
+    <state x="653" y="151" width="666" height="803" key="#xpay" timestamp="1591215412465">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state x="717" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/49.27.1871.1053@49.27.1871.1053" timestamp="1582842467991" />
-    <state x="653" y="151" width="666" height="803" key="#xpay" timestamp="1591214038184">
+    <state x="653" y="151" width="666" height="803" key="#xpay/49.27.1871.1053@49.27.1871.1053" timestamp="1591215412465" />
+    <state x="767" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1591220855838">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state x="653" y="151" width="666" height="803" key="#xpay/49.27.1871.1053@49.27.1871.1053" timestamp="1591214038184" />
-    <state x="767" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1589393617542">
+    <state x="767" y="310" width="424" height="484" key="FileChooserDialogImpl/49.27.1871.1053@49.27.1871.1053" timestamp="1591220855838" />
+    <state width="1825" height="278" key="GridCell.Tab.0.bottom" timestamp="1591539134763">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state x="767" y="310" width="424" height="484" key="FileChooserDialogImpl/49.27.1871.1053@49.27.1871.1053" timestamp="1589393617542" />
+    <state width="1825" height="278" key="GridCell.Tab.0.bottom/49.27.1871.1053@49.27.1871.1053" timestamp="1591539134763" />
+    <state width="1825" height="278" key="GridCell.Tab.0.center" timestamp="1591539134762">
+      <screen x="49" y="27" width="1871" height="1053" />
+    </state>
+    <state width="1825" height="278" key="GridCell.Tab.0.center/49.27.1871.1053@49.27.1871.1053" timestamp="1591539134762" />
+    <state width="1825" height="278" key="GridCell.Tab.0.left" timestamp="1591539134761">
+      <screen x="49" y="27" width="1871" height="1053" />
+    </state>
+    <state width="1825" height="278" key="GridCell.Tab.0.left/49.27.1871.1053@49.27.1871.1053" timestamp="1591539134761" />
+    <state width="1825" height="278" key="GridCell.Tab.0.right" timestamp="1591539134763">
+      <screen x="49" y="27" width="1871" height="1053" />
+    </state>
+    <state width="1825" height="278" key="GridCell.Tab.0.right/49.27.1871.1053@49.27.1871.1053" timestamp="1591539134763" />
+    <state x="473" y="187" key="SettingsEditor" timestamp="1591215457465">
+      <screen x="49" y="27" width="1871" height="1053" />
+    </state>
+    <state x="473" y="187" key="SettingsEditor/49.27.1871.1053@49.27.1871.1053" timestamp="1591215457465" />
     <state x="149" y="125" width="1671" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1591191262287">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
@@ -227,9 +246,9 @@
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
     <state x="640" y="380" key="com.intellij.ide.util.TipDialog/49.27.1871.1053@49.27.1871.1053" timestamp="1583497776713" />
-    <state x="647" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1582842403190">
+    <state x="647" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1591544539306">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state x="647" y="257" width="672" height="678" key="search.everywhere.popup/49.27.1871.1053@49.27.1871.1053" timestamp="1582842403190" />
+    <state x="647" y="257" width="672" height="678" key="search.everywhere.popup/49.27.1871.1053@49.27.1871.1053" timestamp="1591544539306" />
   </component>
 </project>

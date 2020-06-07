@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.views.generic import CreateView, UpdateView, DeleteView
 from .forms import BusinessForm
-
+from .models import  Business
 
 def signin(request):
     if request.method == 'POST':
@@ -41,6 +41,12 @@ def businesssignup(request):
         form = BusinessForm()
     return render(request, 'account/businessAccount.html', {'form': form})
 
+class   EditCompany(UpdateView):
+    # template_name_suffix = 'account/edit.html'
+    template_name = "account/edit.html"
+    form_class = BusinessForm
+    model = Business
+    success_url = reverse_lazy('index')
 
 @login_required()
 def logout_view(request):

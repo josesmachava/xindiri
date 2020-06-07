@@ -8,7 +8,18 @@ from django.forms import ModelForm
 class BusinessForm(UserCreationForm):
     phone_number = forms.CharField(max_length=30, label='', required=True,
                                    widget=forms.TextInput(attrs={'placeholder': 'Numero de telefone'}))
-
+    company_name = forms.CharField(max_length=30, label='', required=True,
+                                   widget=forms.TextInput(attrs={'placeholder': 'Nome comercial'}))
+    nuit = forms.CharField(max_length=30, label='', required=True,
+                                   widget=forms.TextInput(attrs={'placeholder': 'Nuit'}))
+    website = forms.CharField(max_length=30, label='', required=True,
+                                   widget=forms.TextInput(attrs={'placeholder': 'Website'}))
+    address = forms.CharField(max_length=30, label='', required=True,
+                                   widget=forms.TextInput(attrs={'placeholder': 'Endereco'}))
+    province = forms.CharField(max_length=30, label='', required=True,
+                                   widget=forms.TextInput(attrs={'placeholder': 'Province'}))
+    location = forms.CharField(max_length=30, label='', required=True,
+                                   widget=forms.TextInput(attrs={'placeholder': 'Localidade'}))
     first_name = forms.CharField(max_length=30, label='', required=True,
                                  widget=forms.TextInput(attrs={'placeholder': 'Nome'}))
     last_name = forms.CharField(max_length=30, label='', required=True,

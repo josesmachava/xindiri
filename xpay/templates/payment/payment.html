@@ -8,121 +8,142 @@
 
 {# overide the tile of the page #}
 {% block title %}
-<title>market</title>
+    <title>market</title>
 {% endblock %}
+{% block styles %}
+    {#    only include css  files needed for thi page bootstap and other libs are add in base template #}
+
+    <link rel="stylesheet" href="{% static 'stylesheet/xpay/dashboard.css' %}">{% endblock %}
+{% load static %}
 
 {% block styles %}
-{#    only include css  files needed for thi page bootstap and other libs are add in base template #}
+    {#    only include css  files needed for thi page bootstap and other libs are add in base template #}
     <style>
-        body{
-             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
             font-family: 'Roboto', sans-serif;
             background: whitesmoke;
         }
-        section{
-                width: 350px;
+
+        section {
+            width: 350px;
             background: white;
             height: 350px;
             padding: 10px;
 
         }
-        header{
-              display: flex;
+
+        header {
+            display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
 
         }
-        h1{
+
+        h1 {
             font-size: 18px;
         }
-        h2{
+
+        h2 {
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
-            }
-        header{
-                background-color: rgb(7, 71, 166);
-                color: white;
         }
+
+        header {
+            background-color: rgb(7, 71, 166);
+            color: white;
+        }
+
         input[type="text"] {
-               width: -webkit-fill-available;
-                box-sizing: border-box;
-                padding-left: 15px;
-                padding-right: 15px;
-                border: 1px solid #dbe2e8;
-                font-size: 14px;
-                -webkit-box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
-                box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
-                border-radius: 2px;
-                color: #2e3d49;
-                margin: 10px;
-                border-radius: 4px;
-                height: 44px;
+            width: -webkit-fill-available;
+            box-sizing: border-box;
+            padding-left: 15px;
+            padding-right: 15px;
+            border: 1px solid #dbe2e8;
+            font-size: 14px;
+            -webkit-box-shadow: 0 2px 2px 0 rgba(46, 60, 73, .05);
+            box-shadow: 0 2px 2px 0 rgba(46, 60, 73, .05);
+            border-radius: 2px;
+            color: #2e3d49;
+            margin: 10px;
+            border-radius: 4px;
+            height: 44px;
         }
-        .align-center{
+
+        .align-center {
             display: block;
             margin: 0 auto;
         }
-        label, h2, h1{
+
+        label, h2, h1 {
             padding-left: 15px;
         }
-        .primary-button{
+
+        .primary-button {
             border: none;
-        background-color: rgb(7, 71, 166);
-        color: white;
-        height: 40px;
-        width: 150px;
-        font-weight: bold;
-        border-radius: 4px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-            }
-        h2, label{
+            background-color: rgb(7, 71, 166);
+            color: white;
+            height: 40px;
+            width: 150px;
+            font-weight: bold;
+            border-radius: 4px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        h2, label {
             font-size: 16px;
         }
-        .mpesa-logo{
+
+        .mpesa-logo {
             width: 100px;
             height: 100px;
 
 
         }
-    .mpesa{
+
+        .mpesa {
             margin: 0 auto;
-    background-color: #ef4326;
-    border-radius: 100%;
-    height: 90px;
-    width: 90px;
-    margin-top: -70px;
+            background-color: #ef4326;
+            border-radius: 100%;
+            height: 90px;
+            width: 90px;
+            margin-top: -70px;
 
-    }
-    .paymentMpesa{
-        margin-top: 40px;
-    }
-    .mpesa img{
-       width: 60px;
-    height: 60px;
-    display: block;
-    padding: 14px;
+        }
 
-    }
-    h1 {
-        text-align: center;
-        font-size: 50px;
-        margin-bottom: 0;
-    }
-    h2 {
-        text-align: center;
-        font-size: 18px;
-    }
+        .paymentMpesa {
+            margin-top: 40px;
+        }
+
+        .mpesa img {
+            width: 60px;
+            height: 60px;
+            display: block;
+            padding: 14px;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 18px;
+        }
     </style>
-    {% endblock %}
+{% endblock %}
 <meta charset="utf-8">
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible", content="IE=edge">
-<meta name="viewport", content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" , content="IE=edge">
+<meta name="viewport" , content="width=device-width, initial-scale=1">
 
 
 
 {% block scripts %}
-{#    only include css  files needed for thi page bootstap and other libs are add in base template #}
+    {#    only include css  files needed for thi page bootstap and other libs are add in base template #}
 
 {% endblock %}
 
@@ -130,268 +151,293 @@
 {% block content %}
 
 
-<main>
+    <main>
 
         <div class="alignCenter">
-        <section class="alignCenterSingleElement">
+            <section class="alignCenterSingleElement">
 
-            <div class="mpesa">
-                <img src="http://www.przestrzeninnowacji.pl/wp-content/uploads/2018/04/27655006_2006603532961463_2972204159027559696_n.png" alt="">
-            </div>
+                <div class="mpesa">
+                    <img src="http://www.przestrzeninnowacji.pl/wp-content/uploads/2018/04/27655006_2006603532961463_2972204159027559696_n.png"
+                         alt="">
+                </div>
                 <h1>100 <sup>MTN</sup></h1>
                 <h2>Pacote basico</h2>
-            <div>
+                <div>
 
                     <form action="{% url 'mpesa' %}" method="post">
-                          {% csrf_token %}
+                        {% csrf_token %}
 
-                          <label for="phone_number">Digite o seu número</label>
-                        <input class="align-center" type="text" placeholder="Digite o seu número 84 xxx xxxx" name="contact" id="phone_number" >
-                        <button type="submit" class="primary-button align-center" type="submit">Pagar  com M-pesa</button>
+                        <label for="phone_number">Digite o seu número</label>
+                        <input class="align-center" type="text" placeholder="Digite o seu número 84 xxx xxxx"
+                               name="contact" id="phone_number">
+                        <button type="submit" class="primary-button align-center" type="submit">Pagar com M-pesa
+                        </button>
 
                     </form>
-            </div>
+                </div>
 
 
-        </section>
+            </section>
         </div>
 
-    <style>
+        <style>
 
 
-        button a{
-    color: white;
-    font-size: 20px;
-    text-transform: capitalize;
-}
-h1, h2{
-    font-family: 'Open Sans', sans-serif;
+            button a {
+                color: white;
+                font-size: 20px;
+                text-transform: capitalize;
+            }
 
-}
-header{
-    height: 80vh;
-}
-        body, html{
-     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-}
+            h1, h2 {
+                font-family: 'Open Sans', sans-serif;
 
+            }
 
-.unstyledList {
-    list-style-type: none;
-    text-transform: capitalize
-}
+            header {
+                height: 80vh;
+            }
 
-.unstyledLink {
-    text-decoration: none;
-    margin: 0 20px;
-}
-.inlineElement{
-    display:inline;
-
-}
-.unstyledLink :hover {
-
-}
-
-.resetPadding{
-    padding: 0;
-
-}
-.error{
-    color:red;
-}
-.resetMargin{
-    margin: 0;
-}
-.menuEnd{
-        display: flex;
-    justify-content: space-between;
-}
-.menu{
-        display: flex;
-    justify-content: space-around;
-}
-input{
-      box-sizing: border-box;
-    padding-left: 15px;
-    padding-right: 15px;
-    border: 1px solid #dbe2e8;
-    font-size: 14px;
-    -webkit-box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
-    box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
-    border-radius: 2px;
-    color: #2e3d49;
-    margin: 10px;
-        border-radius: 4px;
-            height: 44px;
-
-}
-.inputField{
-    box-sizing: border-box;
-    padding-left: 15px;
-    padding-right: 15px;
-    border: 1px solid #dbe2e8;
-    font-size: 14px;
-    -webkit-box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
-    box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
-    border-radius: 2px;
-    color: #2e3d49;
-    margin: 10px;
-    border-radius: 4px;
-    height: 44px;
-
-}
-
-.alignCenter{
-  display: grid;
-  height: 100vh;
-  place-items: center center;
-
-}
-
-.alignElementCenter{
-  display: grid;
-  place-items: center center;
-  height: 100%;
-}
-
-.alignTextCenter{
-    text-align: center;
-}
-.flex{
-    display: flex;
-}
-.alignTextRight{
-    text-align: right;
-}
-.alignRight{
-
-display: flex;
-justify-content: flex-end;
-
-}
-.alignTextLeft{
-    text-align: left;
-}
-
-.alignCenterSingleElement{    margin: 0 auto;
-    display: block;
+            body, html {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            }
 
 
-}
-.defaultHeader{
+            .unstyledList {
+                list-style-type: none;
+                text-transform: capitalize
+            }
 
-    height: 15vh;
-    color: #3a343a;
-    background-color: #F6F8FA;
-        margin: 0 -5.5%;
+            .unstyledLink {
+                text-decoration: none;
+                margin: 0 20px;
+            }
 
- }
+            .inlineElement {
+                display: inline;
+
+            }
+
+            .unstyledLink :hover {
+
+            }
+
+            .resetPadding {
+                padding: 0;
+
+            }
+
+            .error {
+                color: red;
+            }
+
+            .resetMargin {
+                margin: 0;
+            }
+
+            .menuEnd {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .menu {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            input {
+                box-sizing: border-box;
+                padding-left: 15px;
+                padding-right: 15px;
+                border: 1px solid #dbe2e8;
+                font-size: 14px;
+                -webkit-box-shadow: 0 2px 2px 0 rgba(46, 60, 73, .05);
+                box-shadow: 0 2px 2px 0 rgba(46, 60, 73, .05);
+                border-radius: 2px;
+                color: #2e3d49;
+                margin: 10px;
+                border-radius: 4px;
+                height: 44px;
+
+            }
+
+            .inputField {
+                box-sizing: border-box;
+                padding-left: 15px;
+                padding-right: 15px;
+                border: 1px solid #dbe2e8;
+                font-size: 14px;
+                -webkit-box-shadow: 0 2px 2px 0 rgba(46, 60, 73, .05);
+                box-shadow: 0 2px 2px 0 rgba(46, 60, 73, .05);
+                border-radius: 2px;
+                color: #2e3d49;
+                margin: 10px;
+                border-radius: 4px;
+                height: 44px;
+
+            }
+
+            .alignCenter {
+                display: grid;
+                height: 100vh;
+                place-items: center center;
+
+            }
+
+            .alignElementCenter {
+                display: grid;
+                place-items: center center;
+                height: 100%;
+            }
+
+            .alignTextCenter {
+                text-align: center;
+            }
+
+            .flex {
+                display: flex;
+            }
+
+            .alignTextRight {
+                text-align: right;
+            }
+
+            .alignRight {
+
+                display: flex;
+                justify-content: flex-end;
+
+            }
+
+            .alignTextLeft {
+                text-align: left;
+            }
+
+            .alignCenterSingleElement {
+                margin: 0 auto;
+                display: block;
 
 
-/*typography*/
+            }
+
+            .defaultHeader {
+
+                height: 15vh;
+                color: #3a343a;
+                background-color: #F6F8FA;
+                margin: 0 -5.5%;
+
+            }
 
 
-.primary-font{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-}
-
-/*typography*/
-
-/*buttons*/
- .primary-button{
-    border: none;
-    background-color: rgb(7, 71, 166);
-    color: white;
-    height: 40px;
-    width: auto;
-    font-weight: bold;
-    border-radius: 4px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-
-}
+            /*typography*/
 
 
- .default-button{
-    border: none;
-    background-color: rgba(9, 30, 66, 0.08);
-    color: black;
-    height: 40px;
-    width: auto;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            .primary-font {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            }
 
-    border-radius: 4px;
- }
- .link-button{
-    color: rgb(7, 71, 166);
-        font-weight: bold;
-    font-family: Ubuntu;
+            /*typography*/
 
- }
- .warning-button{
-     border: none;
-    background-color: #F5AA07;
-    color: black;
-    height: 40px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            /*buttons*/
+            .primary-button {
+                border: none;
+                background-color: rgb(7, 71, 166);
+                color: white;
+                height: 40px;
+                width: auto;
+                font-weight: bold;
+                border-radius: 4px;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 
-    width: auto;
-    border-radius: 4px;
- }
- .danger-button{
-    border: none;
-    background-color:#DE350A;
-    color: white;
-    height: 40px;
-    width: auto;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-
-    border-radius: 4px;
- }
- .disable-button{
-
- }
-
- /*buttons*/
+            }
 
 
-@media only screen and  (max-width: 480px) {
+            .default-button {
+                border: none;
+                background-color: rgba(9, 30, 66, 0.08);
+                color: black;
+                height: 40px;
+                width: auto;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 
-    .smallHeading{
-        font-size: 25px;
-        text-transform: capitalize;
-    }
+                border-radius: 4px;
+            }
 
-}
-@media only screen and (min-width: 768px  ) and (max-width: 992px) {
+            .link-button {
+                color: rgb(7, 71, 166);
+                font-weight: bold;
+                font-family: Ubuntu;
 
-    .mediumHeading{
+            }
 
-    }
+            .warning-button {
+                border: none;
+                background-color: #F5AA07;
+                color: black;
+                height: 40px;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 
-}
-@media only screen and (min-width: 993px) and (max-width: 1200px){
-    .largeHeading{
+                width: auto;
+                border-radius: 4px;
+            }
 
-    }
-}
+            .danger-button {
+                border: none;
+                background-color: #DE350A;
+                color: white;
+                height: 40px;
+                width: auto;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+                border-radius: 4px;
+            }
+
+            .disable-button {
+
+            }
+
+            /*buttons*/
 
 
+            @media only screen and  (max-width: 480px) {
 
-@media only screen and  (min-width: 1201px){
-    .extraLargeHeading{
+                .smallHeading {
+                    font-size: 25px;
+                    text-transform: capitalize;
+                }
 
-    }
-}
+            }
 
-         .buy{
-            width: 300px;
-            height: 40px;
+            @media only screen and (min-width: 768px  ) and (max-width: 992px) {
 
-        }
-    </style>
+                .mediumHeading {
 
-</main>
+                }
+
+            }
+
+            @media only screen and (min-width: 993px) and (max-width: 1200px) {
+                .largeHeading {
+
+                }
+            }
+
+
+            @media only screen and  (min-width: 1201px) {
+                .extraLargeHeading {
+
+                }
+            }
+
+            .buy {
+                width: 300px;
+                height: 40px;
+
+            }
+        </style>
+
+    </main>
 
 {% endblock %}
 

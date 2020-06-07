@@ -22,7 +22,7 @@ from . import views
 urlpatterns = [
     path('signin/business', views.businesssignup, name="signup"),
     path('signin', views.signin, name="signin"),
-
+    path('edit/<pk>', views.EditCompany.as_view(), name="edit"),
     # path('logout', 'django.contrib.auth.views.logout',  {'next_page': '/successfully_logged_out/'}).
     path('', include('django.contrib.auth.urls')),
 

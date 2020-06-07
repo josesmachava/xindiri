@@ -1,6 +1,10 @@
 {% extends "../xpay/layout/base.html" %}
 {% load static %}
+{% block styles %}
+    {#    only include css  files needed for thi page bootstap and other libs are add in base template #}
 
+    <link rel="stylesheet" href="{% static 'stylesheet/xpay/dashboard.css' %}">{% endblock %}
+{% load static %}
 
 
 {% block  content %}
@@ -8,15 +12,15 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2 aside">
                 <aside>
                     {% include "dashboard/layout/aside.html" %}
                 </aside>
 
             </div>
-            <div class="col-md-9">
+            <div class="col-md-10">
 
-                <table class="table table-borderless">
+                <table class="table table table-borderless">
 
 
                     <th>Numero do cliente</th>
