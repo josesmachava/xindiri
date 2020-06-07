@@ -36,7 +36,7 @@ def transation_list(request):
 
             amount = request_transaction["amount"]
             api_key = request_transaction["api_key"]
-            phone_number =  str(request_transaction["phone_number"])
+            phone_number = str(request_transaction["phone_number"])
             reference = secrets.token_hex(6)
             if Token.objects.filter(id=api_key).exists():
                 user = User.objects.get(token=api_key)
@@ -47,6 +47,11 @@ def transation_list(request):
                     return Response("os dados da conta nao prenchidos")
                 elif not user.is_active:
                     return Response("conta nao activa")
+                elif len(phone_number) < 9:
+                    return Response("o numero do telefone e menor que 8")
+                elif len(phone_number) >9:
+                    return Response("o numero do telefone e menor que 8")
+
 
 
                 else:
@@ -67,7 +72,7 @@ def transation_list(request):
                 "contact": phone_number,
                 "amount": amount,
                 "reference": reference,
-                "token":api_key
+                "token": api_key
 
             }
 

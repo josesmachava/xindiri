@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uria/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/uria/views.py" afterDir="false" />
     </list>
@@ -186,7 +187,7 @@
       <workItem from="1591541690059" duration="1791000" />
       <workItem from="1591543499217" duration="1828000" />
       <workItem from="1591545345876" duration="1892000" />
-      <workItem from="1591547465549" duration="1340000" />
+      <workItem from="1591547465549" duration="1741000" />
     </task>
     <servers />
   </component>
