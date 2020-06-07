@@ -37,24 +37,7 @@ def transation_list(request):
             amount = request_transaction["amount"]
             api_key = request_transaction["api_key"]
             phone_number = str(258) + str(request_transaction["phone_number"])
-            # try:
-            #   phone_number = str(258) + str(request_transaction["phone_number"])
-            # except:
-            #   return Response({"o numero de telefone e necesaria"})
-
-            # try:
-            # amount = request_transaction["amount"]
-            # except:
-            #   return Response({"o amout  e necesaria"})
-
-            # try:
-            # api_key = request_transaction["api_key"]
-            # except:
-            #  return Response({"api key e necesaria"})
-
-            # if api_key == "":
-            #   return Response("api nao pode ser vazia")
-
+            reference = secrets.token_hex(6)
             if Token.objects.filter(id=api_key).exists():
                 user = User.objects.get(token=api_key)
                 print(user.email)
@@ -70,14 +53,29 @@ def transation_list(request):
                     transaction = Transaction(
                         phone_number=phone_number,
                         amount=amount,
-                        reference=secrets.token_hex(6),
+                        reference=reference,
                         api_key=api_key
                     )
                     transaction.save()
 
             else:
                 return Response("api key usado nao existe")
-            return Response("salvao")
+
+            import requests
+            url = "http://localhost:8001/mpesa"
+            json_data = {
+                "contact": phone_number,
+                "amount": amount,
+                "reference": reference,
+                "token":api_key
+
+            }
+
+            resp = requests.post(url=url, json=json_data)
+            print(resp.status_code)
+            print(resp.text)
+
+            return Response(resp.text)
 
         else:
             return Response({'data': "token invalido"})

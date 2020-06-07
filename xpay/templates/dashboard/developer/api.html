@@ -12,49 +12,40 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2 aside">
+            <div class="col-md-3 aside">
                 <aside>
-                        {% include "dashboard/layout/aside.html" %}
+                    {% include "dashboard/layout/aside.html" %}
                 </aside>
 
             </div>
-            <div class="col-md-10 ">
-                    <p>Use a chave Test API para testar sua integração e a chave Live API para criar pagamentos reais. Por favor, mantenha-os privados o máximo possível. Leia mais sobre como integrar nossa API.
-                    </p>
-<p>Para acessar as APIs mais avançadas no nível da organização, você pode criar tokens de acesso à organização.
-</p>
-                  <table class="table table table-borderless">
-                <tr>
+            <div class="col-md-9 ">
+                <p class="api-documentation">Use a chave Test API para testar sua integração e a chave Live API para criar pagamentos reais. Por
+                    favor, mantenha-os privados o máximo possível. <a href="">Leia mais sobre como integrar nossa API.</a>
+                </p>
+                <table class="table table table-borderless api">
+
+                    <tr>
+                        <td>API Key</td>
+                        <td>{{ user.token.id }}  </td>
 
 
-                    <th>Nome</th>
-                    <th>Token</th>
-                    <th>Data</th>
-
-                </tr>
-                <tr>
-                    <td>API Key</td>
-                    <td>{{ user.token.id }}  </td>
+                    </tr>
+                    <tr>
+                        <td>Test API Key</td>
+                        <td>{{ user.token.id }}  </td>
 
 
-                </tr>
-                <tr>
-                    <td>Test API Key</td>
-                    <td>{{ user.token.id }}  </td>
+                    </tr>
+
+                    <tr>
+                        <td>Live API Key</td>
+                        <td>{{ user.token.id }}  </td>
 
 
-                </tr>
-
-<tr>
-                    <td>Live API Key</td>
-                    <td>{{ user.token.id }}  </td>
+                    </tr>
 
 
-                </tr>
-
-
-
-            </table>
+                </table>
 
             </div>
         </div>
