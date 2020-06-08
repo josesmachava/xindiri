@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/static/images/002-shopping-bag.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/static/images/006-pay.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xpay/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/index.html" afterDir="false" />
     </list>
@@ -199,7 +196,7 @@
       <workItem from="1591651882876" duration="1812000" />
       <workItem from="1591653804988" duration="2386000" />
       <workItem from="1591656415931" duration="1810000" />
-      <workItem from="1591658252672" duration="1008000" />
+      <workItem from="1591658252672" duration="1450000" />
     </task>
     <servers />
   </component>
