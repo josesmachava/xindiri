@@ -1,4 +1,5 @@
 import json
+from django.http import JsonResponse
 from django.shortcuts import render
 from rest_framework import generics
 from rest_framework import status
@@ -45,7 +46,7 @@ def mpesa(request):
             api_context.api_key = api_key
             api_context.public_key = public_key
             api_context.add_parameter('input_Amount', amount)
-            api_context.add_parameter('input_CustomerMSISDN', contact)
+            api_context.add_parameter('input_CustomerMSISDN', phone_number)
             api_context.add_parameter('input_TransactionReference', reference)
 
             # Configuacoes Do Mpesa
@@ -78,6 +79,15 @@ def mpesa(request):
                 transaction_id=transaction_id,
                 public_key=public_key, api_key=api_key, reference=reference)
             xpay_mpesa.save()
-            return Response({'data': data})
+            format_data = {"phone_number": phone_number,
+                "amount": amount,
+                "reference": reference,
+                "transaction_id": transaction_id,
+                "transaction_status_code":transaction_status_code,
+                "transaction_status":transaction_status
+
+            }
+            dump = json.dumps(format_data)
+            return HttpResponse(dump, content_type='application/json')
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

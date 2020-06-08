@@ -31,7 +31,7 @@
                     </tr>
                     {% for transaction in transactions %}
                         <tr>
-                            <td>+{{ transaction.contact }}</td>
+                            <td>+{{ transaction.phone_number }}</td>
                             <td>{{ transaction.amount }} MT</td>
                             <td>{{ transaction.transaction_status }}</td>
                             <td>{{ transaction.created_at }}</td>
