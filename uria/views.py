@@ -69,7 +69,7 @@ def transation_list(request):
             import requests
             url = "http://localhost:8000/mpesa"
             json_data = {
-                "contact": phone_number,
+                "phone_number": phone_number,
                 "amount": amount,
                 "reference": reference,
                 "token": api_key

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # from account.models import User
-from mpesa.models import xpayMpesa
+from mpesa.models import Transaction
 from django.contrib.auth.decorators import login_required
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView, DetailView
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
@@ -9,14 +9,14 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 # @login_required()
 def transaction(request):
-    paymentByUser = xpayMpesa.objects.all()
-    count = xpayMpesa.objects.all().count()
+    paymentByUser = Transaction.objects.all()
+    count = Transaction.objects.all().count()
     context = {'count': count}
     return render(request, 'dashboard/transaction.html', {'payments': paymentByUser}, context)
 
 
 class TransactionListView(ListView):
-    model = xpayMpesa
+    model = Transaction
     template_name = 'dashboard/transaction.html'
     context_object_name = 'transactions'
     paginate_by = 13
@@ -37,8 +37,8 @@ class TransactionListView(ListView):
 
 
 def index(request):
-    paymentByUser = xpayMpesa.objects.all()[:5]
-    count = xpayMpesa.objects.all().count()
+    paymentByUser = Transaction.objects.all()[:5]
+    count = Transaction.objects.all().count()
     context = {'count': count}
     return render(request, 'dashboard/index.html', {'payments': paymentByUser}, context)
 

@@ -1,11 +1,11 @@
 from rest_framework import serializers
-from .models import xpayMpesa
+from .models import Transaction
 
-class xpayMpesaSerializer(serializers.ModelSerializer):
+class TransactionSerializer(serializers.ModelSerializer):
 
     class Meta:
 
-        model = xpayMpesa
+        model = Transaction
         fields = '__all__'
         extra_kwargs = {'phone_number': {'required': False},
                         'mpesaReturn': {'required': False},

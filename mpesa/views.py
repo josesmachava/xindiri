@@ -4,8 +4,8 @@ from rest_framework import generics
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import xpayMpesa
-from .serializers import xpayMpesaSerializer
+from .models import Transaction
+from .serializers import TransactionSerializer
 from mpesa.api import APIContext, APIMethodType, APIRequest
 from django.http import HttpResponse, HttpResponseRedirect
 from pprint import pprint
@@ -25,18 +25,18 @@ def mpesa(request):
     List all code Payment, or create a new Payment.
     """
     if request.method == 'GET':
-        payments = xpayMpesa.objects.all()
-        serializer = xpayMpesaSerializer(payments, many=True)
+        payments = Transaction.objects.all()
+        serializer = TransactionSerializer(payments, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = xpayMpesaSerializer(data=request.data)
+        serializer = TransactionSerializer(data=request.data)
         if serializer.is_valid():
             # Recuperando dados enviados atraves do API e criacao de variaveis
-            requestPayment = request.data
-            contact = str(258) + str(requestPayment["contact"])
-            amount = requestPayment["amount"]
-            reference = requestPayment["reference"]
+            request_transaction = request.data
+            phone_number = str(258) + str(request_transaction["phone_number"])
+            amount = request_transaction["amount"]
+            reference = request_transaction["reference"]
             api_key = '9njrbcqty9ew3cyx4s6k7jvtab134rr6'
             public_key = 'MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAmptSWqV7cGUUJJhUBxsMLonux24u+FoTlrb+4Kgc6092JIszmI1QUoMohaDDXSVueXx6IXwYGsjjWY32HGXj1iQhkALXfObJ4DqXn5h6E8y5/xQYNAyd5bpN5Z8r892B6toGzZQVB7qtebH4apDjmvTi5FGZVjVYxalyyQkj4uQbbRQjgCkubSi45Xl4CGtLqZztsKssWz3mcKncgTnq3DHGYYEYiKq0xIj100LGbnvNz20Sgqmw/cH+Bua4GJsWYLEqf/h/yiMgiBbxFxsnwZl0im5vXDlwKPw+QnO2fscDhxZFAwV06bgG0oEoWm9FnjMsfvwm0rUNYFlZ+TOtCEhmhtFp+Tsx9jPCuOd5h2emGdSKD8A6jtwhNa7oQ8RtLEEqwAn44orENa1ibOkxMiiiFpmmJkwgZPOG/zMCjXIrrhDWTDUOZaPx/lEQoInJoE2i43VN/HTGCCw8dKQAwg0jsEXau5ixD0GUothqvuX3B9taoeoFAIvUPEq35YulprMM7ThdKodSHvhnwKG82dCsodRwY428kg2xM/UjiTENog4B6zzZfPhMxFlOSFX4MnrqkAS+8Jamhy1GgoHkEMrsT5+/ofjCx0HjKbT5NuA2V/lmzgJLl3jIERadLzuTYnKGWxVJcGLkWXlEPYLbiaKzbJb2sYxt+Kt5OxQqC1MCAwEAAQ=='
 
@@ -69,10 +69,10 @@ def mpesa(request):
             transaction_id = data["body"]["output_TransactionID"]
             transaction_status = data["body"]["output_ResponseDesc"]
 
-            xpay_mpesa = xpayMpesa(
+            xpay_mpesa = Transaction(
                 mpesaReturn=data,
                 amount=amount,
-                contact=contact,
+                phone_number=phone_number,
                 transaction_status_code=transaction_status_code,
                 transaction_status=transaction_status,
                 transaction_id=transaction_id,

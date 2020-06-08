@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import xpayMpesa
+from .models import Transaction
 
-admin.site.register(xpayMpesa)
+admin.site.register(Transaction)
 
 # Register your models here.
