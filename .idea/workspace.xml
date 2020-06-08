@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uria/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/uria/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/transaction.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/transaction.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +190,10 @@
       <workItem from="1591541690059" duration="1791000" />
       <workItem from="1591543499217" duration="1828000" />
       <workItem from="1591545345876" duration="1892000" />
-      <workItem from="1591547465549" duration="1741000" />
+      <workItem from="1591547465549" duration="1945000" />
+      <workItem from="1591602165795" duration="649000" />
+      <workItem from="1591630388520" duration="1214000" />
+      <workItem from="1591639679986" duration="356000" />
     </task>
     <servers />
   </component>
@@ -203,22 +209,22 @@
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
     <state x="767" y="310" width="424" height="484" key="FileChooserDialogImpl/49.27.1871.1053@49.27.1871.1053" timestamp="1591220855838" />
-    <state width="1825" height="278" key="GridCell.Tab.0.bottom" timestamp="1591539134763">
+    <state width="1825" height="278" key="GridCell.Tab.0.bottom" timestamp="1591602213806">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state width="1825" height="278" key="GridCell.Tab.0.bottom/49.27.1871.1053@49.27.1871.1053" timestamp="1591539134763" />
-    <state width="1825" height="278" key="GridCell.Tab.0.center" timestamp="1591539134762">
+    <state width="1825" height="278" key="GridCell.Tab.0.bottom/49.27.1871.1053@49.27.1871.1053" timestamp="1591602213806" />
+    <state width="1825" height="278" key="GridCell.Tab.0.center" timestamp="1591602213805">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state width="1825" height="278" key="GridCell.Tab.0.center/49.27.1871.1053@49.27.1871.1053" timestamp="1591539134762" />
-    <state width="1825" height="278" key="GridCell.Tab.0.left" timestamp="1591539134761">
+    <state width="1825" height="278" key="GridCell.Tab.0.center/49.27.1871.1053@49.27.1871.1053" timestamp="1591602213805" />
+    <state width="1825" height="278" key="GridCell.Tab.0.left" timestamp="1591602213805">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state width="1825" height="278" key="GridCell.Tab.0.left/49.27.1871.1053@49.27.1871.1053" timestamp="1591539134761" />
-    <state width="1825" height="278" key="GridCell.Tab.0.right" timestamp="1591539134763">
+    <state width="1825" height="278" key="GridCell.Tab.0.left/49.27.1871.1053@49.27.1871.1053" timestamp="1591602213805" />
+    <state width="1825" height="278" key="GridCell.Tab.0.right" timestamp="1591602213806">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state width="1825" height="278" key="GridCell.Tab.0.right/49.27.1871.1053@49.27.1871.1053" timestamp="1591539134763" />
+    <state width="1825" height="278" key="GridCell.Tab.0.right/49.27.1871.1053@49.27.1871.1053" timestamp="1591602213806" />
     <state x="473" y="187" key="SettingsEditor" timestamp="1591215457465">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
