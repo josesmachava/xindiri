@@ -67,7 +67,9 @@ def transation_list(request):
                 return Response("api key usado nao existe")
 
             import requests
-            url = "http://localhost:8000/mpesa"
+            url = request.get_host()
+            print(url)
+            url = "http://{}/mpesa".format(url)
             json_data = {
                 "phone_number": phone_number,
                 "amount": amount,
