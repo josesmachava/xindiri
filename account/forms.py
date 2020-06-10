@@ -5,26 +5,52 @@ from django.db import transaction
 from django.forms import ModelForm
 
 
+class BusinessSignUpForm(UserCreationForm):
+    first_name = forms.CharField(max_length=30, label='', required=True,
+                                 widget=forms.TextInput(attrs={'placeholder': 'Nome'}))
+    last_name = forms.CharField(max_length=30, label='', required=True,
+                                widget=forms.TextInput(attrs={'placeholder': 'Apelido'}))
+    email = forms.EmailField(max_length=254, label='', widget=forms.TextInput(attrs={'placeholder': 'E-mail'}))
+    password1 = forms.CharField(label='', widget=forms.PasswordInput(attrs={'placeholder': 'Senha'}))
+    password2 = forms.CharField(label='', widget=forms.PasswordInput(attrs={'placeholder': 'Repitir Senha'}))
+
+    class Meta(UserCreationForm.Meta):
+        model = User
+        fields = ('first_name', 'last_name', 'email', 'password1')
+
+    @transaction.atomic
+    def save(self):
+        user = super().save(commit=False)
+        user.is_active = False
+        user.is_business = True
+
+        user.save()
+
+        business = Business.objects.create(user=user)
+        token = Token.objects.create(user=user)
+        return user
+
+
 class BusinessForm(UserCreationForm):
     phone_number = forms.CharField(max_length=30, label='', required=True,
                                    widget=forms.TextInput(attrs={'placeholder': 'Numero de telefone'}))
     company_name = forms.CharField(max_length=30, label='', required=True,
                                    widget=forms.TextInput(attrs={'placeholder': 'Nome comercial'}))
     nuit = forms.CharField(max_length=30, label='', required=True,
-                                   widget=forms.TextInput(attrs={'placeholder': 'Nuit'}))
+                           widget=forms.TextInput(attrs={'placeholder': 'Nuit'}))
     website = forms.CharField(max_length=30, label='', required=True,
-                                   widget=forms.TextInput(attrs={'placeholder': 'Website'}))
+                              widget=forms.TextInput(attrs={'placeholder': 'Website'}))
     address = forms.CharField(max_length=30, label='', required=True,
-                                   widget=forms.TextInput(attrs={'placeholder': 'Endereco'}))
+                              widget=forms.TextInput(attrs={'placeholder': 'Endereco'}))
     province = forms.CharField(max_length=30, label='', required=True,
-                                   widget=forms.TextInput(attrs={'placeholder': 'Province'}))
+                               widget=forms.TextInput(attrs={'placeholder': 'Province'}))
     location = forms.CharField(max_length=30, label='', required=True,
-                                   widget=forms.TextInput(attrs={'placeholder': 'Localidade'}))
+                               widget=forms.TextInput(attrs={'placeholder': 'Localidade'}))
     first_name = forms.CharField(max_length=30, label='', required=True,
                                  widget=forms.TextInput(attrs={'placeholder': 'Nome'}))
     last_name = forms.CharField(max_length=30, label='', required=True,
                                 widget=forms.TextInput(attrs={'placeholder': 'Apelido'}))
-    email = forms.EmailField(max_length=254, label='',  widget=forms.TextInput(attrs={'placeholder': 'E-mail'}))
+    email = forms.EmailField(max_length=254, label='', widget=forms.TextInput(attrs={'placeholder': 'E-mail'}))
     password1 = forms.CharField(label='', widget=forms.PasswordInput(attrs={'placeholder': 'Senha'}))
     password2 = forms.CharField(label='', widget=forms.PasswordInput(attrs={'placeholder': 'Repitir Senha'}))
 
@@ -41,7 +67,7 @@ class BusinessForm(UserCreationForm):
         user.save()
 
         business = Business.objects.create(user=user)
-        token  = Token.objects.create(user=user)
+        token = Token.objects.create(user=user)
         return user
 
 
@@ -66,5 +92,3 @@ class StudentSignUpdateForm(ModelForm):
         model = User
         fields = ('first_name', 'last_name', 'email', 'location', 'birth_date', 'phone_number', 'description',
                   'educational_institution')
-
-

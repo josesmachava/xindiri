@@ -1,0 +1,177 @@
+{% extends "xpay/layout/base.html" %}
+{% load staticfiles %}
+
+{% comment %}
+
+{% endcomment %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+
+{# overide the tile of the page #}
+{% block title %}
+    <title>Price</title>
+{% endblock %}
+
+{% block styles %}
+    {#    only include css  files needed for thi page bootstap and other libs are add in base template #}
+
+    <link rel="stylesheet" href="{% static 'stylesheet/xpay/account/signin.css' %}">
+    <style>
+        body {
+            color: #4f566b;
+        }
+
+        .logo {
+            width: 60px;
+        }
+
+        .left {
+            background: whitesmoke;
+            height: 100vh;
+            padding-top: 150px;
+
+        }
+
+        .features {
+
+            padding: 10px;
+        }
+
+        .features h3 {
+            display: inline;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .right {
+            margin-top: 150px;
+
+        }
+
+        .icon-feature {
+            width: 13px;
+        }
+
+        .copy {
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+{% endblock %}
+
+
+{% block scripts %}
+    {#    only include css  files needed for thi page bootstap and other libs are add in base template #}
+
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 left">
+                <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                        <h1><img class="logo"
+                                 src="{% static 'images/logo.png' %}"
+                                 alt="xindiri"></h1>
+                        <div class="features">
+                            <img class="icon-feature"
+                                 src="https://www.pngkit.com/png/full/776-7768720_success-icon-arrow-icon.png" alt="">
+                            <h3> Registo rápida </h3>
+                            <p>Digite seu endereço de e-mail para criar uma conta.
+                            </p>
+                        </div>
+                        <div class="features">
+                            <img class="icon-feature"
+                                 src="https://www.pngkit.com/png/full/776-7768720_success-icon-arrow-icon.png" alt="">
+                            <h3>Configuração rápida.</h3>
+
+                            <p> Comece a aceitar pagamentos em 15 minutos.</p>
+                        </div>
+                        <div class="features">
+                            <img class="icon-feature"
+                                 src="https://www.pngkit.com/png/full/776-7768720_success-icon-arrow-icon.png" alt="">
+                            <h3>Preços honestos.
+                            </h3>
+                            <p>
+                                Pague apenas por transações bem-sucedidas.</p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <footer class="copy">
+                    <p class=" text-center">&copy xindiri {% now 'Y' %}
+                </footer>
+
+            </div>
+            <div class="col-md-6 right">
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <h4>Crie sua conta </h4>
+                        <form method="post" novalidate>
+
+                            {% csrf_token %}
+                            <input type="hidden" name="next" value="{{ next }}">
+
+                            <div class="row">
+                                <div class="col-md-6">
+
+                                    {{ form.first_name|as_crispy_field }}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.last_name|as_crispy_field }}
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    {{ form.email|as_crispy_field }}
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    {{ form.password1|as_crispy_field }}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.password2|as_crispy_field }}
+                                </div>
+                            </div>
+
+
+                            <input type="submit" name="hello" class="btn btn-primary" value="Criar conta">
+
+
+                            <!--<p>Ao clicar em criar conta, você concorda com nossos Termos de Uso e nossa Política de Privacidade.</p>-->
+                            <p class="text-center"><a href="{% url 'signin' %}">ou iniciar sessao</a></p>
+                    </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
