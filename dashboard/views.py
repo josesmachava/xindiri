@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # from account.models import User
 from django.utils.decorators import method_decorator
@@ -57,4 +57,7 @@ def active_account(request):
 
 
 def api(request):
+    if not request.user.is_business:
+        return redirect('active')
+
     return render(request, 'dashboard/developer/api.html')

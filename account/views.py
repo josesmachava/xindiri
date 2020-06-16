@@ -22,6 +22,8 @@ def signin(request):
 
         if user is not None:
             login(request, user)
+            if not request.user.is_business:
+                return redirect('active')
             return redirect('index')
         else:
             messages.error(request, "E-mail e senha não correspodem.")

@@ -24,6 +24,7 @@
             <form class="edit-perfil" method="post">{% csrf_token %}
 
                 {% csrf_token %}
+
                 <input type="hidden" name="next" value="{{ next }}">
                 {{ form.company_name|as_crispy_field }}
 
