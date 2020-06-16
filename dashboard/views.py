@@ -1,13 +1,17 @@
 from django.shortcuts import render
 
 # from account.models import User
+from django.utils.decorators import method_decorator
+
 from mpesa.models import Transaction
 from django.contrib.auth.decorators import login_required
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView, DetailView
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+
+
 # Create your views here.
 
-# @login_required()
+@login_required
 def transaction(request):
     paymentByUser = Transaction.objects.all()
     count = Transaction.objects.all().count()
@@ -15,6 +19,8 @@ def transaction(request):
     return render(request, 'dashboard/transaction.html', {'payments': paymentByUser}, context)
 
 
+
+method_decorator(login_required)
 class TransactionListView(ListView):
     model = Transaction
     template_name = 'dashboard/transaction.html'
@@ -36,6 +42,7 @@ class TransactionListView(ListView):
         return context
 
 
+@login_required
 def index(request):
     paymentByUser = Transaction.objects.all()[:5]
     count = Transaction.objects.all().count()
@@ -43,6 +50,8 @@ def index(request):
     return render(request, 'dashboard/index.html', {'payments': paymentByUser}, context)
 
 
+
+@login_required
 def active_account(request):
     return render(request, 'dashboard/active_account.html')
 

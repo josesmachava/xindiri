@@ -13,13 +13,13 @@
 
     <div class="container-fluid">
     <div class="row">
-        <div class="col-md-9 aside">
+        <div class="col-md-3 aside">
             <aside>
                 {% include "dashboard/layout/aside.html" %}
             </aside>
 
         </div>
-        <div class="col-md-3">
+        <div class="col-md-9">
 
             <form class="edit-perfil" method="post">{% csrf_token %}
 
@@ -27,6 +27,7 @@
                 <input type="hidden" name="next" value="{{ next }}">
                 {{ form.company_name|as_crispy_field }}
 
+                  {{ form.phone_number|as_crispy_field }}
 
                 {{ form.nuit|as_crispy_field }}
 
@@ -43,7 +44,7 @@
             </form>
         </div>
 
-
+    </div>
     </div>
 
 

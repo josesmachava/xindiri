@@ -1,64 +1,60 @@
-{% extends "../xpay/layout/base.html" %} {% load static %} {% block content %}
-    {% include "xpay/layout/navegation.html" %}
+{% extends "../xpay/layout/base.html" %}
+{% load static %}
+{% block styles %}
+    {#    only include css  files needed for thi page bootstap and other libs are add in base template #}
 
-    {% block styles %}
-        {#    only include css  files needed for thi page bootstap and other libs are add in base template #}
+    <link rel="stylesheet" href="{% static 'stylesheet/xpay/dashboard.css' %}">{% endblock %}
+{% load static %}
 
-        <link rel="stylesheet" href="{% static 'stylesheet/xpay/dashboard.css' %}">{% endblock %}
-    {% load static %}
-    <div class="container">
+
+{% block  content %}
+
+
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-3 aside">
+                <aside>
+                    {% include "dashboard/layout/aside.html" %}
+                </aside>
+
+            </div>
+            <div class="col-md-9">
                 <div class="col-md-6">
                     <h1>Activar Conta</h1>
-
+                    {{ user.last_name }}
                     <h2>Bem-vindo ao Xindiri</h2>
                     <p>
                         Antes de aceitar pagamentos usando mpesa, precisamos de algumas
                         informações adicionais. Por favor, preencha as informações necessárias
                         e você estará pronto para aceitar pagamentos com mpesa.
                     </p>
+                    <button type="button" class="btn btn-primary"><a href="{% url "edit" user.business.id %}">Activar conta</a>
+                    </button>
 
-                    <button class="primary-button">Activar conta</button>
-                    <button class="default-button">Ver API Key</button>
+                    <button type="button" class="btn btn-link"><a href="{% url "api" %}"> Ver API Key</a></button>
                 </div>
-            </div>
-            <div col-md-3>
-                <div class="">
-                    <h3>Contas de Levantamento</h3>
+                <h3>Precisa de alguma ajuda?</h3>
 
-                    <ul>
-                        <li>Mpesa</li>
-                        <li>Standard Bank</li>
-                    </ul>
-                    <span>adicionar conta</span>
-                </div>
-            </div>
-            <div col-md-3>
-                <div class="">
-                    <h3>Para Desenvolvedores</h3>
-
-                    <ul>
-                        <li>Mpesa</li>
-                        <li>Standard Bank</li>
-                    </ul>
-                    <span>adicionar conta</span>
-                </div>
-            </div>
-            <div col-md-3>
-                <div class="">
-                    <h3>Precisa de alguma ajuda?</h3>
-
-                    <p>
-                        Obtenha assistência a qualquer momento visitando o
-                        <span class="link-button">centro de ajuda</span>, entrando em contato
-                        com o <span class="link-button">suporte</span> ou ligando para
-                        +258869394995 Forneça o ID de parceiro # 6329741 ao entrar em contato
-                        com o suporte
-                    </p>
-                </div>
+                <p>
+                    Obtenha assistência a qualquer momento visitando o
+                    <span class="link-button">centro de ajuda</span>, entrando em contato
+                    com o <span class="link-button">suporte</span> ou ligando para
+                    +258869394995 Forneça o ID de parceiro # 6329741 ao entrar em contato
+                    com o suporte
+                </p>
             </div>
         </div>
     </div>
+
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
 
 {% endblock %}

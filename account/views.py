@@ -6,6 +6,8 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 from django.views.generic import CreateView, UpdateView, DeleteView
 from .forms import BusinessSignUpForm, BusinessForm
 from .models import Business
@@ -26,49 +28,38 @@ def signin(request):
     return render(request, 'account/signin.html')
 
 
-def businesssignups(request):
-    if request.method == 'POST':
-        form = BusinessSignUpForm(request.POST)
-        if form.is_valid():
-            form.save()
-            email = form.cleaned_data.get('email')
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=email, password=raw_password)
-            if user is not None:
-                login(request, user)
-                return redirect('index')
-
-    else:
-        form = BusinessSignUpForm()
-    return render(request, 'account/business_account.html', {'form': form})
-
-
 def businesssignup(request):
     if request.method == 'POST':
         form = BusinessSignUpForm(request.POST)
         if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('email')
+            email = form.cleaned_data.get('email')
             raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
+            user = form.save()
+
+            user = authenticate(username=email, password=raw_password)
             if user is not None:
                 login(request, user)
-                return redirect('index')
+                return redirect('active')
+
     else:
         form = BusinessSignUpForm()
-
     return render(request, 'account/business_account.html', {'form': form})
+
+
+login_required()
 
 
 class EditCompany(UpdateView):
     # template_name_suffix = 'account/edit.html'
     template_name = "account/edit.html"
-    form_class = BusinessForm
     model = Business
+    form_class = BusinessForm
     success_url = reverse_lazy('index')
 
 
-@login_required()
+login_required()
+
+
 def logout_view(request):
     logout(request)
     # Redirect to a succe

@@ -6,89 +6,44 @@ from django.forms import ModelForm
 
 
 class BusinessSignUpForm(UserCreationForm):
-    first_name = forms.CharField(max_length=30, label='', required=True,
-                                 widget=forms.TextInput(attrs={'placeholder': 'Nome'}))
-    last_name = forms.CharField(max_length=30, label='', required=True,
-                                widget=forms.TextInput(attrs={'placeholder': 'Apelido'}))
-    email = forms.EmailField(max_length=254, label='', widget=forms.TextInput(attrs={'placeholder': 'E-mail'}))
-    password1 = forms.CharField(label='', widget=forms.PasswordInput(attrs={'placeholder': 'Senha'}))
-    password2 = forms.CharField(label='', widget=forms.PasswordInput(attrs={'placeholder': 'Repitir Senha'}))
-
+    first_name = forms.CharField(max_length=30, label='Nome',  required=True, widget=forms.TextInput(attrs={'placeholder': 'Nome'}))
+    last_name = forms.CharField(max_length=30, label='Apelido', required=True    , widget=forms.TextInput(attrs={'placeholder': 'Apelido'}))
+    email = forms.EmailField(max_length=254, label='Email',  widget=forms.TextInput(attrs={'placeholder': 'E-mail'}))
+    password1 = forms.CharField(label='Palavra passe',  widget=forms.PasswordInput(attrs={'placeholder': 'Palavra Passe'}))
+    password2 = forms.CharField(label='Repitir Palavra Passe ',  widget=forms.PasswordInput(attrs={'placeholder': 'Repitir Palavra Passe  '}))
     class Meta(UserCreationForm.Meta):
         model = User
         fields = ('first_name', 'last_name', 'email', 'password1')
-
     @transaction.atomic
     def save(self):
         user = super().save(commit=False)
-        user.is_active = False
-        user.is_business = True
 
         user.save()
 
         business = Business.objects.create(user=user)
         token = Token.objects.create(user=user)
+
+        user.is_active = False
+        user.is_business = False
         return user
 
 
-class BusinessForm(UserCreationForm):
-    phone_number = forms.CharField(max_length=30, label='', required=True,
-                                   widget=forms.TextInput(attrs={'placeholder': 'Numero de telefone'}))
-    company_name = forms.CharField(max_length=30, label='', required=True,
+class BusinessForm(ModelForm):
+    phone_number = forms.CharField(max_length=30, label='Número de telefone', required=True,
+                                   widget=forms.TextInput(attrs={'placeholder': 'Número de telefone'}))
+    company_name = forms.CharField(max_length=30, label='Nome comercial', required=True,
                                    widget=forms.TextInput(attrs={'placeholder': 'Nome comercial'}))
-    nuit = forms.CharField(max_length=30, label='', required=True,
+    nuit = forms.CharField(max_length=30, label='Nuit', required=True,
                            widget=forms.TextInput(attrs={'placeholder': 'Nuit'}))
-    website = forms.CharField(max_length=30, label='', required=True,
+    website = forms.CharField(max_length=30, label='Website', required=True,
                               widget=forms.TextInput(attrs={'placeholder': 'Website'}))
-    address = forms.CharField(max_length=30, label='', required=True,
-                              widget=forms.TextInput(attrs={'placeholder': 'Endereco'}))
-    province = forms.CharField(max_length=30, label='', required=True,
-                               widget=forms.TextInput(attrs={'placeholder': 'Province'}))
-    location = forms.CharField(max_length=30, label='', required=True,
+    address = forms.CharField(max_length=30, label='Endereço', required=True,
+                              widget=forms.TextInput(attrs={'placeholder': 'Endereço'}))
+    province = forms.CharField(max_length=30, label='Província', required=True,
+                               widget=forms.TextInput(attrs={'placeholder': 'Província'}))
+    location = forms.CharField(max_length=30, label='Localidade', required=True,
                                widget=forms.TextInput(attrs={'placeholder': 'Localidade'}))
-    first_name = forms.CharField(max_length=30, label='', required=True,
-                                 widget=forms.TextInput(attrs={'placeholder': 'Nome'}))
-    last_name = forms.CharField(max_length=30, label='', required=True,
-                                widget=forms.TextInput(attrs={'placeholder': 'Apelido'}))
-    email = forms.EmailField(max_length=254, label='', widget=forms.TextInput(attrs={'placeholder': 'E-mail'}))
-    password1 = forms.CharField(label='', widget=forms.PasswordInput(attrs={'placeholder': 'Senha'}))
-    password2 = forms.CharField(label='', widget=forms.PasswordInput(attrs={'placeholder': 'Repitir Senha'}))
-
-    class Meta(UserCreationForm.Meta):
-        model = User
-        fields = ('phone_number', 'first_name', 'last_name', 'email', 'password1')
-
-    @transaction.atomic
-    def save(self):
-        user = super().save(commit=False)
-        user.is_active = False
-        user.is_business = True
-
-        user.save()
-
-        business = Business.objects.create(user=user)
-        token = Token.objects.create(user=user)
-        return user
-
-
-class StudentSignUpdateForm(ModelForm):
-    first_name = forms.CharField(label="", widget=forms.TextInput(attrs={'placeholder': 'Nome'}), max_length=30,
-                                 required=False, help_text='Optional.')
-    last_name = forms.CharField(label="", widget=forms.TextInput(attrs={'placeholder': 'Apelido'}), max_length=30,
-                                required=False, help_text='Optional.')
-    email = forms.EmailField(label="", widget=forms.TextInput(attrs={'placeholder': 'E-mail'}), max_length=254,
-                             help_text='Required. Inform a valid email address.')
-    location = forms.CharField(label="", widget=forms.TextInput(attrs={'placeholder': 'loacal'}), max_length=30,
-                               required=False)
-    phone_number = forms.CharField(label="", widget=forms.TextInput(attrs={'placeholder': 'Número de telefone'}),
-                                   max_length=30)
-    description = forms.CharField(label="", widget=forms.TextInput(attrs={'placeholder': 'Sobre me'}), max_length=30)
-    educational_institution = forms.CharField(label="",
-                                              widget=forms.TextInput(attrs={'placeholder': 'Instituição de ensino'}),
-                                              max_length=30)
-    birth_date = forms.DateField(widget=forms.SelectDateWidget)
 
     class Meta:
-        model = User
-        fields = ('first_name', 'last_name', 'email', 'location', 'birth_date', 'phone_number', 'description',
-                  'educational_institution')
+        model = Business
+        fields = ('phone_number', 'company_name', 'nuit', 'website', 'address', 'province', 'location')
