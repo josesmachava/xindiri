@@ -26,7 +26,7 @@ def signin(request):
                 return redirect('active')
             return redirect('index')
         else:
-            messages.error(request, "E-mail ou senha não correspodem.")
+            messages.error(request, "E-mail ou palavra-passe não correspodem.")
     return render(request, 'account/signin.html')
 
 
