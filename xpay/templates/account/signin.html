@@ -13,37 +13,64 @@
 
 {% block styles %}
 
-<link rel="stylesheet" href="{% static 'stylesheet/xpay/library/malangatana.css' %}">
+    <link rel="stylesheet" href="{% static 'stylesheet/xpay/library/malangatana.css' %}">
+    <style>
+        body{
+            background-color: whitesmoke;
+        }
+        form {
+            margin-top: 80px;
+            padding: 25px 85px;
+            background: white none repeat scroll 0% 0%;
+            border-radius: 4px;
+            box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 
+        }
+    </style>
 {% endblock %}
 
 
 
 {% block content %}
-      <div class="alignCenter">
-        <div class="sign">
-                       <h1><img src="{% static 'images/logo2.png' %}" class="logo" alt="kutiva logo"></h1>
- 
-                    <form class="alignElementCenter"  action="signin" method="post">
-                         {% csrf_token %}
-                        
-                         <input type="email" placeholder="numero de telfone" class="inputField" name="username">
-                         <input placeholder="Senha" type="password" class="inputField" name="password">
-                        <p><a href="{% url 'password_reset' %}" class="unstyledLink link-button">Esqueceu a senha?</a></p>
-                        <input type="submit" name="hello" class="primary-button" value="Iniciar Sessão">
-                          
-                       {% for message in messages %}
-                          <p class="error alignTextCenter"> {{ message }}</p>
-                    {% endfor %}
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
 
-                    <p class="alignTextCenter"><a class="unstyledLink link-button" href="{% url 'signup' %}">ou criar conta</a></p>
-                     </form>
-     
-      </div>
-      </div>
-        
-      
+            <form action="signin" method="post">
+                <h1 class="text-center"> Mulla </h1>
 
-   
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Email</label>
+                    <input type="email" class="form-control" id="formGroupExampleInput" name="username"
+                           placeholder="E-mail">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Palavra-passe</label>
+                    <input placeholder="Palavra-passe" type="password" name="password" class="form-control"
+                           id="password">
+                </div>
+
+                {% for message in messages %}
+                    <p class="text-danger"> {{ message }}</p>
+                {% endfor %}
+                <input style="width: 100%" type="submit" name="hello" class="btn btn-primary" value="Iniciar Sessão">
+
+                <p class="text-center"><a href="{% url 'password_reset' %}" class="btn btn-link">Esqueceu a senha?</a>
+                </p>
+
+                <p class="text-center">Não tem conta? <a href="{% url 'signup' %}" class="btn btn-link">Registe-se em
+                    segundos</a></p>
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
 {% endblock %}
 

@@ -12,40 +12,76 @@
 
 
     <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-3 aside">
-            <aside>
-                {% include "dashboard/layout/aside.html" %}
-            </aside>
+        <div class="row">
+            <div class="col-md-2 aside">
+                <aside>
+                    {% include "dashboard/layout/aside.html" %}
+                </aside>
 
+            </div>
+            <div class="col-md-10">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-6">
+                            <form class="edit-perfil" method="post">{% csrf_token %}
+
+                                {% csrf_token %}
+
+                                <input type="hidden" name="next" value="{{ next }}">
+                                <h1>Detalhes da organização</h1>
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        {{ form.company_name|as_crispy_field }}
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form.nuit|as_crispy_field }}
+
+                                    </div>
+
+                                </div>
+                                <h1>Endereço</h1>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        {{ form.address|as_crispy_field }}
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form.province|as_crispy_field }}
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form.location|as_crispy_field }}
+
+                                    </div>
+                                </div>
+
+
+                                {{ form.phone_number|as_crispy_field }}
+
+
+                                {{ form.website|as_crispy_field }}
+
+
+                                <button type="submit" class="btn btn-success">Update</button>
+
+                            </form>
+                        </div>
+                        <div class="col-md-3">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <div class="col-md-9">
-
-            <form class="edit-perfil" method="post">{% csrf_token %}
-
-                {% csrf_token %}
-
-                <input type="hidden" name="next" value="{{ next }}">
-                {{ form.company_name|as_crispy_field }}
-
-                  {{ form.phone_number|as_crispy_field }}
-
-                {{ form.nuit|as_crispy_field }}
-
-                {{ form.province|as_crispy_field }}
-
-                {{ form.address|as_crispy_field }}
-                {{ form.location|as_crispy_field }}
-
-                {{ form.website|as_crispy_field }}
-
-
-                <button type="submit" class="btn btn-success">Update</button>
-
-            </form>
-        </div>
-
-    </div>
     </div>
 
 
