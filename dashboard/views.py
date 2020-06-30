@@ -18,7 +18,7 @@ def transaction(request):
     paymentByUser = Transaction.objects.all()
     count = Transaction.objects.all().count()
     context = {'count': count}
-    return render(request, 'dashboard/transaction.html', {'payments': paymentByUser}, context)
+    return render(request, '3dashboard/transaction.html', {'payments': paymentByUser}, context)
 
 
 class TransactionListView(LoginRequiredMixin, ListView):

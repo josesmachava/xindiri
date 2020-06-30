@@ -104,40 +104,60 @@
 
                         </div>
                     </div>
+
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
 
 
                                 <div class="m-card">
-                                    <div class="m-card-header">
-                                        <h1 class="title" style="font-weight: 600;">Pagamentos recentes</h1>
-                                    </div>
 
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                            <th>Numero do cliente</th>
-                                            <th>Valor</th>
-                                            <th>Status</th>
-                                            <th>Data</th>
-                                            </thead>
+                                    {% if not transaction %}
+                                        <div class="m-card-header">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="">
+                                                    <p class="text-center"><i class="fas fa-money-check fa-2x"></i>
+                                                    </p>
+                                                    <h1 class="title text-center">Você não tem nenhum pagamento de
+                                                        teste. <a href="#">Documentação</a>
+                                                    </h1>
+                                                </div>
 
-                                            </tr>
-                                            {% for payment in payments %}
-                                                <tr>
-                                                    <td>+{{ payment.phone_number }}</td>
-                                                    <td>{{ payment.amount }} MT</td>
-                                                    <td>{{ payment.transaction_status }}</td>
+                                            </div>
+                                            </h1>
+                                        </div>
 
-                                                    <td>{{ payment.created_at|date:'Y-m-d' }}</td>
+                                    {% else %}
 
+
+                                        <div class="m-card-header">
+                                            <h1 class="title" style="font-weight: 600;">Pagamentos recentes</h1>
+                                        </div>
+
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                <th>Numero do cliente</th>
+                                                <th>Valor</th>
+                                                <th>Status</th>
+                                                <th>Data</th>
+                                                </thead>
 
                                                 </tr>
-                                            {% endfor %}
-                                        </table>
-                                    </div>
+                                                {% for payment in transactions %}
+                                                    <tr>
+                                                        <td>+{{ payment.phone_number }}</td>
+                                                        <td>{{ payment.amount }} MT</td>
+                                                        <td>{{ payment.transaction_status }}</td>
 
+                                                        <td>{{ payment.created_at|date:'Y-m-d' }}</td>
+
+
+                                                    </tr>
+                                                {% endfor %}
+                                            </table>
+                                        </div>
+                                    {% endif %}
                                 </div>
                             </div>
 
