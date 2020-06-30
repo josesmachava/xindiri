@@ -63,6 +63,9 @@ table {
 
 }
 
+.nav-link-text{
+    font-size: 14px;
+}
 tr td {
     font-size: 14px;
 }
