@@ -3,9 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/account/signin.css" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/account/sign.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/templates/account/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/account/signin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpesa/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mpesa/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpesa/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mpesa/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/layout/aside.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/layout/aside.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/transaction.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/transaction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/registration/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/registration/password_reset_done.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +231,18 @@
       <workItem from="1593384561736" duration="7000" />
       <workItem from="1593429179204" duration="1384000" />
       <workItem from="1593430933630" duration="1788000" />
-      <workItem from="1593432839042" duration="1195000" />
+      <workItem from="1593432839042" duration="1876000" />
+      <workItem from="1593436238977" duration="1609000" />
+      <workItem from="1593438065341" duration="1799000" />
+      <workItem from="1593439884654" duration="1375000" />
+      <workItem from="1593454319647" duration="615000" />
+      <workItem from="1593454567937" duration="1212000" />
+      <workItem from="1593457433091" duration="1573000" />
+      <workItem from="1593519353133" duration="1808000" />
+      <workItem from="1593521330467" duration="1795000" />
+      <workItem from="1593523147189" duration="2353000" />
+      <workItem from="1593525580853" duration="1849000" />
+      <workItem from="1593527444918" duration="646000" />
     </task>
     <servers />
   </component>
@@ -267,9 +286,9 @@
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
     <state x="755" y="467" width="458" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/49.27.1871.1053@49.27.1871.1053" timestamp="1592304955286" />
-    <state x="647" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1593430679808">
+    <state x="647" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1593525985892">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state x="647" y="257" width="672" height="678" key="search.everywhere.popup/49.27.1871.1053@49.27.1871.1053" timestamp="1593430679808" />
+    <state x="647" y="257" width="672" height="678" key="search.everywhere.popup/49.27.1871.1053@49.27.1871.1053" timestamp="1593525985892" />
   </component>
 </project>

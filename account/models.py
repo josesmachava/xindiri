@@ -77,4 +77,5 @@ class Token(models.Model):
     id = models.CharField(primary_key=True, max_length=32,  blank=False,  default=secrets.token_hex(16), editable=False, unique=True)
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created_date = models.DateTimeField(default=timezone.now)
+
     uploaded_at = models.DateTimeField(blank=True, null=True)

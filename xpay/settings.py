@@ -51,9 +51,14 @@ INSTALLED_APPS = [
     'dashboard',
     'crispy_forms',
 ]
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # During development only
 
-
-
+EMAIL_HOST = 'mail.kutiva.co.mz'
+EMAIL_PORT = 26
+EMAIL_HOST_USER = 'noreply@kutiva.co.mz'
+EMAIL_HOST_PASSWORD = '849394995Jose'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'noreply@kutiva.co.mz'
 
 AUTH_USER_MODEL = 'account.User'
 LOGIN_URL='signin'

@@ -1,8 +1,44 @@
-<nav>
-    <ul>
-        <li><span><i class="fas fa-tachometer-alt"></i></span><a href="{% url 'index' %}">painel</a></li>
-        <li><span><i class="fas fa-money-bill-wave"></i></span> <a href="{% url 'transaction' %}">transações </a></li>
-        <li><span><i class="fas fa-laptop-code"></i></span><a href="{% url 'api' %}">desenvolvedor</a></li>
-        <li><span><i class="fas fa-cog"></i></span><a href="">definições</a></li>
+<nav class="navbar ">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" name="Painel" icon="book" href="{% url 'index' %}">
+                <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"><i class="fas fa-tachometer-alt"></i></span>
+                    <span
+                            class="nav-link-text">Painel</span>
+                </div>
+            </a>
+
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" name="Transações" icon="book" href="{% url 'transaction' %}">
+                <div class="d-flex align-items-center">
+                    <span class="nav-link-icon">   <i class="fas fa-money-bill-wave"></i></span>
+                    <span
+                            class="nav-link-text">Transações</span>
+                </div>
+            </a>
+
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" name="Desenvolvedor" icon="book" href="{% url 'api' %}">
+                <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"><i class="fas fa-tachometer-alt"></i></span>
+                    <span
+                            class="nav-link-text">Desenvolvedor</span>
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" name="Definições" icon="book" href="{% url 'index' %}">
+                <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"><i class="fas fa-cog"></i></span>
+                    <span
+                            class="nav-link-text">Definições</span>
+                </div>
+            </a>
+        </li>
+
     </ul>
 </nav>
+

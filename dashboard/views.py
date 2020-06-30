@@ -29,7 +29,7 @@ class TransactionListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(TransactionListView, self).get_context_data(**kwargs)
-        transactions = self.get_queryset()
+        transactions = Transaction.objects.all().filter(api_key="23b694b0fa9cdb8270ea1045d5ef9f68")
         page = self.request.GET.get('page')
         paginator = Paginator(transactions, self.paginate_by)
         try:

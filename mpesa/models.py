@@ -4,6 +4,9 @@ from django.db import models
 
 
 # Create your models here.
+from account.models import Token
+
+
 class Transaction(models.Model):
     phone_number = models.CharField(max_length=255, null=False)
     token = models.CharField(max_length=255, null=False)
