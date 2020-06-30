@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/layout/aside.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/layout/aside.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +235,7 @@
       <workItem from="1593523147189" duration="2353000" />
       <workItem from="1593525580853" duration="1849000" />
       <workItem from="1593527444918" duration="1795000" />
-      <workItem from="1593529256525" duration="248000" />
+      <workItem from="1593529256525" duration="965000" />
     </task>
     <servers />
   </component>

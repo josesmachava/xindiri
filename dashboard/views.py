@@ -8,6 +8,8 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView, DetailView
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 # Create your views here.
 
@@ -19,9 +21,7 @@ def transaction(request):
     return render(request, 'dashboard/transaction.html', {'payments': paymentByUser}, context)
 
 
-
-method_decorator(login_required)
-class TransactionListView(ListView):
+class TransactionListView(LoginRequiredMixin, ListView):
     model = Transaction
     template_name = 'dashboard/transaction.html'
     context_object_name = 'transactions'
@@ -50,12 +50,12 @@ def index(request):
     return render(request, 'dashboard/index.html', {'payments': paymentByUser}, context)
 
 
-
 @login_required
 def active_account(request):
     return render(request, 'dashboard/active_account.html')
 
 
+@login_required
 def api(request):
     if not request.user.is_business:
         return redirect('active')
