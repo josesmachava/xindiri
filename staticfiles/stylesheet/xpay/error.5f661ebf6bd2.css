@@ -1,0 +1,21 @@
+button {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+}
+
+button a {
+    color: white;
+    text-decoration: navajowhite;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+button a:hover {
+    color: white;
+    text-decoration: navajowhite;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}

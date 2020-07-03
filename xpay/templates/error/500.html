@@ -1,0 +1,39 @@
+{% extends "../xpay/layout/base.html" %}
+{% load staticfiles %}
+
+
+
+{% block styles %}
+    {#    only include css  files needed for thi page bootstap and other libs are add in base template #}
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="{% static 'stylesheet/xpay/error.css' %}">{% endblock %}
+{% load static %}
+
+
+
+{% block  content %}
+
+    <main>
+        <div class="d-flex justify-content-center">
+            <div>
+                <h1 class="text-center">Erro de servidor 500</h1>
+                <h2 class="text-center">
+                    Erro interno do servidor
+                    <a href="{% url 'index' %}">Clica aqui para voltar</a></h2>
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+{% endblock %}
+
+
+
+
+
+

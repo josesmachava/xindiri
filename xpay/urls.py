@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.conf.urls import url
 from django.conf import settings
 from django.conf.urls.static import static
-
+from django.conf.urls import handler404, handler500
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^', include('mpesa.urls')),
@@ -29,3 +29,9 @@ urlpatterns = [
     path('dashboard/', include('dashboard.urls')),
 
 ]
+
+
+
+
+handler404 = "uria.views.handler404"
+handler500 = "uria.views.handler500"
