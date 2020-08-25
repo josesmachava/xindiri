@@ -47,7 +47,7 @@ def index(request):
     paymentByUser = Transaction.objects.all()[:5]
     count = Transaction.objects.all().count()
     context = {'count': count}
-    return render(request, 'dashboard/index.html', {'payments': paymentByUser}, context)
+    return render(request, 'dashboard/index.html', {'transactions': paymentByUser}, context)
 
 
 @login_required

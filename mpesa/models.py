@@ -2,7 +2,6 @@ from django.utils import timezone
 
 from django.db import models
 
-
 # Create your models here.
 from account.models import Token
 
@@ -24,3 +23,13 @@ class Transaction(models.Model):
 
     def __str__(self):
         return "{} - {}  -  {}".format(self.phone_number, self.amount, self.reference)
+
+    def sum_amount(self):
+        sum = 0
+        for i in Transaction.objects.all():
+            print(i.token, "hello")
+            sum += i.amount
+        print(sum)
+        return "hi"
+        if name == 10:
+            print("Hello")

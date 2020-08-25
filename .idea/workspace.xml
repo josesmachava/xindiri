@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/templates/error/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/error/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/xpayy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/xpayy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpesa/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mpesa/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpesa/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mpesa/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpesa/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mpesa/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/layout/aside.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/layout/aside.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +51,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="e631890d-a9a3-4015-866c-d65176025d9e" />
   <component name="ProjectId" id="1YPRKj4gG7MddYfj6YgekBgrkMH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -50,11 +63,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/xpay/static/javascript" />
+    <property name="last_opened_file_path" value="$USER_HOME$/dev-headlinessnews" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -98,6 +112,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -244,21 +259,41 @@
       <workItem from="1593810122348" duration="601000" />
       <workItem from="1593815543400" duration="1794000" />
       <workItem from="1593817353822" duration="1003000" />
+      <workItem from="1593982447951" duration="655000" />
+      <workItem from="1593984831083" duration="141000" />
+      <workItem from="1594073346254" duration="37000" />
+      <workItem from="1594079309037" duration="1762000" />
+      <workItem from="1594081250202" duration="132000" />
+      <workItem from="1594762019500" duration="1266000" />
+      <workItem from="1594763810603" duration="1449000" />
+      <workItem from="1594765617426" duration="570000" />
+      <workItem from="1594766361047" duration="94000" />
+      <workItem from="1594766468750" duration="867000" />
+      <workItem from="1594896477994" duration="1114000" />
+      <workItem from="1594898489097" duration="617000" />
+      <workItem from="1594925309471" duration="824000" />
+      <workItem from="1595191187213" duration="177000" />
+      <workItem from="1595640474223" duration="27000" />
+      <workItem from="1598385564147" duration="2206000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="355" y="27" width="1200" height="1053" key="#Plugins" timestamp="1595640486462">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="355" y="27" width="1200" height="1053" key="#Plugins/0.27.1920.1053@0.27.1920.1053" timestamp="1595640486462" />
     <state x="653" y="151" width="666" height="803" key="#xpay" timestamp="1591215412465">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
     <state x="653" y="151" width="666" height="803" key="#xpay/49.27.1871.1053@49.27.1871.1053" timestamp="1591215412465" />
-    <state x="767" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1591220855838">
+    <state x="767" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1594073380971">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state x="767" y="310" width="424" height="484" key="FileChooserDialogImpl/49.27.1871.1053@49.27.1871.1053" timestamp="1591220855838" />
+    <state x="767" y="310" width="424" height="484" key="FileChooserDialogImpl/49.27.1871.1053@49.27.1871.1053" timestamp="1594073380971" />
     <state width="1825" height="278" key="GridCell.Tab.0.bottom" timestamp="1593182311048">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
@@ -275,9 +310,10 @@
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
     <state width="1825" height="278" key="GridCell.Tab.0.right/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
-    <state x="473" y="187" key="SettingsEditor" timestamp="1591215457465">
-      <screen x="49" y="27" width="1871" height="1053" />
+    <state x="2355" y="164" key="SettingsEditor" timestamp="1594897122109">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2355" y="164" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1594897122109" />
     <state x="473" y="187" key="SettingsEditor/49.27.1871.1053@49.27.1871.1053" timestamp="1591215457465" />
     <state x="149" y="125" width="1671" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1591191262287">
       <screen x="49" y="27" width="1871" height="1053" />
@@ -287,9 +323,25 @@
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
     <state x="755" y="467" width="458" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/49.27.1871.1053@49.27.1871.1053" timestamp="1592304955286" />
-    <state x="647" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1593525985892">
+    <state x="647" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1594081008248">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state x="647" y="257" width="672" height="678" key="search.everywhere.popup/49.27.1871.1053@49.27.1871.1053" timestamp="1593525985892" />
+    <state x="647" y="257" width="672" height="678" key="search.everywhere.popup/49.27.1871.1053@49.27.1871.1053" timestamp="1594081008248" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/mpesa/models.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/mpesa/models.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

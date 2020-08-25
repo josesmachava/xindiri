@@ -47,6 +47,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'livereload',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -59,6 +60,7 @@ INSTALLED_APPS = [
     'mpesa',
     'payment',
     'xpay',
+    'graphene_django',
 
     
 ]
@@ -68,7 +70,6 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'account.User'
 LOGIN_URL='signin'
 LOGOUT_REDIRECT_URL = 'index'
-
 
 
 

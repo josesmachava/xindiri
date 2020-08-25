@@ -3,8 +3,9 @@ pbody, html {
 
 }
 
-nav {
-    margin-top: 60px;
+nav ul li{
+    display: inline;
+
 }
 
 h2 {

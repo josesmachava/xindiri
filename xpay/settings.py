@@ -50,8 +50,60 @@ INSTALLED_APPS = [
     'xpay',
     'dashboard',
     'crispy_forms',
+    'graphene_django',
+
 ]
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # During development only
+GRAPHENE = {
+    'SCHEMA': 'xpay.schema.schema'
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 EMAIL_HOST = 'mail.kutiva.co.mz'
 EMAIL_PORT = 26

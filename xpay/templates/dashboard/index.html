@@ -81,7 +81,7 @@
                                         <div class="card-body">
                                             <div class="d-flex  justify-content-between">
 
-                                                <h1>340 MTN</h1>
+                                                <h1>{{ transactions.sum_amount }} MTN</h1>
                                                 <div class="d-flex  justify-content-between">
                                                     <div class="rounded-circle positive">
                                                         <svg width="1em" height="1em" viewBox="0 0 16 16"
@@ -112,7 +112,7 @@
 
                                 <div class="m-card">
 
-                                    {% if not transaction %}
+                                    {% if not transactions %}
                                         <div class="m-card-header">
                                             <div class="d-flex justify-content-center">
                                                 <div class="">
