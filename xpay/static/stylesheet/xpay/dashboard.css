@@ -24,3 +24,23 @@
 aside nav ul li span{
     padding: 10px;
 }
+a{
+        color: rgb(255, 255, 255);
+
+}
+a:hover{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+}
+.paragraph{
+    font-size: 18px;
+    color: #737373;
+}
+.heading{
+    font-size: 32px;
+    font-weight: bold;
+}
+.content{
+    margin-top: 50px;
+    margin-left: 50px;
+}
