@@ -25,7 +25,7 @@ urlpatterns = [
     path('pay/', include('payment.urls')),
     path('account/', include('account.urls')),
 
-    path('api/v1/payment/', include('uria.urls')),
+    path('v1/payments/', include('uria.urls')),
     path('dashboard/', include('dashboard.urls')),
 
 ]

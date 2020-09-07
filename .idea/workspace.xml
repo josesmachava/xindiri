@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/static/stylesheet/xpay/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/active_account.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/active_account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/developer/api.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/developer/api.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpesa/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mpesa/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/transaction.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/transaction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,12 +55,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/dev-headlinessnews" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -264,7 +266,12 @@
       <workItem from="1594925309471" duration="824000" />
       <workItem from="1595191187213" duration="177000" />
       <workItem from="1595640474223" duration="27000" />
-      <workItem from="1598385564147" duration="4109000" />
+      <workItem from="1598385564147" duration="4443000" />
+      <workItem from="1598437002764" duration="42000" />
+      <workItem from="1599128417576" duration="3070000" />
+      <workItem from="1599147484355" duration="271000" />
+      <workItem from="1599452285207" duration="377000" />
+      <workItem from="1599452663874" duration="3519000" />
     </task>
     <task id="LOCAL-00001" summary="implement dashboard navigation ui">
       <created>1598388857543</created>
@@ -273,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598388857543</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="improve activate account user interface">
+      <created>1598390764805</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598390764805</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +295,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implement dashboard navigation ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement dashboard navigation ui" />
+    <MESSAGE value="improve activate account user interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve activate account user interface" />
   </component>
   <component name="WindowStateProjectService">
     <state x="355" y="27" width="1200" height="1053" key="#Plugins" timestamp="1595640486462">
@@ -292,34 +307,39 @@
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
     <state x="653" y="151" width="666" height="803" key="#xpay/49.27.1871.1053@49.27.1871.1053" timestamp="1591215412465" />
-    <state x="1920" y="221" width="849" height="859" key="CommitChangelistDialog2" timestamp="1598388857366">
+    <state x="1920" y="221" width="849" height="859" key="CommitChangelistDialog2" timestamp="1598390764732">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="1920" y="221" width="849" height="859" key="CommitChangelistDialog2/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598388857366" />
-    <state x="767" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1594073380971">
-      <screen x="49" y="27" width="1871" height="1053" />
+    <state x="1920" y="221" width="849" height="859" key="CommitChangelistDialog2/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598390764732" />
+    <state x="2657" y="290" width="424" height="484" key="FileChooserDialogImpl" timestamp="1599452654622">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2657" y="290" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599452654622" />
     <state x="767" y="310" width="424" height="484" key="FileChooserDialogImpl/49.27.1871.1053@49.27.1871.1053" timestamp="1594073380971" />
-    <state width="1825" height="278" key="GridCell.Tab.0.bottom" timestamp="1593182311048">
-      <screen x="49" y="27" width="1871" height="1053" />
-    </state>
-    <state width="1825" height="278" key="GridCell.Tab.0.bottom/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
-    <state width="1825" height="278" key="GridCell.Tab.0.center" timestamp="1593182311048">
-      <screen x="49" y="27" width="1871" height="1053" />
-    </state>
-    <state width="1825" height="278" key="GridCell.Tab.0.center/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
-    <state width="1825" height="278" key="GridCell.Tab.0.left" timestamp="1593182311048">
-      <screen x="49" y="27" width="1871" height="1053" />
-    </state>
-    <state width="1825" height="278" key="GridCell.Tab.0.left/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
-    <state width="1825" height="278" key="GridCell.Tab.0.right" timestamp="1593182311048">
-      <screen x="49" y="27" width="1871" height="1053" />
-    </state>
-    <state width="1825" height="278" key="GridCell.Tab.0.right/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
-    <state x="2355" y="164" key="SettingsEditor" timestamp="1594897122109">
+    <state width="971" height="306" key="GridCell.Tab.0.bottom" timestamp="1599128439648">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2355" y="164" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1594897122109" />
+    <state width="971" height="306" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599128439648" />
+    <state width="1825" height="278" key="GridCell.Tab.0.bottom/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
+    <state width="971" height="306" key="GridCell.Tab.0.center" timestamp="1599128439648">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="971" height="306" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599128439648" />
+    <state width="1825" height="278" key="GridCell.Tab.0.center/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
+    <state width="971" height="306" key="GridCell.Tab.0.left" timestamp="1599128439648">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="971" height="306" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599128439648" />
+    <state width="1825" height="278" key="GridCell.Tab.0.left/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
+    <state width="971" height="306" key="GridCell.Tab.0.right" timestamp="1599128439648">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="971" height="306" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599128439648" />
+    <state width="1825" height="278" key="GridCell.Tab.0.right/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
+    <state x="2355" y="164" width="1007" height="731" key="SettingsEditor" timestamp="1599452428271">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2355" y="164" width="1007" height="731" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599452428271" />
     <state x="473" y="187" key="SettingsEditor/49.27.1871.1053@49.27.1871.1053" timestamp="1591215457465" />
     <state x="149" y="125" width="1671" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1591191262287">
       <screen x="49" y="27" width="1871" height="1053" />
