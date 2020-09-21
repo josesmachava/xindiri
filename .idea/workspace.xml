@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="" />
+    <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/xpayy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/xpayy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpesa/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mpesa/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpesa/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mpesa/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -265,6 +273,8 @@
       <workItem from="1599147484355" duration="271000" />
       <workItem from="1599452285207" duration="377000" />
       <workItem from="1599452663874" duration="4099000" />
+      <workItem from="1599465026703" duration="3360000" />
+      <workItem from="1600717976652" duration="459000" />
     </task>
     <task id="LOCAL-00001" summary="implement dashboard navigation ui">
       <created>1598388857543</created>
@@ -296,10 +306,6 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="355" y="27" width="1200" height="1053" key="#Plugins/0.27.1920.1053@0.27.1920.1053" timestamp="1595640486462" />
-    <state x="653" y="151" width="666" height="803" key="#xpay" timestamp="1591215412465">
-      <screen x="49" y="27" width="1871" height="1053" />
-    </state>
-    <state x="653" y="151" width="666" height="803" key="#xpay/49.27.1871.1053@49.27.1871.1053" timestamp="1591215412465" />
     <state x="1920" y="221" width="849" height="859" key="CommitChangelistDialog2" timestamp="1598390764732">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -309,35 +315,30 @@
     </state>
     <state x="2657" y="290" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599452654622" />
     <state x="767" y="310" width="424" height="484" key="FileChooserDialogImpl/49.27.1871.1053@49.27.1871.1053" timestamp="1594073380971" />
-    <state width="971" height="306" key="GridCell.Tab.0.bottom" timestamp="1599128439648">
+    <state width="1350" height="256" key="GridCell.Tab.0.bottom" timestamp="1600718192110">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="971" height="306" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599128439648" />
+    <state width="1350" height="256" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600718192110" />
     <state width="1825" height="278" key="GridCell.Tab.0.bottom/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
-    <state width="971" height="306" key="GridCell.Tab.0.center" timestamp="1599128439648">
+    <state width="1350" height="256" key="GridCell.Tab.0.center" timestamp="1600718192110">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="971" height="306" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599128439648" />
+    <state width="1350" height="256" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600718192110" />
     <state width="1825" height="278" key="GridCell.Tab.0.center/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
-    <state width="971" height="306" key="GridCell.Tab.0.left" timestamp="1599128439648">
+    <state width="1350" height="256" key="GridCell.Tab.0.left" timestamp="1600718192110">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="971" height="306" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599128439648" />
+    <state width="1350" height="256" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600718192110" />
     <state width="1825" height="278" key="GridCell.Tab.0.left/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
-    <state width="971" height="306" key="GridCell.Tab.0.right" timestamp="1599128439648">
+    <state width="1350" height="256" key="GridCell.Tab.0.right" timestamp="1600718192110">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="971" height="306" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599128439648" />
+    <state width="1350" height="256" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600718192110" />
     <state width="1825" height="278" key="GridCell.Tab.0.right/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
-    <state x="2355" y="164" width="1007" height="731" key="SettingsEditor" timestamp="1599452428271">
+    <state x="2355" y="0" width="1350" height="1080" key="SettingsEditor" timestamp="1600718172383">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2355" y="164" width="1007" height="731" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599452428271" />
-    <state x="473" y="187" key="SettingsEditor/49.27.1871.1053@49.27.1871.1053" timestamp="1591215457465" />
-    <state x="149" y="125" width="1671" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1591191262287">
-      <screen x="49" y="27" width="1871" height="1053" />
-    </state>
-    <state x="149" y="125" width="1671" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog/49.27.1871.1053@49.27.1871.1053" timestamp="1591191262287" />
+    <state x="2355" y="0" width="1350" height="1080" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600718172383" />
     <state x="755" y="467" width="458" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592304955286">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
