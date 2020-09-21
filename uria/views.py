@@ -6,7 +6,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Transaction
 from .serializers import TransationSerializer
-from account.models import Token, User
+from account.models import   User, ProductionAPI
 import secrets
 from django.http import HttpResponse, HttpResponseRedirect
 from pprint import pprint
@@ -38,7 +38,7 @@ def transation_list(request):
             api_key = request_transaction["api_key"]
             phone_number = str(request_transaction["phone_number"])
             reference = secrets.token_hex(6)
-            if Token.objects.filter(id=api_key).exists():
+            if ProductionAPI.objects.filter(id=api_key).exists():
                 user = User.objects.get(token=api_key)
                 print(user.email)
                 if not user.is_active and not user.is_business:

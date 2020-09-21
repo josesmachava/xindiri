@@ -62,6 +62,8 @@ class Business(models.Model):
     company_name = models.CharField(max_length=30, blank=True)
     nuit = models.CharField(max_length=30, blank=True)
     phone_number = models.CharField(max_length=30, blank=True)
+    public_key = models.CharField(max_length=32, blank=False, default=secrets.token_hex(32),
+                               editable=False)
 
     website = models.URLField()
     address = models.CharField(max_length=30, blank=True)
@@ -73,8 +75,16 @@ class Business(models.Model):
         return str(self.user)
 
 
-class Token(models.Model):
-    id = models.CharField(primary_key=True, max_length=32,  blank=False,  default=secrets.token_hex(16), editable=False, unique=True)
+class SandboxAPI(models.Model):
+    api_key = models.CharField(primary_key=True, max_length=32,  blank=False,  default=secrets.token_hex(16), editable=False, unique=True)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    created_date = models.DateTimeField(default=timezone.now)
+
+    uploaded_at = models.DateTimeField(blank=True, null=True)
+
+
+class ProductionAPI(models.Model):
+    api_key = models.CharField(primary_key=True, max_length=32,  blank=False,  default=secrets.token_hex(16), editable=False, unique=True)
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created_date = models.DateTimeField(default=timezone.now)
 

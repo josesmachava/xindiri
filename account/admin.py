@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import User, Business, Token
+from .models import User, Business, ProductionAPI, SandboxAPI
 
 # Register your models here.
 
@@ -13,12 +13,17 @@ admin.site.register(User, UserAdmin)
 
 
 class BusinessAdmin(admin.ModelAdmin):
-    list_display = ['user']
+    list_display = ['user', 'public_key']
 
 admin.site.register(Business, BusinessAdmin)
 
 
-class TokenAdmin(admin.ModelAdmin):
-    list_display = ['id', 'user']
+class ProductionAPIAdmin(admin.ModelAdmin):
+    list_display = ['api_key', 'user']
 
-admin.site.register(Token, TokenAdmin)
+admin.site.register(ProductionAPI, ProductionAPIAdmin)
+
+class SandboxAPIAdmin(admin.ModelAdmin):
+    list_display = ['api_key', 'user']
+
+admin.site.register(SandboxAPI, SandboxAPIAdmin)
