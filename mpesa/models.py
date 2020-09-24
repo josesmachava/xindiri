@@ -3,7 +3,7 @@ from django.utils import timezone
 from django.db import models
 
 # Create your models here.
-from account.models import ProductionAPI
+from account.models import Token
 
 
 class Transaction(models.Model):

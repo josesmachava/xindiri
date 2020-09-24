@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from .models import User, Business, SandboxAPI, ProductionAPI
+from .models import User, Business, Token
 from django.db import transaction
 from django.forms import ModelForm
 
@@ -21,8 +21,7 @@ class BusinessSignUpForm(UserCreationForm):
         user.save()
 
         business = Business.objects.create(user=user)
-        sandbox_api = SandboxAPI.objects.create(user=user)
-        production_api = ProductionAPI.objects.create(user=user)
+        token = Token.objects.create(user=user)
 
         user.is_active = False
         user.is_business = False

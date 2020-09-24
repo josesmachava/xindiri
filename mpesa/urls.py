@@ -7,6 +7,7 @@ urlpatterns = [
     path('', views.index),
     path('mpesa', views.mpesa),
     path('sandbox', views.sandbox),
+
     path("graphql", GraphQLView.as_view(graphiql=True)),
     
 ]
