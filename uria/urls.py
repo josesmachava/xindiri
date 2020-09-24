@@ -4,10 +4,7 @@ from . import views
 
 urlpatterns = [
 
-    path('', views.transation_list, name='transation'),
-
-
-
-
+    path('', views.production, name='production'),
+    path('sandbox', views.sandbox, name='sandbox'),
 
 ]
