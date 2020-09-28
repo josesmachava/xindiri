@@ -15,6 +15,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 @login_required
 def transaction(request):
+    if not request.user.is_business:
+        return redirect('active')
     paymentByUser = Transaction.objects.all()
     count = Transaction.objects.all().count()
     context = {'count': count}
@@ -44,6 +46,8 @@ class TransactionListView(LoginRequiredMixin, ListView):
 
 @login_required
 def index(request):
+    if not request.user.is_business:
+        return redirect('active')
     paymentByUser = Transaction.objects.all()[:5]
     count = Transaction.objects.all().count()
     context = {'count': count}
