@@ -26,6 +26,8 @@ urlpatterns = [
     path('account/', include('account.urls')),
 
     path('v1/payments/', include('uria.urls')),
+    path('v1/wordpress/', include('wordpress.urls')),
+    path('v1/send/', include('send.urls')),
     path('dashboard/', include('dashboard.urls')),
 
 ]
