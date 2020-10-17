@@ -24,67 +24,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="implement sandbox api and production api">
+    <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="implement navegation menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0002_auto_20190729_1618.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0003_auto_20190729_1903.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0004_auto_20190819_1345.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0005_auto_20190908_2346.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0006_auto_20190910_0031.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0007_auto_20190910_1544.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0008_auto_20191106_2330.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0009_auto_20200302_1550.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0010_auto_20200603_1533.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0011_auto_20200608_2021.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0012_auto_20200608_2026.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0013_auto_20200609_1420.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0014_auto_20200609_1422.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0015_auto_20200616_1040.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0016_auto_20200629_1522.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0017_auto_20200629_1526.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0018_auto_20200629_1550.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0019_auto_20200630_2332.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0020_auto_20200921_2216.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0021_auto_20200921_2232.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0022_auto_20200921_2233.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0023_auto_20200921_2234.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0024_auto_20200921_2234.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0025_auto_20200921_2235.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0026_auto_20200921_2235.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0027_auto_20200921_2235.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0028_auto_20200921_2235.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0029_auto_20200921_2240.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0030_auto_20200921_2240.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0031_auto_20200921_2241.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0032_auto_20200921_2309.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/migrations/0002_comment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/migrations/0003_remove_post_title.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/migrations/0004_remove_post_published_date.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/migrations/0005_auto_20200406_1119.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/migrations/0006_auto_20200406_1245.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/migrations/0007_auto_20200406_1339.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/migrations/0008_auto_20200406_1400.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/migrations/0009_auto_20200406_1511.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/migrations/0010_auto_20200406_1517.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpesa/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/mpesa/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uria/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uria/migrations/0002_transaction_public_key.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uria/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,7 +299,11 @@
       <workItem from="1601294869760" duration="875000" />
       <workItem from="1601507006822" duration="3406000" />
       <workItem from="1601511595768" duration="3669000" />
-      <workItem from="1601614631548" duration="3077000" />
+      <workItem from="1601614631548" duration="4960000" />
+      <workItem from="1601678659374" duration="1563000" />
+      <workItem from="1601994294972" duration="12000" />
+      <workItem from="1602089483713" duration="17000" />
+      <workItem from="1602919494937" duration="3813000" />
     </task>
     <task id="LOCAL-00001" summary="implement dashboard navigation ui">
       <created>1598388857543</created>
@@ -387,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600721221099</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="implement navegation menu">
+      <created>1601617792955</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601617792955</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,7 +363,8 @@
     <MESSAGE value="improve activate account user interface" />
     <MESSAGE value="fixing recent payment positions" />
     <MESSAGE value="implement sandbox api and production api" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement sandbox api and production api" />
+    <MESSAGE value="implement navegation menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement navegation menu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="355" y="27" width="1200" height="1053" key="#Plugins" timestamp="1595640486462">
@@ -425,31 +379,30 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2657" y="290" width="424" height="485" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600769118847" />
-    <state x="767" y="310" width="424" height="484" key="FileChooserDialogImpl/49.27.1871.1053@49.27.1871.1053" timestamp="1594073380971" />
-    <state width="1356" height="261" key="GridCell.Tab.0.bottom" timestamp="1601407117185">
+    <state width="678" height="261" key="GridCell.Tab.0.bottom" timestamp="1602919503507">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1356" height="261" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601407117185" />
-    <state width="1825" height="278" key="GridCell.Tab.0.bottom/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
-    <state width="1356" height="261" key="GridCell.Tab.0.center" timestamp="1601407117185">
+    <state width="678" height="261" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602919503507" />
+    <state width="678" height="261" key="GridCell.Tab.0.center" timestamp="1602919503507">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1356" height="261" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601407117185" />
-    <state width="1825" height="278" key="GridCell.Tab.0.center/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
-    <state width="1356" height="261" key="GridCell.Tab.0.left" timestamp="1601407117185">
+    <state width="678" height="261" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602919503507" />
+    <state width="678" height="261" key="GridCell.Tab.0.left" timestamp="1602919503506">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1356" height="261" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601407117185" />
-    <state width="1825" height="278" key="GridCell.Tab.0.left/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
-    <state width="1356" height="261" key="GridCell.Tab.0.right" timestamp="1601407117185">
+    <state width="678" height="261" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602919503506" />
+    <state width="678" height="261" key="GridCell.Tab.0.right" timestamp="1602919503507">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1356" height="261" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601407117185" />
-    <state width="1825" height="278" key="GridCell.Tab.0.right/49.27.1871.1053@49.27.1871.1053" timestamp="1593182311048" />
+    <state width="678" height="261" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602919503507" />
     <state x="2355" y="0" width="1350" height="1080" key="SettingsEditor" timestamp="1600718172383">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2355" y="0" width="1350" height="1080" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600718172383" />
+    <state x="2735" y="236" width="800" height="529" key="Vcs.Push.Dialog.v2" timestamp="1601617773460">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2735" y="236" width="800" height="529" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601617773460" />
     <state x="2856" y="457" width="408" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601521969506">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -458,7 +411,6 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2534" y="236" width="690" height="696" key="search.everywhere.popup/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601406775531" />
-    <state x="647" y="257" width="672" height="678" key="search.everywhere.popup/49.27.1871.1053@49.27.1871.1053" timestamp="1594081008248" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
