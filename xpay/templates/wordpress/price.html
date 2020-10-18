@@ -1,0 +1,311 @@
+{% extends "xpay/layout/base.html" %}
+{% load staticfiles %}
+
+{% comment %}
+
+{% endcomment %}
+{% load staticfiles %}
+
+{# overide the tile of the page #}
+{% block title %}
+
+    <title>Mulla</title>
+{% endblock %}
+
+<meta charset="utf-8">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" , content="IE=edge">
+<meta name="viewport" , content="width=device-width, initial-scale=1">
+
+{% block styles %}
+
+    {#    only include css  files needed for thi page bootstap and other libs are add in base template #}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <style>
+        nav {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav h1 {
+            font-size: 24px;
+        }
+
+        nav ul li {
+            display: inline;
+            font-size: 16px;
+            padding: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav ul li a:hover {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .header {
+            height: 50vh;
+        }
+
+        .header h1 {
+            padding-top: 150px;
+        }
+
+        .packages {
+            background: #F4F7FE;
+            padding: 96px 0;
+        }
+
+        .packages-columns__box {
+            background: #FFFFFF;
+            width: 100%;
+            max-width: 320px;
+            padding: 40px 48px;
+            -webkit-box-shadow: 0px 2px 8px rgba(44, 49, 73, 0.12);
+            box-shadow: 0px 2px 8px rgba(44, 49, 73, 0.12);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2C3149;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .btn--primary {
+            background: #568EE8;
+            position: relative;
+            height: 48px;
+            line-height: 48px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #fff;
+            padding: 0 32px;
+            border-radius: 4px;
+            -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+            border: none;
+            text-align: center;
+        }
+
+        ul li {
+            list-style: none;
+            font-size: 18px;
+        }
+
+        h3 {
+            text-transform: capitalize;
+        }
+
+        h5 {
+            font-size: 18px;
+            font-weight: 800;
+            color: #2C3149;
+            padding: 10px 0;
+        }
+
+        section h5:first-child {
+            font-size: 32px;
+            padding: 30px;
+        }
+
+        h5:first-letter {
+            text-transform: capitalize;
+
+
+        }
+
+        h5 p {
+            margin-bottom: 60px;
+        }
+
+        h3 {
+            color: #2C3149;
+            font-weight: 800;
+            margin: 10px 0px 30px 0px;
+        }
+
+        h4 {
+            color: #2C3149;
+            margin: 10px 0px 30px 0px;
+
+
+            font-size: 39px;
+            font-weight: 800;
+
+        }
+
+         ul li {
+            font-size: 15px;
+            line-height: 35px;
+        }
+    </style>
+{% endblock %}
+
+
+{% block scripts %}
+    {#    only include css  files needed for thi page bootstap and other libs are add in base template #}
+
+{% endblock %}
+
+
+{% block content %}
+    <nav>
+        <h1>mulla
+        </h1>
+        <ul>
+            <li><a href="{% url 'index' %}">Demo</a></li>
+            <li><a href="{% url 'index' %}">Documentação</a></li>
+            <li><a href="{% url 'signin' %}">Entrar</a></li>
+
+        </ul>
+    </nav>
+    <div class="container-fluid header">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">
+                    Solução simples de pagamentos mpesa para Wordpress.
+
+                </h1>
+                <p class="text-center">Nosso plugin realiza os pagamentos, para que você possa se concentrar no seu
+                    negócio.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="container-fluid packages">
+        <section class="container">
+            <div class="row">
+                <section class="col-md-4">
+                    <div class="packages-columns__box">
+                        <h3>básico</h3>
+                        <h4>5000 MT</h4>
+
+
+                        <ul>
+                            <li>1 website</li>
+                            <li>12 meses de suporte e atualizações</li>
+
+                        </ul>
+                        <button class="btn--primary">comprar pacote básico</button>
+                    </div>
+                </section>
+                <section class="col-md-4">
+                    <div class="packages-columns__box">
+
+                        <h3>empresas</h3>
+
+                        <h4>12500 MT</h4>
+
+
+                        <ul>
+                            <li>3 website</li>
+                            <li>12 meses de suporte e atualizações</li>
+                            <li>+ Suporte Wordpress Multisite</li>
+                        </ul>
+
+                        <button class="btn--primary">comprar pacote empresas</button>
+                    </div>
+                </section>
+                <section class="col-md-4">
+
+                    <div class="packages-columns__box">
+
+                        <h3>agência</h3>
+
+                        <h4>25000 MT</h4>
+
+
+                        <ul>
+                            <li>websites
+                                <ilimitados></ilimitados>
+                            </li>
+                            <li>12 meses de suporte e atualizações</li>
+                            <li>+ Suporte Wordpress Multisite</li>
+
+                        </ul>
+
+                        <button class="btn--primary">comprar pacote agência</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+    </section>
+
+    <div class="container-fluid">
+
+        <div class="container">
+            <div class="row">
+
+                <section class="col-md-12">
+                    <h5 class="text-center">perguntas frequentes</h5>
+                    <h5>Preciso ter habilidades de codificação para usar o WP Full Stripe?</h5>
+                    <p>Não, absolutamente não! Você pode colocar seu primeiro formulário de pagamento em funcionamento
+                        com
+                        apenas alguns cliques. No entanto, se você tiver requisitos especiais, pode desejar personalizar
+                        a
+                        aparência com estilos CSS ou contratar um desenvolvedor para desenvolver extensões ou
+                        integrações
+                        com outros sistemas.</p>
+
+                    <h5> Você oferece suporte se eu precisar?</h5>
+                    <p>Sim, estamos felizes em ajudar! Criamos plugins de ajuda, artigos da base de conhecimento e
+                        vídeos
+                        para você começar, e você também pode enviar um tíquete para nosso helpdesk de suporte.</p>
+
+                    <h5>Você oferece um teste?</h5>
+                    <p>Não oferecemos uma versão de teste, mas temos uma política de reembolso de 14 dias, para que você
+                        possa comprar com confiança.</p>
+
+                    <h5> Posso atualizar minha licença?</h5>
+                    <p>Sim, você pode atualizar a qualquer momento e pagará apenas a diferença no custo da licença.</p>
+
+                    <h5> O WP Full Stripe funciona com base em assinatura?</h5>
+                    <p> Não. O plugin continuará funcionando em seu site, mesmo depois que sua licença expirar. A
+                        licença
+                        cobre o acesso a suporte e atualizações, portanto, se você deseja garantir acesso ininterrupto a
+                        esses benefícios, deve renovar sua licença.</p>
+
+                    <h5> O WP Full Stripe funciona no WordPress.com?</h5>
+                    <p> Sim, o WP Full Stripe pode ser instalado em sites WordPress hospedados em WordPress.com.</p>
+
+                    <h5> O WP Full Stripe funciona em multisite WordPress?</h5>
+                    <p>Sim, funciona em WordPress multisite e requer uma licença comercial ou de agência.</p>
+
+
+                </section>
+            </div>
+        </div>
+    </div>
+    <section>
+        <h2 class="text-center"> Comece a aceitar pagamentos mpesa hoje</h2>
+        <button class="btn--primary">selecione o seu pacote</button>
+
+    </section>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-center">&copy mulla {% now 'Y' %}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+
+
+
+
+
