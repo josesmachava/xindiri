@@ -27,6 +27,9 @@
     <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="implement navegation menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wordpress/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordpress/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wordpress/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordpress/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wordpress/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordpress/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +309,10 @@
       <workItem from="1602919494937" duration="3813000" />
       <workItem from="1602924031844" duration="3183000" />
       <workItem from="1603006737265" duration="743000" />
-      <workItem from="1603026480785" duration="845000" />
+      <workItem from="1603026480785" duration="1281000" />
+      <workItem from="1603095792749" duration="1887000" />
+      <workItem from="1603285771666" duration="4183000" />
+      <workItem from="1603356815247" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="implement dashboard navigation ui">
       <created>1598388857543</created>
@@ -382,22 +388,22 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2657" y="290" width="424" height="485" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600769118847" />
-    <state width="678" height="261" key="GridCell.Tab.0.bottom" timestamp="1602919503507">
+    <state width="678" height="261" key="GridCell.Tab.0.bottom" timestamp="1603027338584">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="678" height="261" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602919503507" />
-    <state width="678" height="261" key="GridCell.Tab.0.center" timestamp="1602919503507">
+    <state width="678" height="261" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603027338584" />
+    <state width="678" height="261" key="GridCell.Tab.0.center" timestamp="1603027338584">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="678" height="261" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602919503507" />
-    <state width="678" height="261" key="GridCell.Tab.0.left" timestamp="1602919503506">
+    <state width="678" height="261" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603027338584" />
+    <state width="678" height="261" key="GridCell.Tab.0.left" timestamp="1603027338584">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="678" height="261" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602919503506" />
-    <state width="678" height="261" key="GridCell.Tab.0.right" timestamp="1602919503507">
+    <state width="678" height="261" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603027338584" />
+    <state width="678" height="261" key="GridCell.Tab.0.right" timestamp="1603027338584">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="678" height="261" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602919503507" />
+    <state width="678" height="261" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603027338584" />
     <state x="2355" y="0" width="1350" height="1080" key="SettingsEditor" timestamp="1600718172383">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

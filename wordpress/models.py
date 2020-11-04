@@ -6,6 +6,12 @@ from django.db import models
 from account.models import Token
 
 
+class Website(models.Model):
+    url = models.URLField()
+    active = models.BooleanField(default=False)
+    blacklist = models.BooleanField(default=False)
+
+
 class Transaction(models.Model):
     phone_number = models.CharField(max_length=255, null=False)
     amount = models.CharField(max_length=255, null=False)

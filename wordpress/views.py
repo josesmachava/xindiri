@@ -5,7 +5,7 @@ from rest_framework import generics
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Transaction
+from .models import Transaction, Website
 from .serializers import TransactionSerializer
 from mpesa.api import APIContext, APIMethodType, APIRequest
 from django.http import HttpResponse, HttpResponseRedirect
@@ -41,6 +41,13 @@ def mpesa(request):
             api_key = request_payment["api_key"]
             public_key = request_payment["public_key"]
             service_provider = request_payment["service_provider"]
+
+            website_model, created = Website.objects.get_or_create(url=website, active=False,
+                                                                   blacklist=False)
+            website_model.save()
+
+
+
             api_context = APIContext()
             api_context.api_key = api_key
             api_context.public_key = public_key
@@ -80,6 +87,7 @@ def mpesa(request):
                 website=website,
                 reference=reference)
             xpay_mpesa.save()
+
             format_data = {"phone_number": phone_number,
                            "amount": amount,
                            "reference": reference,
@@ -119,6 +127,14 @@ def sandbox(request):
             website = request_payment["website"]
             public_key = request_payment["public_key"]
             service_provider = request_payment["service_provider"]
+
+            website_model, created = Website.objects.get_or_create(url=website, active=False,
+                                                                   blacklist=False)
+            website_model.save()
+
+
+            get_website = Website.objects.filter(url=website)
+            
             api_context = APIContext()
             api_context.api_key = api_key
             api_context.public_key = public_key
@@ -157,6 +173,7 @@ def sandbox(request):
                 website=website
             )
             xpay_mpesa.save()
+
             format_data = {"phone_number": phone_number,
                            "amount": amount,
                            "reference": reference,
