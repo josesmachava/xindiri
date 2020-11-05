@@ -49,7 +49,7 @@ class TransactionListView(LoginRequiredMixin, ListView):
 def index(request):
     if request.user.is_business:
         return redirect('active')
-    transaction = Transaction.objects.all()[:5]
+    transaction = Transaction.objects.all()[:10]
     total = Transaction.objects.filter(transaction_status_code="201").aggregate(Sum('amount'))
 
     return render(request, 'dashboard/index.html', {'transactions': transaction, 'total':total['amount__sum']})
