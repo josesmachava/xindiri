@@ -7,6 +7,7 @@ from mpesa.models import Transaction
 from django.contrib.auth.decorators import login_required
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView, DetailView
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.db.models import Sum
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -48,11 +49,10 @@ class TransactionListView(LoginRequiredMixin, ListView):
 def index(request):
     if request.user.is_business:
         return redirect('active')
-    paymentByUser = Transaction.objects.all()[:5]
-    count = Transaction.objects.all().count()
-    context = {'count': count}
-    return render(request, 'dashboard/index.html', {'transactions': paymentByUser}, context)
+    transaction = Transaction.objects.all()[:5]
+    total = Transaction.objects.filter(transaction_status_code="201").aggregate(Sum('amount'))
 
+    return render(request, 'dashboard/index.html', {'transactions': transaction, 'total':total['amount__sum']})
 
 @login_required
 def active_account(request):

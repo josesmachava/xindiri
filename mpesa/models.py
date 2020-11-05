@@ -9,7 +9,7 @@ from account.models import Token
 class Transaction(models.Model):
     phone_number = models.CharField(max_length=255, null=False)
     token = models.CharField(max_length=255, null=False)
-    amount = models.CharField(max_length=255, null=False)
+    amount = models.IntegerField(max_length=255, null=False)
     mpesaReturn = models.TextField()
     reference = models.CharField(max_length=255, null=False)
     api_key = models.CharField(max_length=255, null=False)
@@ -24,12 +24,5 @@ class Transaction(models.Model):
     def __str__(self):
         return "{} - {}  -  {}".format(self.phone_number, self.amount, self.reference)
 
-    def sum_amount(self):
-        sum = 0
-        for i in Transaction.objects.all():
-            print(i.token, "hello")
-            sum += i.amount
-        print(sum)
-        return "hi"
-        if name == 10:
-            print("Hello")
+    def get_total_amout(self):
+        return self.amount
