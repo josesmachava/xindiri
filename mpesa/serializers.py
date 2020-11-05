@@ -15,5 +15,6 @@ class TransactionSerializer(serializers.ModelSerializer):
                         'website': {'required': False},
                         'api_key': {'required': False},
                         'public_key': {'required': False},
-                        'token':{'required': False}
+                        'token':{'required': False},
+                        'reference': {'required': False}
                         }

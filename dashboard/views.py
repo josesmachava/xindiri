@@ -46,7 +46,7 @@ class TransactionListView(LoginRequiredMixin, ListView):
 
 @login_required
 def index(request):
-    if not request.user.is_business:
+    if request.user.is_business:
         return redirect('active')
     paymentByUser = Transaction.objects.all()[:5]
     count = Transaction.objects.all().count()
@@ -61,7 +61,7 @@ def active_account(request):
 
 @login_required
 def api(request):
-    if not request.user.is_business:
+    if  request.user.is_business:
         return redirect('active')
 
     return render(request, 'dashboard/developer/api.html')
