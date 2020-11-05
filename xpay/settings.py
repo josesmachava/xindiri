@@ -32,6 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+DATE_INPUT_FORMATS = ['%d-%m-%Y']
 
 # Application definition
 

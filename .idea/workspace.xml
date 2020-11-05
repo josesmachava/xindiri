@@ -27,6 +27,8 @@
     <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="implement navegation menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpesa/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mpesa/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -314,7 +316,9 @@
       <workItem from="1604518685218" duration="2854000" />
       <workItem from="1604533143330" duration="1817000" />
       <workItem from="1604535013766" duration="1773000" />
-      <workItem from="1604536812866" duration="781000" />
+      <workItem from="1604536812866" duration="1796000" />
+      <workItem from="1604538630502" duration="1796000" />
+      <workItem from="1604540568482" duration="776000" />
     </task>
     <task id="LOCAL-00001" summary="implement dashboard navigation ui">
       <created>1598388857543</created>
@@ -406,10 +410,10 @@
     </state>
     <state width="682" height="261" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1604533150439" />
     <state width="678" height="261" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603027338584" />
-    <state x="435" y="27" width="1350" height="1080" key="SettingsEditor" timestamp="1604537448305">
+    <state x="435" y="27" width="1007" height="731" key="SettingsEditor" timestamp="1604538652078">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="435" y="27" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1604537448304" />
+    <state x="435" y="27" width="1007" height="731" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1604538652078" />
     <state x="2355" y="0" width="1350" height="1080" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600718172383" />
     <state x="2735" y="236" width="800" height="529" key="Vcs.Push.Dialog.v2" timestamp="1601617773460">
       <screen x="1920" y="0" width="1920" height="1080" />

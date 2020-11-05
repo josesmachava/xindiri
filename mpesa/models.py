@@ -18,7 +18,7 @@ class Transaction(models.Model):
     transaction_status_code = models.CharField(max_length=255, null=False)
     transaction_status = models.CharField(max_length=255, null=False)
     website = models.URLField()
-    created_at = models.DateTimeField(default=timezone.now)
+    created_at = models.DateField(default=timezone.now, )
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):

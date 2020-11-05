@@ -1,3 +1,5 @@
+import datetime
+
 from django.shortcuts import render, redirect
 
 # from account.models import User
@@ -50,9 +52,22 @@ def index(request):
     if request.user.is_business:
         return redirect('active')
     transaction = Transaction.objects.all()[:10]
-    total = Transaction.objects.filter(transaction_status_code="201").aggregate(Sum('amount'))
+    total_amount = Transaction.objects.filter(transaction_status_code="201").aggregate(Sum('amount'))
+    today = datetime.date.today()
+    week = today - datetime.timedelta(days=7)
+    month = today - datetime.timedelta(days=31)
+    format_day = today.strftime("%Y-%m-%d")
+    today_amount = Transaction.objects.filter(transaction_status_code="201", created_at=today).aggregate(Sum('amount'))
+    week_amount = Transaction.objects.filter(transaction_status_code="201", created_at__range=[week, today]).aggregate(Sum('amount'))
+    month_amount = Transaction.objects.filter(transaction_status_code="201", created_at__range=[month, today]).aggregate(
+        Sum('amount'))
 
-    return render(request, 'dashboard/index.html', {'transactions': transaction, 'total':total['amount__sum']})
+    return render(request, 'dashboard/index.html', {'transactions': transaction,
+                                                    'total_amount': total_amount['amount__sum'],
+                                                    "today_amount": today_amount['amount__sum'],
+                                                    "week_amount": week_amount['amount__sum'],
+                                                    "month_amount": month_amount['amount__sum']
+                                                    })
 
 @login_required
 def active_account(request):
