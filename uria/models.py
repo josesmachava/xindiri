@@ -11,4 +11,4 @@ class UriaTransaction(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
     def __str__(self):
-        return "{} - {}  -  {}".format(self.contact, self.amount, self.reference)
+        return "{} - {}  -  {}".format(self.phone_number, self.amount, self.reference)

@@ -1,6 +1,10 @@
 import json
+
+from django.core.serializers import get_serializer
 from django.shortcuts import render
 from rest_framework import generics
+from django.core import serializers
+
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -38,7 +42,7 @@ def transation_list(request):
             api_key = request_transaction["api_key"]
             phone_number = str(request_transaction["phone_number"])
             reference = secrets.token_hex(6)
-            if Api.objects.filter(id=api_key).exists():
+            if Api.objects.filter(user=api_key).exists():
                 user = User.objects.get(token=api_key)
                 print(user.email)
                 if not user.is_active and not user.is_business:
@@ -91,7 +95,7 @@ def transation_list(request):
 
 
 @api_view(['GET', 'POST'])
-def sandbox(request):
+def sandbox(request,  *args, **kwargs):
     """
     List all code Payment, or create a new Payment.
     """
@@ -103,6 +107,7 @@ def sandbox(request):
     elif request.method == 'POST':
         serializer = TransationSerializer(data=request.data)
         print(serializer)
+
         if serializer.is_valid():
             request_transaction = request.data
 
@@ -114,8 +119,11 @@ def sandbox(request):
             api_key = request_transaction["api_key"]
             phone_number = str(request_transaction["phone_number"])
             reference = secrets.token_hex(6)
-            if Api.objects.filter(test_api=api_key).exists():
-                user = User.objects.get(api_test_api=api_key)
+            api = Api.objects.get(test_api=api_key)
+            print(api)
+            user = User.objects.get(id=api.user_id)
+            if api:
+
                 print(user.email)
                 if not user.is_active and not user.is_business:
                     return Response("conta nao activa e dados  nao prenchidos")
@@ -131,11 +139,12 @@ def sandbox(request):
 
 
                 else:
-                    transaction = Transaction(
+                    transaction = UriaTransaction(
                         phone_number=phone_number,
                         amount=amount,
                         reference=reference,
-                        api_key=api_key
+                        api_key=api_key,
+                        user=user,
                     )
                     transaction.save()
 
@@ -146,11 +155,14 @@ def sandbox(request):
             url = request.get_host()
             print(url)
             url = "http://{}/sandbox".format(url)
+
+
             json_data = {
                 "phone_number": phone_number,
                 "amount": amount,
                 "reference": reference,
-                "token": api_key
+                "token": api_key,
+                "user": user.id,
 
             }
 
@@ -161,7 +173,7 @@ def sandbox(request):
             return Response(resp.text)
 
         else:
-            return Response({'data': "token invalido"})
+            return Response({'data': "api invalido"})
 
 
 

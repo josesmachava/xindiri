@@ -5,6 +5,8 @@ from rest_framework import generics
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+
+from account.models import User
 from .models import Transaction
 from .serializers import TransactionSerializer
 from mpesa.api import APIContext, APIMethodType, APIRequest
@@ -108,7 +110,8 @@ def sandbox(request):
             requestPayment = request.data
             phone_number = str(258) + str(requestPayment["phone_number"])
             amount = requestPayment["amount"]
-
+            id = requestPayment['user']
+            user = User.objects.get(id=id)
             api_key = "2vxo8594o7okfp7yoekshayxj5lkf0e1"
             public_key = "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAmptSWqV7cGUUJJhUBxsMLonux24u+FoTlrb+4Kgc6092JIszmI1QUoMohaDDXSVueXx6IXwYGsjjWY32HGXj1iQhkALXfObJ4DqXn5h6E8y5/xQYNAyd5bpN5Z8r892B6toGzZQVB7qtebH4apDjmvTi5FGZVjVYxalyyQkj4uQbbRQjgCkubSi45Xl4CGtLqZztsKssWz3mcKncgTnq3DHGYYEYiKq0xIj100LGbnvNz20Sgqmw/cH+Bua4GJsWYLEqf/h/yiMgiBbxFxsnwZl0im5vXDlwKPw+QnO2fscDhxZFAwV06bgG0oEoWm9FnjMsfvwm0rUNYFlZ+TOtCEhmhtFp+Tsx9jPCuOd5h2emGdSKD8A6jtwhNa7oQ8RtLEEqwAn44orENa1ibOkxMiiiFpmmJkwgZPOG/zMCjXIrrhDWTDUOZaPx/lEQoInJoE2i43VN/HTGCCw8dKQAwg0jsEXau5ixD0GUothqvuX3B9taoeoFAIvUPEq35YulprMM7ThdKodSHvhnwKG82dCsodRwY428kg2xM/UjiTENog4B6zzZfPhMxFlOSFX4MnrqkAS+8Jamhy1GgoHkEMrsT5+/ofjCx0HjKbT5NuA2V/lmzgJLl3jIERadLzuTYnKGWxVJcGLkWXlEPYLbiaKzbJb2sYxt+Kt5OxQqC1MCAwEAAQ=="
             api_context = APIContext()
@@ -146,7 +149,7 @@ def sandbox(request):
                 transaction_status_code=transaction_status_code,
                 transaction_status=transaction_status,
                 transaction_id=transaction_id,
-                public_key=public_key, api_key=api_key, reference=reference)
+                public_key=public_key, api_key=api_key, reference=reference, user=user)
             xpay_mpesa.save()
             format_data = {"phone_number": phone_number,
                            "amount": amount,
@@ -154,7 +157,7 @@ def sandbox(request):
                            "transaction_id": transaction_id,
                            "transaction_status_code": transaction_status_code,
                            "transaction_status": transaction_status,
-                           "api_key": api_key
+                           "api_key": api_key,
 
                            }
             dump = json.dumps(format_data)
