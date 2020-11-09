@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 # from account.models import User
 from django.utils.decorators import method_decorator
 
+from account.models import Api
 from mpesa.models import Transaction
 from django.contrib.auth.decorators import login_required
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView, DetailView
@@ -76,7 +77,7 @@ def active_account(request):
 
 @login_required
 def api(request):
-    if  request.user.is_business:
-        return redirect('active')
+    api = Api.objects.get(user=request.user)
+    all = Api.objects.all()
 
-    return render(request, 'dashboard/developer/api.html')
+    return render(request, 'dashboard/developer/api.html', {"api":api, "all":all})
