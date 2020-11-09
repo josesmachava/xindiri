@@ -6,7 +6,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import  Payment
 from .serializers import  PaymentSerializer
-from account.models import Token, User
+from account.models import Api, User
 import secrets
 from django.http import HttpResponse, HttpResponseRedirect
 from pprint import pprint

@@ -4,9 +4,9 @@ from rest_framework import generics
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Transaction
+from .models import UriaTransaction
 from .serializers import TransationSerializer
-from account.models import Token, User
+from account.models import Api, User
 import secrets
 from django.http import HttpResponse, HttpResponseRedirect
 from pprint import pprint
@@ -20,7 +20,7 @@ def transation_list(request):
     List all code Payment, or create a new Payment.
     """
     if request.method == 'GET':
-        transactions = Transaction.objects.all()
+        transactions = UriaTransaction.objects.all()
         serializer = TransationSerializer(transactions, many=True)
         return Response(serializer.data)
 
@@ -38,7 +38,7 @@ def transation_list(request):
             api_key = request_transaction["api_key"]
             phone_number = str(request_transaction["phone_number"])
             reference = secrets.token_hex(6)
-            if Token.objects.filter(id=api_key).exists():
+            if Api.objects.filter(id=api_key).exists():
                 user = User.objects.get(token=api_key)
                 print(user.email)
                 if not user.is_active and not user.is_business:
@@ -96,7 +96,7 @@ def sandbox(request):
     List all code Payment, or create a new Payment.
     """
     if request.method == 'GET':
-        transactions = Transaction.objects.all()
+        transactions = UriaTransaction.objects.all()
         serializer = TransationSerializer(transactions, many=True)
         return Response(serializer.data)
 
@@ -114,8 +114,8 @@ def sandbox(request):
             api_key = request_transaction["api_key"]
             phone_number = str(request_transaction["phone_number"])
             reference = secrets.token_hex(6)
-            if Token.objects.filter(id=api_key).exists():
-                user = User.objects.get(token=api_key)
+            if Api.objects.filter(test_api=api_key).exists():
+                user = User.objects.get(api_test_api=api_key)
                 print(user.email)
                 if not user.is_active and not user.is_business:
                     return Response("conta nao activa e dados  nao prenchidos")

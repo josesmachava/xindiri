@@ -3,7 +3,7 @@ from django.utils import timezone
 from django.db import models
 
 # Create your models here.
-from account.models import Token
+from account.models import Api
 
 
 class Website(models.Model):

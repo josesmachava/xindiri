@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import User, Business, Token
+from .models import User, Business, Api
+
 
 # Register your models here.
 
@@ -19,6 +20,6 @@ admin.site.register(Business, BusinessAdmin)
 
 
 class TokenAdmin(admin.ModelAdmin):
-    list_display = ['id', 'user']
+    list_display = ['live_api', 'user', 'test_api']
 
-admin.site.register(Token, TokenAdmin)
+admin.site.register(Api, TokenAdmin)

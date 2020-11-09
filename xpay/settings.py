@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-
     'mpesa',
     'account',
     'payment',
@@ -61,44 +60,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # During devel
 GRAPHENE = {
     'SCHEMA': 'xpay.schema.schema'
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

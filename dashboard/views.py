@@ -57,9 +57,9 @@ def index(request):
     week = today - datetime.timedelta(days=7)
     month = today - datetime.timedelta(days=31)
     format_day = today.strftime("%Y-%m-%d")
-    today_amount = Transaction.objects.filter(transaction_status_code="201", created_at=today).aggregate(Sum('amount'))
-    week_amount = Transaction.objects.filter(transaction_status_code="201", created_at__range=[week, today]).aggregate(Sum('amount'))
-    month_amount = Transaction.objects.filter(transaction_status_code="201", created_at__range=[month, today]).aggregate(
+    today_amount = Transaction.objects.filter(transaction_status_code="201", user=request.user, created_at=today).aggregate(Sum('amount'))
+    week_amount = Transaction.objects.filter(transaction_status_code="201",  user=request.user, created_at__range=[week, today]).aggregate(Sum('amount'))
+    month_amount = Transaction.objects.filter(transaction_status_code="201",  user=request.user, created_at__range=[month, today]).aggregate(
         Sum('amount'))
 
     return render(request, 'dashboard/index.html', {'transactions': transaction,
