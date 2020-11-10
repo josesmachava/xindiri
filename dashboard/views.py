@@ -1,5 +1,6 @@
 import datetime
 
+from django.db.models.functions import Coalesce
 from django.shortcuts import render, redirect
 
 # from account.models import User
@@ -53,24 +54,21 @@ def index(request):
     if not request.user.is_business:
         return redirect('active')
 
-    api = Api.objects.get(user=request.user)
-    print(api.test_api)
-    transaction = Transaction.objects.filter(api)[:10]
-    total_amount = Transaction.objects.filter(transaction_status_code="201").aggregate(Sum('amount'))
+    transaction = Transaction.objects.filter(user=request.user)[:10]
+    total_amount = Transaction.objects.filter(transaction_status_code="201", user=request.user).aggregate(total_amount=Coalesce(Sum('amount'), 0))
     today = datetime.date.today()
     week = today - datetime.timedelta(days=7)
     month = today - datetime.timedelta(days=31)
     format_day = today.strftime("%Y-%m-%d")
-    today_amount = Transaction.objects.filter(transaction_status_code="201", created_at=today).aggregate(Sum('amount'))
-    week_amount = Transaction.objects.filter(transaction_status_code="201", created_at__range=[week, today]).aggregate(Sum('amount'))
-    month_amount = Transaction.objects.filter(transaction_status_code="201", created_at__range=[month, today]).aggregate(
-        Sum('amount'))
+    today_amount = Transaction.objects.filter(transaction_status_code="201", user=request.user, created_at=today).aggregate(today_amount=Coalesce(Sum('amount'), 0))
+    week_amount = Transaction.objects.filter(transaction_status_code="201", user=request.user, created_at__range=[week, today]).aggregate(week_amount=Coalesce(Sum('amount'), 0))
+    month_amount = Transaction.objects.filter(transaction_status_code="201", user=request.user,  created_at__range=[month, today]).aggregate(month_amount=Coalesce(Sum('amount'),0))
 
     return render(request, 'dashboard/index.html', {'transactions': transaction,
-                                                    'total_amount': total_amount['amount__sum'],
-                                                    "today_amount": today_amount['amount__sum'],
-                                                    "week_amount": week_amount['amount__sum'],
-                                                    "month_amount": month_amount['amount__sum']
+                                                    'total_amount': total_amount['total_amount'],
+                                                    "today_amount": today_amount['today_amount'],
+                                                    "week_amount": week_amount['week_amount'],
+                                                    "month_amount": month_amount['month_amount']
                                                     })
 
 @login_required

@@ -28,6 +28,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mpesa/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mpesa/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpesa/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mpesa/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uria/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/uria/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,7 +331,8 @@
       <workItem from="1604953456191" duration="738000" />
       <workItem from="1604969826373" duration="638000" />
       <workItem from="1605018717941" duration="41000" />
-      <workItem from="1605040440352" duration="1094000" />
+      <workItem from="1605040440352" duration="1783000" />
+      <workItem from="1605042257625" duration="1795000" />
     </task>
     <task id="LOCAL-00001" summary="implement dashboard navigation ui">
       <created>1598388857543</created>
@@ -447,12 +450,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/mpesa/models.py</url>
-          <line>24</line>
+          <line>23</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/mpesa/models.py</url>
-          <line>19</line>
+          <line>18</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

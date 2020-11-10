@@ -111,9 +111,7 @@ def sandbox(request,  *args, **kwargs):
         if serializer.is_valid():
             request_transaction = request.data
 
-            phone_number = ""
-            amount = ""
-            api_key = ""
+
 
             amount = request_transaction["amount"]
             api_key = request_transaction["api_key"]
@@ -153,22 +151,21 @@ def sandbox(request,  *args, **kwargs):
 
             import requests
             url = request.get_host()
-            print(url)
             url = "http://{}/sandbox".format(url)
 
+            print(api_key, "uria")
 
             json_data = {
                 "phone_number": phone_number,
                 "amount": amount,
                 "reference": reference,
-                "token": api_key,
+                "api": api_key,
                 "user": user.id,
 
             }
 
             resp = requests.post(url=url, json=json_data)
-            print(resp.status_code)
-            print(resp.text)
+
 
             return Response(resp.text)
 

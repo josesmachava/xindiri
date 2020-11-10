@@ -9,13 +9,12 @@ from account.models import Api
 
 class Transaction(models.Model):
     phone_number = models.CharField(max_length=255, null=False)
-    token = models.CharField(max_length=255, null=False)
+    api = models.CharField(max_length=255, null=False)
     amount = models.IntegerField(null=False)
     mpesaReturn = models.TextField()
     reference = models.CharField(max_length=255, null=False)
     api_key = models.CharField(max_length=255, null=False)
-    api = models.CharField(max_length=255, null=False)
-
+    is_active = models.BooleanField(default=False)
     public_key = models.TextField()
     transaction_id = models.CharField(max_length=255, null=False)
     transaction_status_code = models.CharField(max_length=255, null=False)
