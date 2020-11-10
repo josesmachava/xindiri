@@ -50,17 +50,20 @@ class TransactionListView(LoginRequiredMixin, ListView):
 
 @login_required
 def index(request):
-    if request.user.is_business:
+    if not request.user.is_business:
         return redirect('active')
-    transaction = Transaction.objects.all()[:10]
+
+    api = Api.objects.get(user=request.user)
+    print(api.test_api)
+    transaction = Transaction.objects.filter(api)[:10]
     total_amount = Transaction.objects.filter(transaction_status_code="201").aggregate(Sum('amount'))
     today = datetime.date.today()
     week = today - datetime.timedelta(days=7)
     month = today - datetime.timedelta(days=31)
     format_day = today.strftime("%Y-%m-%d")
-    today_amount = Transaction.objects.filter(transaction_status_code="201", user=request.user, created_at=today).aggregate(Sum('amount'))
-    week_amount = Transaction.objects.filter(transaction_status_code="201",  user=request.user, created_at__range=[week, today]).aggregate(Sum('amount'))
-    month_amount = Transaction.objects.filter(transaction_status_code="201",  user=request.user, created_at__range=[month, today]).aggregate(
+    today_amount = Transaction.objects.filter(transaction_status_code="201", created_at=today).aggregate(Sum('amount'))
+    week_amount = Transaction.objects.filter(transaction_status_code="201", created_at__range=[week, today]).aggregate(Sum('amount'))
+    month_amount = Transaction.objects.filter(transaction_status_code="201", created_at__range=[month, today]).aggregate(
         Sum('amount'))
 
     return render(request, 'dashboard/index.html', {'transactions': transaction,
@@ -78,6 +81,5 @@ def active_account(request):
 @login_required
 def api(request):
     api = Api.objects.get(user=request.user)
-    all = Api.objects.all()
 
     return render(request, 'dashboard/developer/api.html', {"api":api, "all":all})

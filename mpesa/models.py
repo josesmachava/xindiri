@@ -14,6 +14,8 @@ class Transaction(models.Model):
     mpesaReturn = models.TextField()
     reference = models.CharField(max_length=255, null=False)
     api_key = models.CharField(max_length=255, null=False)
+    api = models.CharField(max_length=255, null=False)
+
     public_key = models.TextField()
     transaction_id = models.CharField(max_length=255, null=False)
     transaction_status_code = models.CharField(max_length=255, null=False)
