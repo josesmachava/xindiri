@@ -14,10 +14,8 @@
 
 
 {% block  content %}
-      {%    if not request.user.is_business  %}
-                  {% include 'dashboard/active_account.html' %}
-      {% else %}
-      <div class="container-fluid">
+
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-2 aside">
                 <aside>
@@ -27,75 +25,96 @@
             </div>
             <div class="col-md-10 ">
 
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
 
 
-                                <div class="m-card">
+                            <div class="m-card">
 
-                                    {% if not transaction %}
-                                        <div class="m-card-header">
-                                            <div class="d-flex justify-content-center">
-                                                <div class="">
-                                                    <p class="text-center"><i class="fas fa-money-check fa-2x"></i>
-                                                    </p>
-                                                    <h1 class="title text-center">Você não tem nenhum pagamento de
-                                                        teste. <a href="#"> Documentação</a>
-                                                    </h1>
-                                                </div>
-
+                                {% if not transaction %}
+                                    <div class="m-card-header">
+                                        <div class="d-flex justify-content-center">
+                                            <div class="">
+                                                <p class="text-center"><i class="fas fa-money-check fa-2x"></i>
+                                                </p>
+                                                <h1 class="title text-center">Você não tem nenhum pagamento de
+                                                    teste. <a href="#"> Documentação</a>
+                                                </h1>
                                             </div>
-                                            </h1>
+
                                         </div>
+                                        </h1>
+                                    </div>
 
-                                    {% else %}
+                                {% else %}
 
 
-                                        <div class="m-card-header">
-                                            <h1 class="title" style="font-weight: 600;">Pagamentos recentes</h1>
-                                        </div>
+                                    <div class="m-card-header">
+                                        <h1 class="title" style="font-weight: 600;">Pagamentos recentes</h1>
+                                    </div>
 
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <thead>
-                                                <th>Numero do cliente</th>
-                                                <th>Valor</th>
-                                                <th>Status</th>
-                                                <th>Data</th>
-                                                </thead>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <th>Numero do cliente</th>
+                                            <th>Valor</th>
+                                            <th>Status</th>
+                                            <th>Data</th>
+                                            </thead>
+
+                                            </tr>
+                                            {% for payment in transaction %}
+                                                <tr>
+                                                    <td>+{{ payment.phone_number }}</td>
+                                                    <td>{{ payment.amount }} MT</td>
+                                                    <td>{{ payment.transaction_status }}</td>
+
+                                                    <td>{{ payment.created_at|date:'Y-m-d' }}</td>
+
 
                                                 </tr>
-                                                {% for payment in transactions %}
-                                                    <tr>
-                                                        <td>+{{ payment.phone_number }}</td>
-                                                        <td>{{ payment.amount }} MT</td>
-                                                        <td>{{ payment.transaction_status }}</td>
-
-                                                        <td>{{ payment.created_at|date:'Y-m-d' }}</td>
-
-
-                                                    </tr>
-                                                {% endfor %}
-                                            </table>
-                                        </div>
-                                    {% endif %}
-                                </div>
+                                            {% endfor %}
+                                        </table>
+                                    </div>
+                                {% endif %}
                             </div>
-
                         </div>
+
                     </div>
-
-
                 </div>
+
+
+                {% if is_paginated %}
+                    <ul class="pagination">
+                        {% if page_obj.has_previous %}
+                            <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+                        {% else %}
+                            <li class="disabled"><span>&laquo;</span></li>
+                        {% endif %}
+                        {% for i in paginator.page_range %}
+                            {% if page_obj.number == i %}
+                                <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                            {% else %}
+                                <li><a href="?page={{ i }}">{{ i }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                        {% if page_obj.has_next %}
+                            <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+                        {% else %}
+                            <li class="disabled"><span>&raquo;</span></li>
+                        {% endif %}
+                    </ul>
+                {% endif %}
             </div>
+
         </div>
-        </div>
+    </div>
+    </div>
 
 
     </main>
 
-{% endif %}
 
 {% endblock %}
 

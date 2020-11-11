@@ -18,25 +18,19 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
-@login_required
-def transaction(request):
-    if not request.user.is_business:
-        return redirect('active')
-    paymentByUser = Transaction.objects.all()
-    count = Transaction.objects.all().count()
-    context = {'count': count}
-    return render(request, '3dashboard/transaction.html', {'payments': paymentByUser}, context)
 
 
 class TransactionListView(LoginRequiredMixin, ListView):
     model = Transaction
     template_name = 'dashboard/transaction.html'
     context_object_name = 'transactions'
-    paginate_by = 13
+    paginate_by = 10
 
     def get_context_data(self, **kwargs):
         context = super(TransactionListView, self).get_context_data(**kwargs)
-        transactions = Transaction.objects.all().filter(api_key="23b694b0fa9cdb8270ea1045d5ef9f68")
+        print(self.request.user)
+        transactions  = Transaction.objects.filter(user=self.request.user)
+        print(transactions)
         page = self.request.GET.get('page')
         paginator = Paginator(transactions, self.paginate_by)
         try:
