@@ -1,5 +1,6 @@
 import json
 
+from django.core.exceptions import ObjectDoesNotExist
 from django.core.serializers import get_serializer
 from django.shortcuts import render
 from rest_framework import generics
@@ -127,7 +128,7 @@ def sandbox(request, *args, **kwargs):
 
     elif request.method == 'POST':
         serializer = TransationSerializer(data=request.data)
-        print(serializer)
+
 
         if serializer.is_valid():
             request_transaction = request.data
@@ -136,56 +137,57 @@ def sandbox(request, *args, **kwargs):
             api_key = request_transaction["api_key"]
             phone_number = str(request_transaction["phone_number"])
             reference = secrets.token_hex(6)
-            api = Api.objects.get(test_api=api_key)
+            api = Api.objects.filter(test_api=api_key)
+            if api.exists():
 
-            user = User.objects.get(id=api.user_id)
-            if api:
+                user = User.objects.get(id=api[0].user_id)
+                if api[0]:
 
-                print(user.email)
-                if not user.is_active and not user.is_business:
-                    return Response("conta nao activa e dados  nao prenchidos")
-                elif not user.is_business:
-                    return Response("os dados da conta nao prenchidos")
-                elif not user.is_active:
-                    return Response("conta nao activa")
-                elif len(phone_number) < 9:
-                    return Response("o numero do telefone e menor que 8")
-                elif len(phone_number) > 9:
-                    return Response("o numero do telefone e menor que 8")
+                    if not user.is_active and not user.is_business:
+                        return Response("conta nao activa e dados  nao prenchidos")
+                    elif not user.is_business:
+                        return Response("os dados da conta nao prenchidos")
+                    elif not user.is_active:
+                        return Response("conta nao activa")
+                    elif len(phone_number) < 9:
+                        return Response("o numero do telefone e menor que 8")
+                    elif len(phone_number) > 9:
+                        return Response("o numero do telefone e menor que 8")
 
 
+
+                    else:
+                        transaction = UriaTransaction(
+                            phone_number=phone_number,
+                            amount=amount,
+                            reference=reference,
+                            api_key=api_key,
+                            user=user,
+                        )
+                        transaction.save()
 
                 else:
-                    transaction = UriaTransaction(
-                        phone_number=phone_number,
-                        amount=amount,
-                        reference=reference,
-                        api_key=api_key,
-                        user=user,
-                    )
-                    transaction.save()
+                    return Response("api key usado nao existe")
 
+                import requests
+                url = request.get_host()
+                url = "http://{}/sandbox".format(url)
+
+
+                json_data = {
+                    "phone_number": phone_number,
+                    "amount": amount,
+                    "reference": reference,
+                    "api": api_key,
+                    "user": user.id,
+
+                }
+
+                resp = requests.post(url=url, json=json_data)
+
+                return Response(resp.text)
             else:
-                return Response("api key usado nao existe")
-
-            import requests
-            url = request.get_host()
-            url = "http://{}/sandbox".format(url)
-
-            print(api_key, "uria")
-
-            json_data = {
-                "phone_number": phone_number,
-                "amount": amount,
-                "reference": reference,
-                "api": api_key,
-                "user": user.id,
-
-            }
-
-            resp = requests.post(url=url, json=json_data)
-
-            return Response(resp.text)
+                return Response({'data': "api key usado nao existe"})
 
         else:
             return Response({'data': "api invalido"})
