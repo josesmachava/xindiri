@@ -49,14 +49,14 @@ def index(request):
         return redirect('active')
 
     transaction = Transaction.objects.filter(user=request.user)[:10]
-    total_amount = Transaction.objects.filter(transaction_status_code="201", user=request.user).aggregate(total_amount=Coalesce(Sum('amount'), 0))
+    total_amount = Transaction.objects.filter(transaction_status_code="201", is_active=True, user=request.user).aggregate(total_amount=Coalesce(Sum('amount'), 0))
     today = datetime.date.today()
     week = today - datetime.timedelta(days=7)
     month = today - datetime.timedelta(days=31)
     format_day = today.strftime("%Y-%m-%d")
-    today_amount = Transaction.objects.filter(transaction_status_code="201", user=request.user, created_at=today).aggregate(today_amount=Coalesce(Sum('amount'), 0))
-    week_amount = Transaction.objects.filter(transaction_status_code="201", user=request.user, created_at__range=[week, today]).aggregate(week_amount=Coalesce(Sum('amount'), 0))
-    month_amount = Transaction.objects.filter(transaction_status_code="201", user=request.user,  created_at__range=[month, today]).aggregate(month_amount=Coalesce(Sum('amount'),0))
+    today_amount = Transaction.objects.filter(transaction_status_code="201", is_active=True, user=request.user, created_at=today).aggregate(today_amount=Coalesce(Sum('amount'), 0))
+    week_amount = Transaction.objects.filter(transaction_status_code="201", is_active=True, user=request.user, created_at__range=[week, today]).aggregate(week_amount=Coalesce(Sum('amount'), 0))
+    month_amount = Transaction.objects.filter(transaction_status_code="201", is_active=True, user=request.user,  created_at__range=[month, today]).aggregate(month_amount=Coalesce(Sum('amount'),0))
 
     return render(request, 'dashboard/index.html', {'transactions': transaction,
                                                     'total_amount': total_amount['total_amount'],
