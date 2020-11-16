@@ -48,7 +48,7 @@ class TransactionListView(LoginRequiredMixin, ListView):
 @login_required
 def index(request):
     if not request.user.is_business:
-        return redirect('active',request.user.business.id)
+        return redirect('active', request.user.business.id)
 
     transaction = Transaction.objects.filter(user=request.user)[:10]
     total_amount = Transaction.objects.filter(transaction_status_code="201", is_active=True, user=request.user).aggregate(total_amount=Coalesce(Sum('amount'), 0))
