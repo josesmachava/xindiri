@@ -8,6 +8,5 @@ urlpatterns = [
     path('api/', views.api, name='api'),
     path("transaction/", views.TransactionListView.as_view(), name="transaction"),
     path('', views.index, name='index'),
-    path('active', views.active_account, name='active'),
-
+    path('active/<pk>', views.ActiveCompany.as_view(), name="active"),
 ]

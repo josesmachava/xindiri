@@ -4,9 +4,11 @@ from django.db.models.functions import Coalesce
 from django.shortcuts import render, redirect
 
 # from account.models import User
+from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 
-from account.models import Api
+from account.forms import BusinessForm
+from account.models import Api, Business
 from mpesa.models import Transaction
 from django.contrib.auth.decorators import login_required
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView, DetailView
@@ -46,7 +48,7 @@ class TransactionListView(LoginRequiredMixin, ListView):
 @login_required
 def index(request):
     if not request.user.is_business:
-        return redirect('active')
+        return redirect('active',request.user.business.id)
 
     transaction = Transaction.objects.filter(user=request.user)[:10]
     total_amount = Transaction.objects.filter(transaction_status_code="201", is_active=True, user=request.user).aggregate(total_amount=Coalesce(Sum('amount'), 0))
@@ -68,6 +70,13 @@ def index(request):
 @login_required
 def active_account(request):
     return render(request, 'dashboard/active_account.html')
+
+class ActiveCompany(UpdateView):
+    # template_name_suffix = 'account/edit.html'
+    template_name = "dashboard/active_account.html"
+    model = Business
+    form_class = BusinessForm
+    success_url = reverse_lazy('index')
 
 
 @login_required
