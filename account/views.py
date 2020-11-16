@@ -10,7 +10,7 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.views.generic import CreateView, UpdateView, DeleteView
 from .forms import BusinessSignUpForm, BusinessForm
-from .models import Business
+from .models import Startup
 
 
 def signin(request):
@@ -54,7 +54,7 @@ login_required()
 class EditCompany(UpdateView):
     # template_name_suffix = 'account/edit.html'
     template_name = "account/edit.html"
-    model = Business
+    model = Startup
     form_class = BusinessForm
     success_url = reverse_lazy('index')
 

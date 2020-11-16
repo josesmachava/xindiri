@@ -57,7 +57,7 @@ class User(AbstractUser):
     objects = UserManager()
 
 
-class Business(models.Model):
+class Startup(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     company_name = models.CharField(max_length=30, blank=True)
     nuit = models.CharField(max_length=30, blank=True)
@@ -69,15 +69,16 @@ class Business(models.Model):
     location = models.CharField(max_length=30, blank=True)
     created_date = models.DateTimeField(default=timezone.now)
     uploaded_at = models.DateTimeField(blank=True, null=True)
+
     def __str__(self):
         return str(self.user)
 
- 
+
 class Api(models.Model):
-    live_api = models.CharField(max_length=32,  blank=False,  default=secrets.token_hex(16), editable=False, unique=True)
+    live_api = models.CharField(max_length=32, blank=False, default=secrets.token_hex(16), editable=False, unique=True)
 
     test_api = models.CharField(max_length=32, blank=False, default=secrets.token_hex(16), editable=False,
-                          unique=True)
+                                unique=True)
     is_active = models.BooleanField(default=False)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created_date = models.DateTimeField(default=timezone.now)

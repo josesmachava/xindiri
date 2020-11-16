@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from .models import User, Business, Api
+from .models import User, Startup, Api
 from django.db import transaction
 from django.forms import ModelForm
 
@@ -20,7 +20,7 @@ class BusinessSignUpForm(UserCreationForm):
 
         user.save()
 
-        business = Business.objects.create(user=user)
+        business = Startup.objects.create(user=user)
         token = Api.objects.create(user=user)
 
 
@@ -46,5 +46,5 @@ class BusinessForm(ModelForm):
                                widget=forms.TextInput(attrs={'placeholder': 'Localidade'}))
 
     class Meta:
-        model = Business
+        model = Startup
         fields = ('phone_number', 'company_name', 'nuit', 'website', 'address', 'province', 'location')
