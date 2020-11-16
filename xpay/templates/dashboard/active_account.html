@@ -1,4 +1,6 @@
 {% extends "../xpay/layout/base.html" %}
+
+{% load crispy_forms_tags %}
 {% load static %}
 {% block styles %}
     {#    only include css  files needed for thi page bootstap and other libs are add in base template #}
@@ -19,30 +21,75 @@
 
             </div>
             <div class="col-md-10 ">
-                <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 class="heading">
+                                Bem-vindo {{ user.first_name|capfirst }} {{ user.last_name|capfirst }}</h2>
+                            <p class="paragraph">
+                                Antes de aceitar pagamentos usando mpesa, precisamos de algumas
+                                informações adicionais. Por favor, preencha as informações necessárias
+                                e você estará pronto para aceitar pagamentos com mpesa.
+                            </p>
+                            <button type="button" class="btn btn-light"><a style="color: #333" href="{% url "api" %}">API
+                                keys</a>
+                            </button>
+                        </div>
+                            <div class="col-md-6">
+                                <form class="edit-perfil" method="post">{% csrf_token %}
 
-                <div class="col-md-6">
-                    <h2 class="heading">Bem-vindo    {{ user.first_name|capfirst  }}  {{ user.last_name|capfirst  }}</h2>
-                    <p class="paragraph">
-                        Antes de aceitar pagamentos usando mpesa, precisamos de algumas
-                        informações adicionais. Por favor, preencha as informações necessárias
-                        e você estará pronto para aceitar pagamentos com mpesa.
-                    </p>
-                    <button type="button" class="btn btn-primary"><a href="{% url "edit" user.business.id %}">Activar conta</a>
-                    </button>
-                    <button type="button" class="btn btn-light"><a style="color: #333" href="{% url "api"  %}">API keys</a>
-                    </button>
+                                    {% csrf_token %}
 
-                </div>
-                    <div class="col-md-6">
-                        
+                                    <input type="hidden" name="next" value="{{ next }}">
+                                    <h1>Detalhes da organização</h1>
+
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            {{ form.company_name|as_crispy_field }}
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            {{ form.nuit|as_crispy_field }}
+
+                                        </div>
+
+                                    </div>
+                                    <h1>Endereço</h1>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            {{ form.address|as_crispy_field }}
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            {{ form.province|as_crispy_field }}
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            {{ form.location|as_crispy_field }}
+
+                                        </div>
+                                    </div>
+
+
+                                    {{ form.phone_number|as_crispy_field }}
+
+
+                                    {{ form.website|as_crispy_field }}
+
+
+                                    <button type="submit" class="btn btn-success">Guardar</button>
+
+                                </form>
+                            </div>
+
+                        </div>
                     </div>
-
-
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
 
