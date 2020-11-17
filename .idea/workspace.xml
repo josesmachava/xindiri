@@ -26,7 +26,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="implement navegation menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,12 +73,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bossie" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -357,7 +356,9 @@
       <workItem from="1605608317358" duration="2347000" />
       <workItem from="1605610687833" duration="1798000" />
       <workItem from="1605612511797" duration="1812000" />
-      <workItem from="1605614356168" duration="692000" />
+      <workItem from="1605614356168" duration="1330000" />
+      <workItem from="1605652097782" duration="219000" />
+      <workItem from="1605652330267" duration="47000" />
     </task>
     <task id="LOCAL-00001" summary="implement dashboard navigation ui">
       <created>1598388857543</created>
@@ -430,30 +431,30 @@
     </state>
     <state x="737" y="310" width="424" height="485" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1605601660056" />
     <state x="2657" y="290" width="424" height="485" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600769118847" />
-    <state width="1365" height="261" key="GridCell.Tab.0.bottom" timestamp="1604930304373">
+    <state width="1356" height="261" key="GridCell.Tab.0.bottom" timestamp="1605652341918">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1365" height="261" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1604930304373" />
+    <state width="1356" height="261" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1605652341918" />
     <state width="678" height="261" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603027338584" />
-    <state width="1365" height="261" key="GridCell.Tab.0.center" timestamp="1604930304372">
+    <state width="1356" height="261" key="GridCell.Tab.0.center" timestamp="1605652341918">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1365" height="261" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1604930304372" />
+    <state width="1356" height="261" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1605652341918" />
     <state width="678" height="261" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603027338584" />
-    <state width="1365" height="261" key="GridCell.Tab.0.left" timestamp="1604930304372">
+    <state width="1356" height="261" key="GridCell.Tab.0.left" timestamp="1605652341917">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1365" height="261" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1604930304372" />
+    <state width="1356" height="261" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1605652341917" />
     <state width="678" height="261" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603027338584" />
-    <state width="1365" height="261" key="GridCell.Tab.0.right" timestamp="1604930304373">
+    <state width="1356" height="261" key="GridCell.Tab.0.right" timestamp="1605652341918">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1365" height="261" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1604930304373" />
+    <state width="1356" height="261" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1605652341918" />
     <state width="678" height="261" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603027338584" />
-    <state x="435" y="27" width="1007" height="731" key="SettingsEditor" timestamp="1604934728720">
+    <state x="435" y="27" width="1350" height="1053" key="SettingsEditor" timestamp="1605652252419">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="435" y="27" width="1007" height="731" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1604934728720" />
+    <state x="435" y="27" width="1350" height="1053" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1605652252419" />
     <state x="2355" y="0" width="1350" height="1080" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600718172383" />
     <state x="2735" y="236" width="800" height="529" key="Vcs.Push.Dialog.v2" timestamp="1601617773460">
       <screen x="1920" y="0" width="1920" height="1080" />

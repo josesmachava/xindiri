@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'graphene_django',
     "django_rq",
+    'django_q'
 
 ]
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # During development only

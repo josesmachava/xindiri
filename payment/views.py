@@ -38,7 +38,7 @@ def mpesa(request, pk):
             payment_data = requests.post(url=API_ENDPOINT, data=data)
 
 
-            response = json.loads(payment_data.text)
+            response = json.loads(payment_data.json())
             print(response)
             print(response)
             status_code = response['transaction_status_code']
