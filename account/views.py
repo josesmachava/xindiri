@@ -41,7 +41,7 @@ def businesssignup(request):
             user = authenticate(username=email, password=raw_password)
             if user is not None:
                 login(request, user)
-                return redirect('active')
+                return redirect('active', request.user.startup.id )
 
     else:
         form = BusinessSignUpForm()

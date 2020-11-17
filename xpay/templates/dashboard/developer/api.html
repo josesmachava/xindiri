@@ -19,42 +19,45 @@
 
             </div>
             <div class="col-md-10">
+                {% include "dashboard/layout/menu.html" %}
+
                 <div class="row">
                     <div class="col-md-12">
 
-                    <div class="d-flex justify-content-center">
-                        <p class="api-documentation">Use a chave Test API para testar sua integração e a chave Live API
-                            para criar pagamentos reais. Por
-                            favor, mantenha-os privados o máximo possível. <a href="">Leia mais sobre como integrar
-                                nossa API.</a>
-                        </p>
-
-</div>
-                    <div class="col-md-12">
-
-                        <div class="card">
-                            <table class="table table table-borderless api">
-
-
-                                <tr>
-                                    <td>Test API Key</td>
-                                    <td>{{ api.test_api }}  </td>
-
-
-                                </tr>
-
-                                <tr>
-                                    <td>Live API Key</td>
-                                     <td>{{ api.live_api }}  </td>
-
-
-                                </tr>
-
-
-                            </table>
+                        <div class="d-flex justify-content-center">
+                            <p class="api-documentation">Use a chave Test API para testar sua integração e a chave Live
+                                API
+                                para criar pagamentos reais. Por
+                                favor, mantenha-os privados o máximo possível. <a href="">Leia mais sobre como integrar
+                                    nossa API.</a>
+                            </p>
 
                         </div>
-                    </div>
+                        <div class="col-md-12">
+
+                            <div class="card">
+                                <table class="table table table-borderless api">
+
+
+                                    <tr>
+                                        <td>Test API Key</td>
+                                        <td>{{ api.test_api }}  </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Live API Key</td>
+                                        <td>{{ api.live_api }}  </td>
+
+
+                                    </tr>
+
+
+                                </table>
+
+                            </div>
+                        </div>
 
                     </div>
 

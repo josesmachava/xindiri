@@ -1,0 +1,21 @@
+<header>
+    <nav>
+        <ul>
+
+            <li><span> <i class="fas fa-user-circle"></i></span></li>
+        </ul>
+    </nav>
+    <div class="dropdown">
+            <nav>
+        <ul>
+            <li> {{ request.user.first_name }}  {{ request.user.last_name }}</li>
+            <li>li {{ request.user.email }}</li>
+            <li><a href="{% url 'logout' %}">sair</a> </li>
+
+        </ul>
+    </nav>
+
+
+    </div>
+
+</header>
