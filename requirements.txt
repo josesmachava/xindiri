@@ -4,6 +4,7 @@ beautifulsoup4==4.9.1
 certifi==2019.6.16
 cffi==1.12.3
 chardet==3.0.4
+click==7.1.2
 coreschema==0.0.4
 crypto==1.4.1
 cryptography==2.7
@@ -12,6 +13,7 @@ Django==2.2.2
 django-crispy-forms==1.9.1
 django-heroku==0.3.1
 django-livereload==1.7
+django-rq==2.4.0
 djangorestframework==3.9.4
 graphene==2.1.8
 graphene-django==2.12.1
@@ -23,6 +25,7 @@ itypes==1.1.0
 Jinja2==2.10.1
 MarkupSafe==1.1.1
 Naked==0.1.31
+pkg-resources==0.0.0
 promise==2.3
 psycopg2==2.8.4
 psycopg2-binary==2.8.3
@@ -31,7 +34,9 @@ pycrypto==2.6.1
 pypi==2.1
 pytz==2019.1
 PyYAML==5.1.1
+redis==3.5.3
 requests==2.22.0
+rq==1.6.1
 Rx==1.6.1
 shellescape==3.4.1
 singledispatch==3.4.0.3
