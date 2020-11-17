@@ -23,7 +23,7 @@ def signin(request):
         if user is not None:
             login(request, user)
             if not request.user.is_business:
-                return redirect('active')
+                return redirect('active',  request.user.startup.id)
             return redirect('index')
         else:
             messages.error(request, "E-mail ou palavra-passe não correspodem.")
@@ -41,7 +41,7 @@ def businesssignup(request):
             user = authenticate(username=email, password=raw_password)
             if user is not None:
                 login(request, user)
-                return redirect('active', request.user.startup.id )
+                return redirect('active', request.user.startup.id)
 
     else:
         form = BusinessSignUpForm()
