@@ -15,7 +15,11 @@
 
     <link rel="stylesheet" href="{% static 'stylesheet/xpay/account/sign.css' %}">
     <style>
-
+        img {
+            width: 45px;
+            margin: 0 auto;
+            display: block;
+        }
     </style>
 {% endblock %}
 
@@ -26,8 +30,9 @@
         <div class="row justify-content-center align-items-center">
 
             <form action="signin" method="post">
-                <h1 class="text-center"> Mulla </h1>
-
+                <h1><img class="logo"
+                         src="{% static 'images/logo.png' %}"
+                         alt="xindiri"></h1>
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="formGroupExampleInput">Email</label>
