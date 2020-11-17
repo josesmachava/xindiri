@@ -1,3 +1,3 @@
 release: python manage.py migrate
-web: gunicorn --pythonpath="$PWD/xpay" config.wsgi:application
-worker: python xpay/manage.py rqworker high default low
+web: gunicorn --pythonpath="$PWD/xpay" wsgi:application
+worker: python manage.py rqworker high default low
