@@ -1,63 +1,65 @@
-from django.shortcuts import render
+
+import secrets
 import json
 import requests
-from django.http import HttpResponse, HttpResponseRedirect
-from rest_framework import generics
-from rest_framework import status
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from .serializers import PaymentSerializer
-from .models import  Payment
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
+from .forms import PaymentForm
 
 
 # Create your views here.
-def phone_number(request):
-    
-    return render(request, 'payment/payment.html')
+from .models import Package
 
 
+@login_required()
+def mpesa(request, pk):
+    package = Package.objects.get(pk=pk)
+    if request.method == "POST":
 
+        form = PaymentForm(request.POST)
+        if form.is_valid():
+            número_de_telefone = request.POST['número_de_telefone']
 
-@api_view(['GET', 'POST'])
-def Mpesa(request):
-    """
-    List all code Payment, or create a new Payment.
-    """
-    if request.method == 'GET':
-        payments = Payment.objects.all()
-        serializer = PaymentSerializer(payments, many=True)
-        return Response(serializer.data)
+            order = Order.objects.create(user=request.user, ordered=False, book=book)
+            payment = form.save(commit=False)
+            payment.user = request.user
+            payment.order = order
 
+            API_ENDPOINT = "https://xpayy.herokuapp.com/payment/"
+            data = {
 
-    #Get Data from Post API
-    elif request.method == 'POST':
-        serializer = PaymentSerializer(data=request.data)
-        if serializer.is_valid():
-            requestPayment = request.data
-            checkToken = requestPayment["token"]
-            contact    = requestPayment["contact"]
-            amount     = requestPayment["amount"]
-            reference  = requestPayment["reference"]
-            api_key    = requestPayment["api_key"]
-            public_key = requestPayment["public_key"]
-            website    = requestPayment["website"]
-    
+                'contact': payment.número_de_telefone,
+                'amount': package.price,
+                'api_key': 'cpurgkttk6fw317ucnnxaqxcnrkxszgs',
+            }
+            # sending post request and saving response as response object
+            payment_data = requests.post(url=API_ENDPOINT, data=data)
 
+            response = json.loads(payment_data.text)
+            status_code = response['data']["status_code"]
+            if status_code == 201 or status_code == 200:
+                payment.order.ordered = True
+                print(payment.order.pk)
+                print(payment.order.ordered)
+                payment.save()
+                order.save()
+                return redirect('read', pk)
 
-        if checkToken != "":
+            else:
+                error_message = response['data']['body']["output_ResponseDesc"]
 
-            requestCheck = ""
+                messages.error(request, error_message)
 
-            if requestCheck == 0:
-                return Response("Requests :Sorry you don't have it!!!", status=status.HTTP_400_BAD_REQUEST)
+                form = PaymentForm()
 
-                if contact == "" and amount == "" and reference == "" and api_key == "" and public_key == "" :
-                    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-                
+        #  return redirect('post_detail', pk=post.pk)
+    else:
+        form = PaymentForm()
 
-
- 
-        
+    return render(request, 'payment/payment.html', {
+        'package': package,
+        'form': form})
 
 
 

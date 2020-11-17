@@ -1,124 +1,115 @@
-{% extends "xpay/layout/base.html" %}
-{% load staticfiles %}
+{% extends "editora/layout/base.html" %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
 
 {% comment %}
 
 {% endcomment %}
-{% load staticfiles %}
 
 {# overide the tile of the page #}
 {% block title %}
-<title>market</title>
+<title>Editora Trinta Zero</title>
 {% endblock %}
 
 {% block styles %}
 {#    only include css  files needed for thi page bootstap and other libs are add in base template #}
-    <style>
-        body{
-             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-            font-family: 'Roboto', sans-serif;
-            background: whitesmoke;
-        }
-        section{
-                width: 350px;
-            background: white;
-            height: 350px;
-            padding: 10px;
-
-        }
-        header{
-              display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-
-        }
-        h1{
-            font-size: 18px;
-        }
-        h2{
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            }
-        header{
-                background-color: rgb(7, 71, 166);
-                color: white;
-        }
-        input[type="text"] {
-               width: -webkit-fill-available;
-                box-sizing: border-box;
-                padding-left: 15px;
-                padding-right: 15px;
-                border: 1px solid #dbe2e8;
-                font-size: 14px;
-                -webkit-box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
-                box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
-                border-radius: 2px;
-                color: #2e3d49;
-                margin: 10px;
-                border-radius: 4px;
-                height: 44px;
-        }
-        .align-center{
-            display: block;
-            margin: 0 auto;
-        }
-        label, h2, h1{
-            padding-left: 15px;
-        }
-        .primary-button{
-            border: none;
-        background-color: rgb(7, 71, 166);
-        color: white;
-        height: 40px;
-        width: 150px;
-        font-weight: bold;
-        border-radius: 4px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-            }
-        h2, label{
-            font-size: 16px;
-        }
-        .mpesa-logo{
-            width: 100px;
-            height: 100px;
-
-
-        }
-    .mpesa{
-            margin: 0 auto;
-    background-color: #ef4326;
-    border-radius: 100%;
-    height: 90px;
-    width: 90px;
-    margin-top: -70px;
+style(type='text/css')
+    body{
+        background-color: whitesmoke;
+    }
+    .payment{
+        background-color: white;
+        padding: 20px;
+        width: 500px;
+        margin-top: 35px;
 
     }
-    .paymentMpesa{
-        margin-top: 40px;
-    }
-    .mpesa img{
-       width: 60px;
-    height: 60px;
-    display: block;
-    padding: 14px;
-
+    .form-tip-message{
+            margin-top:10px;
     }
     h1 {
-        text-align: center;
-        font-size: 50px;
-        margin-bottom: 0;
-    }
-    h2 {
-        text-align: center;
-        font-size: 18px;
-    }
-    </style>
-    {% endblock %}
-<meta charset="utf-8">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible", content="IE=edge">
-<meta name="viewport", content="width=device-width, initial-scale=1">
+            margin-left: 10px;
 
+    }
+    .tip-message i{
+        font-size:35px;
+    }
+
+    .payment img{
+        width: 60px;
+    }
+    h1, h2{
+        font-size: 16px;
+    }
+
+    /*
+      ##Device = Desktops
+      ##Screen = 1281px to higher resolution desktops
+    */
+
+    @media (min-width: 1281px) {
+
+
+    }
+
+    /*
+      ##Device = Laptops, Desktops
+      ##Screen = B/w 1025px to 1280px
+    */
+
+    @media (min-width: 1025px) and (max-width: 1280px) {
+
+
+    }
+
+    /*
+      ##Device = Tablets, Ipads (portrait)
+      ##Screen = B/w 768px to 1024px
+    */
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+
+
+    }
+
+    /*
+      ##Device = Tablets, Ipads (landscape)
+      ##Screen = B/w 768px to 1024px
+    */
+
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+
+
+    }
+
+    /*
+    Screen = B/w 481px to 767px
+    */
+
+    @media (min-width: 481px) and (max-width: 767px) {
+
+
+
+    }
+
+    /*
+      ##Device = Most of the Smartphones Mobiles (Portrait)
+      ##Screen = B/w 320px to 479px
+    */
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        .aside{
+            background: #fbf0e1;
+            height: auto;
+            padding: 40px;
+            text-align: center;
+        }
+
+    }
+{% endblock %}
 
 
 {% block scripts %}
@@ -128,276 +119,80 @@
 
 
 {% block content %}
+main.content
+    {% include "editora/layout/navegation/navegation.jade" %}
+    .container
+        .row.justify-content-center.align-items-center
 
+            .payment
 
-<main>
-
-        <div class="alignCenter">
-        <section class="alignCenterSingleElement">
-
-            <div class="mpesa">
-                <img src="http://www.przestrzeninnowacji.pl/wp-content/uploads/2018/04/27655006_2006603532961463_2972204159027559696_n.png" alt="">
-            </div>
-                <h1>100 <sup>MTN</sup></h1>
-                <h2>Pacote basico</h2>
-            <div>
-
-                    <form action="{% url 'mpesa' %}"  method="post">
-                          {% csrf_token %}
-
-                          <label for="phone_number">Digite o seu número</label>
-                        <input class="align-center" type="text" placeholder="Digite o seu número 84 xxx xxxx" name="contact" id="phone_number" >
-                            <button type="submit" class="primary-button align-center" type="submit">Pagar  com M-pesa</button>
-
-                    </form>
-            </div>
-
-
-        </section>
-        </div>
-
-    <style>
-
-
-        button a{
-    color: white;
-    font-size: 20px;
-    text-transform: capitalize;
-}
-h1, h2{
-    font-family: 'Open Sans', sans-serif;
-
-}
-header{
-    height: 80vh;
-}
-        body, html{
-     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-}
-
-
-.unstyledList {
-    list-style-type: none;
-    text-transform: capitalize
-}
-
-.unstyledLink {
-    text-decoration: none;
-    margin: 0 20px;
-}
-.inlineElement{
-    display:inline;
-
-}
-.unstyledLink :hover {
-
-}
-
-.resetPadding{
-    padding: 0;
-
-}
-.error{
-    color:red;
-}
-.resetMargin{
-    margin: 0;
-}
-.menuEnd{
-        display: flex;
-    justify-content: space-between;
-}
-.menu{
-        display: flex;
-    justify-content: space-around;
-}
-input{
-      box-sizing: border-box;
-    padding-left: 15px;
-    padding-right: 15px;
-    border: 1px solid #dbe2e8;
-    font-size: 14px;
-    -webkit-box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
-    box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
-    border-radius: 2px;
-    color: #2e3d49;
-    margin: 10px;
-        border-radius: 4px;
-            height: 44px;
-
-}
-.inputField{
-    box-sizing: border-box;
-    padding-left: 15px;
-    padding-right: 15px;
-    border: 1px solid #dbe2e8;
-    font-size: 14px;
-    -webkit-box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
-    box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
-    border-radius: 2px;
-    color: #2e3d49;
-    margin: 10px;
-    border-radius: 4px;
-    height: 44px;
-
-}
-
-.alignCenter{
-  display: grid;
-  height: 100vh;
-  place-items: center center;
-
-}
-
-.alignElementCenter{
-  display: grid;
-  place-items: center center;
-  height: 100%;
-}
-
-.alignTextCenter{
-    text-align: center;
-}
-.flex{
-    display: flex;
-}
-.alignTextRight{
-    text-align: right;
-}
-.alignRight{
-
-display: flex;
-justify-content: flex-end;
-
-}
-.alignTextLeft{
-    text-align: left;
-}
-
-.alignCenterSingleElement{    margin: 0 auto;
-    display: block;
-
-
-}
-.defaultHeader{
-
-    height: 15vh;
-    color: #3a343a;
-    background-color: #F6F8FA;
-        margin: 0 -5.5%;
-
- }
-
-
-/*typography*/
-
-
-.primary-font{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-}
-
-/*typography*/
-
-/*buttons*/
- .primary-button{
-    border: none;
-    background-color: rgb(7, 71, 166);
-    color: white;
-    height: 40px;
-    width: auto;
-    font-weight: bold;
-    border-radius: 4px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-
-}
-
-
- .default-button{
-    border: none;
-    background-color: rgba(9, 30, 66, 0.08);
-    color: black;
-    height: 40px;
-    width: auto;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-
-    border-radius: 4px;
- }
- .link-button{
-    color: rgb(7, 71, 166);
-        font-weight: bold;
-    font-family: Ubuntu;
-
- }
- .warning-button{
-     border: none;
-    background-color: #F5AA07;
-    color: black;
-    height: 40px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-
-    width: auto;
-    border-radius: 4px;
- }
- .danger-button{
-    border: none;
-    background-color:#DE350A;
-    color: white;
-    height: 40px;
-    width: auto;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-
-    border-radius: 4px;
- }
- .disable-button{
-
- }
-
- /*buttons*/
-
-
-@media only screen and  (max-width: 480px) {
-
-    .smallHeading{
-        font-size: 25px;
-        text-transform: capitalize;
-    }
-
-}
-@media only screen and (min-width: 768px  ) and (max-width: 992px) {
-
-    .mediumHeading{
-
-    }
-
-}
-@media only screen and (min-width: 993px) and (max-width: 1200px){
-    .largeHeading{
-
-    }
-}
+                {% include 'editora/includes/messages.html' %}
+                .tip-message
+                    p.text-center <i class="fal fa-cash-register"></i>
+                    p Uma notificação ussd da vodacom foi enviada para o seu número .  Insira seu pin Mpesa para autorizar a transação de pagamento .
+                .payment-info
 
 
 
-@media only screen and  (min-width: 1201px){
-    .extraLargeHeading{
 
-    }
-}
+                    .d-flex.justify-content-between
+                            img(src="{{ book.image }}")
+                            h1 {{ book.name }}
+                            h2 {{ book.price }} MT
 
-         .buy{
-            width: 300px;
-            height: 40px;
 
-        }
-    </style>
+                    form( method="POST", class="mpesa")
+                        {% csrf_token %}
+                        .row
+                            .col-md-12
+                                p.form-tip-message Digite o seu número de telefone  com  mpesa
+                                | {{ form.número_de_telefone|as_crispy_field }}
 
-</main>
+                        .row.justify-content-center
+                            button.btn.btn-primary.button Pagar com Mpesa
+                    .paypal
+                        {{ paypal_form.render }}
+
+{% include "editora/layout/footer.jade" %}
+
+script(type="text/javascript" src="{% static 'javascript/app.js' %}")
+script(type="text/javascript")
+    $(document).ready(function(){
+        $('input:radio[name="payment"]').change(
+        function(){
+            if ($(this).is(':checked') && $(this).val() == 'mpesa') {
+                     $(".mpesa").show();
+                }else{
+                    $(".mpesa").hide();
+
+                }
+                if ($(this).is(':checked') && $(this).val() == 'paypal') {
+                     $(".paypal").show();
+                }else{
+                    $(".paypal").hide();
+
+                }
+         });
+        $(".tip-message").hide();
+
+        $(".paypal").hide();
+
+        $(".mpesa").hide();
+        $(".button").click(function () {
+
+            $(".tip-message").show()
+            $(".payment-info").hide()
+        })
+
+
+    });
+
+
+
+
+
+
+
+
 
 {% endblock %}
-
-
-
-
-
-
-

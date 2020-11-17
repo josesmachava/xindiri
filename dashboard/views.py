@@ -76,7 +76,7 @@ class ActiveCompany(UpdateView):
     template_name = "dashboard/active_account.html"
     model = Startup
     form_class = BusinessForm
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('pay', kwargs={'pk': 1})
 
 
 @login_required

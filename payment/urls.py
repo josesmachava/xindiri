@@ -6,8 +6,7 @@ from . import views
 
 urlpatterns = [
 
-    path('', views.phone_number, name='phone_number'),
-    path('mpesaClient/', views.Mpesa, name='mpesa'),
+    path('<int:pk>', views.mpesa, name='pay')
 
 
    

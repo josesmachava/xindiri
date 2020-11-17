@@ -26,7 +26,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="implement navegation menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/payment/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/payment/payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpay/templates/payment/processPayment.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/payment/processPayment.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +80,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eskina" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/payment" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -82,19 +88,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/wordpress" />
-      <recent name="$PROJECT_DIR$/send" />
-      <recent name="$PROJECT_DIR$/xpay/static/javascript" />
-      <recent name="$PROJECT_DIR$/uria" />
-      <recent name="$PROJECT_DIR$/mpesa" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/xpay/static" />
       <recent name="$PROJECT_DIR$/xpay/static/stylesheet/xpay" />
       <recent name="$PROJECT_DIR$/xpay/templates/dashboard/developer" />
       <recent name="$PROJECT_DIR$/xpay" />
       <recent name="$PROJECT_DIR$/xpay/templates/dashboard" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/payment" />
+      <recent name="$PROJECT_DIR$/wordpress" />
+      <recent name="$PROJECT_DIR$/send" />
+      <recent name="$PROJECT_DIR$/xpay/static/javascript" />
+      <recent name="$PROJECT_DIR$/uria" />
     </key>
   </component>
   <component name="RunManager">
@@ -344,7 +350,9 @@
       <workItem from="1605552495004" duration="331000" />
       <workItem from="1605554714779" duration="1551000" />
       <workItem from="1605556557847" duration="1146000" />
-      <workItem from="1605592290156" duration="736000" />
+      <workItem from="1605592290156" duration="1579000" />
+      <workItem from="1605594201838" duration="1794000" />
+      <workItem from="1605596042124" duration="1571000" />
     </task>
     <task id="LOCAL-00001" summary="implement dashboard navigation ui">
       <created>1598388857543</created>
@@ -446,10 +454,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2735" y="236" width="800" height="529" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601617773460" />
-    <state x="936" y="473" width="408" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605056578122">
+    <state x="936" y="473" width="408" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605596615918">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="936" y="473" width="408" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1605056578122" />
+    <state x="936" y="473" width="408" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1605596615918" />
     <state x="2856" y="457" width="408" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601521969506" />
     <state x="614" y="257" width="690" height="679" key="search.everywhere.popup" timestamp="1604935241077">
       <screen x="0" y="27" width="1920" height="1053" />
