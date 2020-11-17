@@ -1,2 +1,3 @@
 release: python manage.py migrate
-web: gunicorn xpay.wsgi --timeout 15 --keep-alive 5 --log-level debug
+web: gunicorn --pythonpath="$PWD/xpay" config.wsgi:application
+worker: python xpay/manage.py rqworker high default low
