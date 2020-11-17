@@ -27,18 +27,18 @@ def mpesa(request, pk):
             payment.user = request.user
             payment.order = order
 
-            API_ENDPOINT = "https://development-xindiri.herokuapp.com/v1/payments/"
+            API_ENDPOINT = "http://localhost:8000/v1/payments/"
             data = {
 
                 'phone_number': payment.número_de_telefone,
-                'amount': package.price,
-                'api_key': 'a0a9fe0bf9178657835ab0ad4b033f9f',
+                'amount': "3",
+                'api_key': '2e67c88ab2f5176b1633e50bcc1f798a',
             }
             # sending post request and saving response as response object
             payment_data = requests.post(url=API_ENDPOINT, data=data)
 
 
-            response = json.loads(payment_data.json())
+            response = json.loads(payment_data.text)
             print(response)
             print(response)
             status_code = response['transaction_status_code']
