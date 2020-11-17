@@ -71,7 +71,7 @@ def mpesa(request, pk):
 
 
 
-
+mpesa.delay()
 
 
 
