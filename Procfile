@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn xpay.wsgi --log-file -
+web: gunicorn xpay.wsgi --timeout 15 --keep-alive 5 --log-level debug
