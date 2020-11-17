@@ -3,11 +3,25 @@ pbody, html {
 
 }
 
+.hero{
+    height: 80vh;
+}
 nav ul li{
     display: inline;
+    padding: 0 20px;
 
 }
 
+nav {
+    padding-top: 30px;
+}
+.sign{
+    width: 100px;
+}
+.hero-image img{
+    margin-top: 100px;
+
+}
 h2 {
     font-size: 50px;
     font-weight: 800;
@@ -31,7 +45,8 @@ nav ul li {
 
 nav {
     display: flex;
-    justify-content: space-around;
+    margin: 0px 30px;
+    justify-content: space-between;
 }
 
 .header {

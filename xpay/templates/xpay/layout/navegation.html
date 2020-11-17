@@ -1,31 +1,12 @@
-<nav class="navbar navbar-expand-lg nav-color">
-    <div class="container">
-        <div class="row">
-            <a class="navbar-brand" href="#">Xindiri</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<nav>
+    <h1><img
+            src="https://marketmz-static.s3.amazonaws.com/site_media/media/companies/logos/logoxindiri_Q9DNg9k.jpeg"
+            alt="xindiri"></h1>
+    <ul>
+        <li><a href="{% url 'signup' %}" class="text-decoration-none">Documentação</a></li>
+        <li><a href="{% url 'signup' %}" class="text-decoration-none">criar conta</a></li>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Painel <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Transações</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">API</a>
-                    </li>
+        <li><a href=" {% url 'signin' %}"  class="btn btn btn-primary sign text-decoration-none">Entrar</a></li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Definições</a>
-                    </li>
-
-
-                </ul>
-
-            </div>
-        </div>
-    </div>
+    </ul>
 </nav>

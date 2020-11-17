@@ -9,7 +9,7 @@
 {# overide the tile of the page #}
 {% block title %}
 
-    <title>Mulla</title>
+    <title>Xindiri - Pagamentos online sem esforço com o mpesa</title>
 {% endblock %}
 
 <meta charset="utf-8">
@@ -33,82 +33,83 @@
 
 {% block content %}
 
-            <nav>
-                <h1><img
-                        src="https://marketmz-static.s3.amazonaws.com/site_media/media/companies/logos/logoxindiri_Q9DNg9k.jpeg"
-                        alt="xindiri"></h1>
-                <ul>
-
-                    <li><a href="{% url 'signup' %}">criar conta</a></li>
-
-                    <li><a href=" {% url 'signin' %}">Entrar</a></li>
-
-                </ul>
-            </nav>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 text-center header">
-                        <h2> Pagamentos online sem esforço com o mpesa</h2>
-                    </div>
-                    <div class="col-md-4 hero-image">
-                        <img src="{% static "images/payment2.png" %}" alt="">
-                    </div>
-                    <div class="col-md-4 text-center ">
-                        <img class="icon" src="{% static "images/shop.svg" %}" alt="">
-
-                        <h3>Configuração rápida.</h3>
-
-                        Comece a aceitar pagamentos em 15 minutos.
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <img class="icon" src="{% static "images/payment.svg" %}" alt="">
-
-                        <h3>Preços honestos.
-                        </h3>
-                        <p>
-                            Pague apenas por transações bem-sucedidas.</p>
-                    </div>
-                           <div class="col-md-4 text-center">
-                        <img class="icon" src="{% static "images/payment.svg" %}" alt="">
-
-                        <h3>Preços honestos.
-                        </h3>
-                        <p>
-                            Pague apenas por transações bem-sucedidas.</p>
-                    </div>
-
-
-                    <div class="col-md-12">
-                        <h4 class="text-center">Parceiros</h4>
-                        <div class="col-md-3"><img class="partner-img"
-                                                   src="https://marketmz-static.s3.amazonaws.com/site_media/media/companies/logos/93i.png"
-                                                   alt="93Interactions"></div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <h3>Plugins e integrações</h3>
-                        <div class="col-md-10">
-                            <img class="icon-plugins" src="{% static "images/woocommer.svg" %}" alt="">
-                            <p><b>WooCommerce.</b>
-                                A plataforma de comércio eletrônico mais personalizável.</p>
-
-                        </div>
-                    </div>
-
-
-                </div>
+    {% include "xpay/layout/navegation.html" %}
+    <div class="container hero">
+        <div class="row">
+            <div class="col-md-8 text-center header">
+                <h2> Pagamentos online sem esforço com o mpesa</h2>
+            </div>
+            <div class="col-md-4 hero-image">
+                <img src="{% static "images/payment2.png" %}" alt="">
             </div>
 
+        </div>
+    </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center ">
+                <img class="icon" src="{% static "images/shop.svg" %}" alt="">
 
+                <h3>Configuração rápida.</h3>
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="text-center">&copy xindiri {% now 'Y' %}
-                </div>
+                Comece a aceitar pagamentos em 15 minutos.
+            </div>
+            <div class="col-md-4 text-center">
+                <img class="icon" src="{% static "images/payment.svg" %}" alt="">
+
+                <h3>Preços honestos.
+                </h3>
+                <p>
+                    Pague apenas por transações bem-sucedidas.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img class="icon" src="{% static "images/payment.svg" %}" alt="">
+
+                <h3>Preços honestos.
+                </h3>
+                <p>
+                    Sem comissões adicionais.</p>
             </div>
         </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+    <div class="col-md-12">
+        <h4 class="text-center">Parceiros</h4>
+        <div class="col-md-3"><img class="partner-img"
+                                   src="https://marketmz-static.s3.amazonaws.com/site_media/media/companies/logos/93i.png"
+                                   alt="93Interactions"></div>
+
+    </div>
+
+            </div>
+    </div>
+    <div class="col-md-6">
+        <h3>Plugins e integrações</h3>
+        <div class="col-md-10">
+            <img class="icon-plugins" src="{% static "images/woocommer.svg" %}" alt="">
+            <p><b>WooCommerce.</b>
+                A plataforma de comércio eletrônico mais personalizável.</p>
+
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-center">&copy xindiri {% now 'Y' %}
+            </div>
+        </div>
+    </div>
 
 
 {% endblock %}
