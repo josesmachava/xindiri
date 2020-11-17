@@ -31,7 +31,7 @@ def mpesa(request, pk):
             data = {
 
                 'phone_number': payment.número_de_telefone,
-                'amount': package.price
+                'amount': package.price,
                 'api_key': 'a0a9fe0bf9178657835ab0ad4b033f9f',
             }
             # sending post request and saving response as response object
