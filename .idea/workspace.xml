@@ -25,13 +25,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b473c11-d2cc-4ef3-b560-42eef57fb5f5" name="Default Changelist" comment="implement navegation menu">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/active_account.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/active_account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/developer/api.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/developer/api.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xpay/templates/dashboard/transaction.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/dashboard/transaction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpay/templates/xpay/layout/navegation.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpay/templates/xpay/layout/navegation.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -356,7 +350,7 @@
       <workItem from="1605600407385" duration="914000" />
       <workItem from="1605601814731" duration="389000" />
       <workItem from="1605602240191" duration="1788000" />
-      <workItem from="1605604207547" duration="81000" />
+      <workItem from="1605604207547" duration="129000" />
     </task>
     <task id="LOCAL-00001" summary="implement dashboard navigation ui">
       <created>1598388857543</created>
