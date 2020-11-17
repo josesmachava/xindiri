@@ -31,6 +31,8 @@
                         <div class="col-md-4">
                             <form action="" method="POST">
                                 {% csrf_token %}
+                                                {% include 'xpay/includes/messages.html' %}
+
                                 <p>
                                        Antes de aceitar pagamentos usando mpesa, precisamos que active a sua conta pagando uma  taxa única de {{ package.price }} MT pelo serviço.
 

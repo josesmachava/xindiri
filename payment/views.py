@@ -9,7 +9,7 @@ from .forms import PaymentForm
 
 
 # Create your views here.
-from .models import Package
+from .models import Package, Order
 
 
 @login_required()
@@ -20,34 +20,35 @@ def mpesa(request, pk):
         form = PaymentForm(request.POST)
         if form.is_valid():
             número_de_telefone = request.POST['número_de_telefone']
-
-            order = Order.objects.create(user=request.user, ordered=False, book=book)
+            order = Order.objects.create(user=request.user, ordered=False, package=package)
             payment = form.save(commit=False)
             payment.user = request.user
             payment.order = order
 
-            API_ENDPOINT = "https://xpayy.herokuapp.com/payment/"
+            API_ENDPOINT = "https://development-xindiri.herokuapp.com/v1/payments/sandbox"
             data = {
 
-                'contact': payment.número_de_telefone,
+                'phone_number': payment.número_de_telefone,
                 'amount': package.price,
-                'api_key': 'cpurgkttk6fw317ucnnxaqxcnrkxszgs',
+                'api_key': 'dc537138235875601fa161fdfebeda6f',
             }
             # sending post request and saving response as response object
             payment_data = requests.post(url=API_ENDPOINT, data=data)
+            print(payment_data)
+            response = json.loads(payment_data.json())
 
-            response = json.loads(payment_data.text)
-            status_code = response['data']["status_code"]
+            status_code = response['transaction_status_code']
+
             if status_code == 201 or status_code == 200:
                 payment.order.ordered = True
                 print(payment.order.pk)
                 print(payment.order.ordered)
                 payment.save()
-                order.save()
-                return redirect('read', pk)
+
+                return redirect('index')
 
             else:
-                error_message = response['data']['body']["output_ResponseDesc"]
+                error_message = response["transaction_status"]
 
                 messages.error(request, error_message)
 
