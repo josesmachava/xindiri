@@ -41,6 +41,8 @@ def mpesa(request, pk):
 
             if status_code == 201 or status_code == 200:
                 payment.order.ordered = True
+                request.user.is_business = True
+                request.user.save()
                 print(payment.order.pk)
                 print(payment.order.ordered)
                 payment.save()
