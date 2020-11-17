@@ -90,7 +90,7 @@ def mpesa(request):
 
                            }
             dump = json.dumps(format_data)
-            return HttpResponse(dump, content_type='application/json')
+            return HttpResponse(format_data, content_type='application/json')
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

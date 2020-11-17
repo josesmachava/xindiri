@@ -111,7 +111,7 @@ def transation_list(request):
                 "user": user.id,
             }
             resp = requests.post(url=url, json=json_data)
-            return Response(resp.text)
+            return Response(resp.json())
         else:
             return Response({'data': "api invalido"})
 
@@ -185,7 +185,7 @@ def sandbox(request, *args, **kwargs):
 
                 resp = requests.post(url=url, json=json_data)
 
-                return Response(resp.text)
+                return Response(resp.json())
             else:
                 return Response({'data': "api key usado nao existe"})
 
