@@ -6,6 +6,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .forms import PaymentForm
+from django_rq import job
 
 
 # Create your views here.
@@ -13,6 +14,7 @@ from .models import Package, Order
 
 
 @login_required()
+@job('high')
 def mpesa(request, pk):
     package = Package.objects.get(pk=pk)
     if request.method == "POST":
@@ -36,8 +38,9 @@ def mpesa(request, pk):
             payment_data = requests.post(url=API_ENDPOINT, data=data)
 
 
-            response = json.loads(payment_data.json())
-
+            response = json.loads(payment_data.text)
+            print(response)
+            print(response)
             status_code = response['transaction_status_code']
 
             if status_code == 201 or status_code == 200:
@@ -84,7 +87,6 @@ def mpesa(request, pk):
 
 
 
-  
 
 
 
@@ -92,5 +94,5 @@ def mpesa(request, pk):
 
 
 
-        
-        
+
+

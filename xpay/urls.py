@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^', include('mpesa.urls')),
     path('pay/', include('payment.urls')),
     path('account/', include('account.urls')),
-
+    path('django-rq/', include('django_rq.urls')),
     path('v1/payments/', include('uria.urls')),
     path('v1/wordpress/', include('wordpress.urls')),
     path('v1/send/', include('send.urls')),
