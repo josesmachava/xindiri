@@ -31,7 +31,7 @@ def mpesa(request, pk):
             data = {
 
                 'contact': payment.número_de_telefone,
-                'amount': package.price
+                'amount': package.price,
                 'reference': secrets.token_hex(4),
                 "short_code":"900511",
                 'api_key': 'q6phoogrb6feqthw6fco8i5iz2lrwipy',
