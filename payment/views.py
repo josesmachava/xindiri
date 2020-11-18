@@ -39,18 +39,13 @@ def mpesa(request, pk):
 
 
             response = json.loads(payment_data.text)
-            print(response)
-            print(response)
             status_code = response['transaction_status_code']
 
             if status_code == 201 or status_code == 200:
                 payment.order.ordered = True
                 request.user.is_business = True
                 request.user.save()
-                print(payment.order.pk)
-                print(payment.order.ordered)
                 payment.save()
-
                 return redirect('index')
 
             else:

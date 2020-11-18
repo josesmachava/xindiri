@@ -140,8 +140,7 @@ def sandbox(request):
 
             api_request = APIRequest(api_context)
             result = json.dumps(api_request.execute())
-            data = json.loads(result)
-            print(data)
+         
 
             transaction_status_code = data["status_code"]
             transaction_id = data["body"]["output_TransactionID"]
